@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|
 | 1 | Buget și Finanțe | 💰 | MFP, ANAF, BNR, AEP | ~300 | [→ Dosar complet](01-buget-si-finante/README.md) |
 | 2 | Sănătate | 🏥 | MS, CNAS, INSP, ANMCS, ANAD, ANA | ~186 | [→ Dosar complet](02-sanatate/README.md) |
-| 3 | Educație | 🎓 | MEN, ARACIP, UEFISCDI | ~200 | [→](03-educatie/README.md) |
+| 3 | Educație | 🎓 | MEN, ARACIP, UEFISCDI, ARACIS | ~92+ | [→ Dosar complet](03-educatie/README.md) |
 | 4 | Justiție | ⚖️ | MJ, portal.just, ICCJ, CCR, CSM | ~100 | [→](04-justitie/README.md) |
 | 5 | Administrație | 🏛️ | MDRAP, ANFP, INA, Primării | ~1.600 | [→](05-administratie/README.md) |
 | 6 | Companii și Comerț | 🏢 | ONRC, ASF, BPI, ANPC | ~100 | [→](06-companii-si-comert/README.md) |
