@@ -18,11 +18,11 @@
 | 10 | Muncă și Social | 👥 | ANOFM, MMFPSPV, ANPIS, ANES, ANPDCA | ~207+ | [→ Dosar](10-munca-si-social/README.md) |
 | 11 | Siguranță și Ordine | 🛡️ | MAI, IGSU, IGI, DGA, ANP, IGPF, IGPR, Jandarmeria | ~925+ | [→ Dosar](11-siguranta-si-ordine/README.md) |
 | 12 | Agricultură | 🌾 | MADR, APIA, AFIR, ANSVSA, AChR | ~30+ | [→ Dosar](12-agricultura/README.md) |
-| 13 | Energie | ⚡ | ANRE, Ministerul Energiei | ~30 | [→](13-energie/README.md) |
-| 14 | Cultură și Patrimoniu | 🏛️ | MC, INP, Arhive, Biblioteci, CNSAS | ~100 | [→](14-cultura-si-patrimoniu/README.md) |
-| 15 | Statistici și Populație | 📊 | INS, DEPABD | ~200 | [→](15-statistici-si-populatie/README.md) |
-| 16 | Telecomunicații | 📡 | ANCOM, MCSI | ~20 | [→](16-telecomunicatii/README.md) |
-| 17 | Externe | 🌐 | MAE | ~5 | [→](17-externe/README.md) |
+| 13 | Energie | ⚡ | Ministerul Energiei, ANRE | ~29+ | [→ Dosar](13-energie/README.md) |
+| 14 | Cultură și Patrimoniu | 🏛️ | MC, INP, MNIR, MNȚR, Arhive, CNSAS | ~200+ | [→ Dosar](14-cultura-si-patrimoniu/README.md) |
+| 15 | Statistici și Populație | 📊 | INS, DEPABD | ~131+ | [→ Dosar](15-statistici-si-populatie/README.md) |
+| 16 | Telecomunicații | 📡 | MCSI, ANCOM | ~18+ | [→ Dosar](16-telecomunicatii/README.md) |
+| 17 | Externe | 🌐 | MAE | ~4+ | [→ Dosar](17-externe/README.md) |
 
 ## Șablon pentru Crearea unui Nou Domeniu
 
