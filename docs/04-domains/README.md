@@ -12,7 +12,7 @@
 | 4 | Justiție | ⚖️ | MJ, DGA, ANP, ANITP, ORDA, CSM | ~215+ | [→ Dosar complet](04-justitie/README.md) |
 | 5 | Administrație | 🏛️ | MDRAP, ANFP, INA, ANC, ADR, SGG | ~1.600+ | [→ Dosar](05-administratie/README.md) |
 | 6 | Companii și Comerț | 🏢 | ONRC, ASF, ANPC, AMEPIP | ~87+ | [→ Dosar](06-companii-si-comert/README.md) |
-| 7 | Achiziții Publice | 📋 | SEAP, ANAP, CNSC | ~700 | [→](07-achizitii-publice/README.md) |
+| 7 | Achiziții Publice | 📋 | SEAP, CNSC, ANAP + toate instituțiile | ~700+ | [→ Dosar](07-achizitii-publice/README.md) |
 | 8 | Mediu | 🌳 | ANPM, ANANP, Apele Române, Garda de Mediu, ANM | ~500 | [→](08-mediu/README.md) |
 | 9 | Transport | 🚗 | MT, ARR, CNAIR, METROREX, AFDJ | ~60 | [→](09-transport/README.md) |
 | 10 | Muncă și Social | 👥 | ANOFM, MMFPSPV, CNPP, ANES | ~250 | [→](10-munca-si-social/README.md) |
