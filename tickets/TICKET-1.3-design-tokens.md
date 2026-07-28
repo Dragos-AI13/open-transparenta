@@ -1,7 +1,7 @@
 # Ticket #1.3 — Design Tokens + Theme Config
 
 **ID:** TICKET-1.3
-**Status:** ⏳ Pending
+**Status:** ✅ Done
 **Feature:** 1 — 🏗️ Fundația
 **Dependențe:** TICKET-1.2 (are nevoie de Next.js + Tailwind)
 

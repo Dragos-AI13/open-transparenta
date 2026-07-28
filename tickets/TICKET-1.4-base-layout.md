@@ -1,7 +1,7 @@
 # Ticket #1.4 — Base Layout Components
 
 **ID:** TICKET-1.4
-**Status:** ⏳ Pending
+**Status:** ✅ Done
 **Feature:** 1 — 🏗️ Fundația
 **Dependențe:** TICKET-1.3 (design tokens)
 

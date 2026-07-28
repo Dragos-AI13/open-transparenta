@@ -13,13 +13,18 @@ Open Transparență e un motor de căutare care agreghează **toate datele publi
 ## 🚀 Status
 
 ```
-Phase 1 — Indexare surse principale  █████░░░░░  50%
-  ✅ data.gov.ro (5.192 seturi)
-  ✅ ONRC (toate firmele din România)
-  ✅ BNR (curs valutar zilnic)
-  🏗 SEAP (achiziții publice)
-  ⬜ INS TEMPO
-  ⬜ ANAF date fiscale
+Phase 1 — Fundația                ████████░░  80%
+  ✅ Next.js + Tailwind (frontend)
+  ✅ Design tokens + dark theme
+  ✅ Layout (Header, Footer, Domain Grid)
+  ✅ Meilisearch (motor căutare)
+  🏗 PWA manifest
+  ⬜ Deploy
+
+Phase 2 — Motor de Căutare        ░░░░░░░░░░   0%
+  ⬜ Search bar funcțional
+  ⬜ Rezultate live
+  ⬜ Indexare data.gov.ro
 ```
 
 ## 🧱 Stack

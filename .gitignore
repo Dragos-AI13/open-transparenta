@@ -50,3 +50,4 @@ crawler/*.sqlite
 
 # Logs
 *.log
+crawler/.crawler_*
