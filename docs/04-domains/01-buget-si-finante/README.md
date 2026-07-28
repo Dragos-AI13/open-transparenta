@@ -1,26 +1,27 @@
 # 💰 Domeniul 1 — Buget și Finanțe
 
-> Dosar complet: date, structură, analiză, propunere de prezentare.
+> Dosar complet: toate instituțiile, toate seturile de date, toate sursele.
+> Verificat pe data.gov.ro + surse proprii, Iulie 2026.
 
 ---
 
 ## Cuprins
 
-1. [Descrierea domeniului](#descriere)
+1. [Descriere](#descriere)
 2. [Instituții și surse](#instituții)
-3. [Arborele complet al datelor](#arborele-complet)
-4. [Inventarul seturilor de date reale](#inventar)
-5. [Povestea datelor — propunere de prezentare](#prezentare)
-6. [Întrebări pe care le răspunde domeniul](#întrebări)
+3. [Arborele complet](#arborele-complet)
+4. [Inventar complet — toate seturile de date](#inventar-complet)
+5. [Surse din afara data.gov.ro](#surse-externe)
+6. [Prezentare propusă](#prezentare)
+7. [Întrebări frecvente](#întrebări)
 
 ---
 
 ## Descriere
 
-Acest domeniu cuprinde **toate datele despre banii publici din România**:
-banii pe care statul îi încasează (taxe, impozite, contribuții), banii pe care
-îi cheltuiește (bugete, salarii, investiții), datoria publică, bugetele locale
-și indicatorii financiari (curs valutar, inflație, dobânzi).
+Date despre **banii publici ai României**: ce încasează statul (taxe, impozite, contribuții), ce cheltuiește (bugete, salarii, investiții), cât datorează (datorie publică), și cum se gospodăresc autoritățile locale (bugete locale, consilii județene, primării).
+
+Include și **indicatorii financiari** (curs valutar, inflație, dobânzi) și **fondurile europene**.
 
 **Pentru cetățean:** „Unde se duc banii mei?"
 
@@ -28,16 +29,28 @@ banii pe care statul îi încasează (taxe, impozite, contribuții), banii pe ca
 
 ## Instituții
 
-| Instituție | Tip | Seturi pe data.gov.ro | Alte date disponibile | Acces |
+### A. Pe data.gov.ro
+
+| # | Instituție | Tip | Seturi | Cod organizație |
 |---|---|---|---|---|
-| **Ministerul Finanțelor (MFP)** | Minister | ~109 | Bugetul de stat, execuție, datorie publică pe site propriu (Liferay SPA) | data.gov.ro + mfinante.gov.ro (SPA) |
-| **ANAF** | Agenție | ~49 | Registrul plătitorilor TVA (API REST), Buletine statistice fiscale, e-Factura, e-Transport | data.gov.ro + anaf.ro + API |
-| **BNR** | Bancă centrală | — | Curs valutar zilnic (API XML gratuit), dobânzi, inflație, indicatori monetari | bnr.ro/nbrfxrates.xml |
-| **AEP** | Autoritate | ~24 | Finanțarea partidelor politice, cheltuieli campanie | data.gov.ro + roaep.ro |
-| **Consilii Județene** | Administrație locală | ~200+ | Bugete și execuții locale, fiecare județ | data.gov.ro |
-| **Primării** | Administrație locală | ~50+ | Bugete locale, taxe și impozite locale | data.gov.ro |
-| **AAAS** | Agenție | 1 | Administrarea activelor statului | data.gov.ro |
-| **Ministerul Finanțelor Publice** | Minister | — | Clasificații bugetare, rectificări | data.gov.ro |
+| 1 | **Ministerul Finanțelor** | Minister | **109** | `mfp` |
+| 2 | **ANAF** | Agenție | **49** | `agentia-nationala-de-administrare-fiscala` |
+| 3 | **AEP — Autoritatea Electorală Permanentă** | Autoritate | **24** | `autoritatea-electorala-permanenta` |
+| 4 | **Ministerul Energiei** | Minister | **21** | `ministerul-energiei` |
+| 5 | **CNI — Compania Națională de Investiții** | Companie de stat | **17** | `compania-nationala-de-investitii` |
+| 6 | **MFE — Ministerul Investițiilor Europene** | Minister | **6** | `mfe` |
+| 7 | **AMEPIP — Agenția pentru Monitorizarea Întreprinderilor Publice** | Agenție | **2** | `agentia-pentru-monitorizarea-si-evaluarea-performantelor-intreprinderilor-publice` |
+| 8 | **AAAS — Administrația Activelor Statului** | Agenție | **1** | `aaas` |
+| 9 | **Consilii Județene** (~20) | CJ | ~200+ | fiecare CJ |
+| 10 | **Primării** (~30) | Primărie | ~50+ | fiecare primărie |
+| 11 | **ONRC** (doar situații financiare) | Oficiu | 76 | `onrc` |
+
+### B. În afara data.gov.ro
+
+| # | Instituție | Tip | Date disponibile | Acces |
+|---|---|---|---|---|
+| 12 | **BNR — Banca Națională a României** | Bancă centrală | Curs valutar zilnic, dobânzi, inflație, indicatori monetari, rapoarte stabilitate financiară | bnr.ro/nbrfxrates.xml (API XML gratuit) |
+| 13 | **ASF — Autoritatea de Supraveghere Financiară** | Autoritate | Piață de capital, fonduri de pensii, asigurări, emitenți | asfromania.ro |
 
 ---
 
@@ -47,164 +60,285 @@ banii pe care statul îi încasează (taxe, impozite, contribuții), banii pe ca
 💰 BUGET ȘI FINANȚE
 │
 ├── 📋 BUGETUL DE STAT
-│   ├── Bugetul anual (2014-2026)
-│   │   ├── Legea bugetului de stat (anual, PDF/DOC)
+│   ├── Legea bugetară anuală (2014-2026)
+│   │   ├── Bugetul de stat — legea (DOC, XLS)
 │   │   ├── Sinteză bugetară (venituri + cheltuieli)
 │   │   └── Clasificații bugetare (coduri, indicatori)
 │   │
 │   ├── Execuția bugetară
+│   │   ├── Execuții lunare (2016, 2017, 2018, 2024+)
 │   │   ├── Venituri realizate vs. estimate
 │   │   ├── Cheltuieli efectuate vs. planificate
 │   │   ├── Deficit / excedent bugetar
 │   │   └── Pe capitole bugetare + ministere
 │   │
 │   ├── Rectificări bugetare
-│   │   └── Modificări ale bugetului pe parcursul anului
-│   │
 │   └── Fondul de rezervă al Guvernului
-│       └── Alocări din fondul de rezervă
 │
 ├── 🏘️ BUGETE LOCALE
-│   ├── Bugete consilii județene
+│   ├── Consilii Județene (20+ județe)
 │   │   ├── Venituri proprii (pe județ)
 │   │   └── Cheltuieli (pe categorii)
 │   │
-│   ├── Bugete primării
+│   ├── Primării (30+)
+│   │   ├── Bugete anuale + rectificări
 │   │   ├── Venituri din taxe și impozite locale
 │   │   ├── Cheltuieli de funcționare
 │   │   └── Cheltuieli de investiții
 │   │
-│   ├── Bugete instituții publice
-│   │   └── Spitale, școli, teatre, muzee etc.
+│   ├── Instituții publice subordonate
+│   │   └── Spitale, școli, muzee, teatre
 │   │
 │   └── Echilibrare bugete locale
 │       └── Sume primite de la bugetul de stat
 │
 ├── 📈 DATORIA PUBLICĂ
-│   ├── Datorie internă (guvernamentală)
+│   ├── Datorie guvernamentală (2020-2025)
+│   ├── Datorie internă
 │   ├── Datorie externă
 │   ├── Serviciul datoriei (dobânzi + rambursări)
-│   └── Deficit bugetar (anual/lunar)
+│   └── Titluri de stat emise
 │
 ├── 💳 TAXE ȘI IMPOZITE
-│   ├── Impozit pe venit
-│   ├── TVA (Taxa pe Valoare Adăugată)
-│   ├── Impozit pe profit
-│   ├── Contribuții sociale (CAS, CASS)
-│   ├── Accize
-│   └── Taxe locale (clădiri, teren, mașini)
+│   ├── Buletin statistic fiscal ANAF (trimestrial, 2013-2026)
+│   │   ├── TVA colectat
+│   │   ├── Impozit pe venit
+│   │   ├── Impozit pe profit
+│   │   ├── Contribuții sociale (CAS, CASS)
+│   │   └── Accize
+│   │
+│   ├── Datoriile către bugetul de stat
+│   ├── Registrul plătitorilor de TVA (API REST ANAF)
+│   ├── Calendarul obligațiilor fiscale (2021-2026)
+│   └── Arierate (datorii restante)
 │
-├── 💱 INDICATORI FINANCIARI
-│   ├── Curs valutar BNR (zilnic, 36 valute + aur)
-│   ├── Dobânda de politică monetară BNR
+├── 🏢 ÎNTREPRINDERI PUBLICE
+│   ├── Indicatori financiari, nefinanciari și de guvernanță
+│   ├── Lista întreprinderilor publice monitorizate
+│   ├── Număr salariați bugetari
+│   └── Acțiuni deținute de stat la companii
+│       ├── Ministerul Energiei — portofoliu
+│       └── Statul român — participații
+│
+├── 💱 INDICATORI FINANCIARI (BNR)
+│   ├── Curs valutar zilnic (36 valute + aur, API XML)
+│   ├── Dobânda de politică monetară
 │   ├── ROBOR / IRCC (indicatori de piață)
 │   ├── Inflație (IPC, medie anuală)
 │   └── Indicatori monetari (M2, credite, depozite)
 │
-├── 🏛️ BUGETE INSTITUȚII PUBLICE
-│   ├── Ministere (fiecare minister are buget propriu)
-│   ├── Agenții naționale
-│   ├── Companii de stat
-│   └── Acțiuni deținute de stat la companii
-│
 ├── 💼 SITUAȚII FINANCIARE
-│   ├── Situații financiare anuale (companii, 2008-2022)
+│   ├── Situații financiare anuale ale companiilor (2008-2025, CSV)
+│   ├── Date de identificare plătitori (2020-2026, actualizat trimestrial)
 │   ├── Bilanțuri contabile
 │   └── Dări de seamă contabile
 │
-├── 📊 BULETINE STATISTICE FISCALE
-│   ├── Buletin statistic fiscal ANAF (trimestrial)
-│   ├── Statistici privind colectarea taxelor
-│   └── Registrul plătitorilor de TVA
-│
-├── 🏗️ SUBVENȚII ȘI FONDURI
+├── 🏗️ INVESTIȚII ȘI FONDURI
+│   ├── CNI — Obiective de investiții recepționate (2002-2020)
+│   ├── Fonduri europene
+│   │   ├── Proiecte contractate (fonduri europene)
+│   │   ├── Stadiul absorbției 2014-2020
+│   │   ├── Stadiul absorbției 2021-2027
+│   │   └── SMIS — date proiecte
+│   │
 │   ├── Subvenții de la bugetul de stat
-│   ├── Fonduri europene nerambursabile
-│   ├── Programul Anghel Saligny (investiții locale)
-│   └── Fonduri externe
+│   ├── Programul Anghel Saligny
+│   └── Plăți AFIR (fonduri agricole)
 │
-├── 🧾 ACHIZIȚII PUBLICE (financiar)
-│   ├── Bugete de achiziții per instituție
-│   └── Contracte și plăți
+├── 🏛️ BUGETE INSTITUȚII PUBLICE
+│   ├── Bugetul ANAF (2022-2026)
+│   ├── Bugetul AEP (2018)
+│   ├── Bugetul ONRC (2013)
+│   ├── Bugetul ANCPI
+│   ├── Bugetul Ministerului Energiei
+│   └── + fiecare minister are buget propriu
 │
-└── 🗳️ FINANȚARE PARTIDE POLITICE
-    ├── Venituri partide (subvenții, donații)
-    ├── Cheltuieli partide (campanie, funcționare)
-    └── Chetuieli electorale
+├── 📊 LISTE ȘI NOMENCLATOARE
+│   ├── Lista entităților publice (toate instituțiile din RO)
+│   ├── Lista organismelor din sectorul public
+│   ├── Lista întreprinderilor publice
+│   └── Nomenclatoare geografice (străzi, localități)
+│
+├── 🗳️ FINANȚARE PARTIDE POLITICE (AEP)
+│   ├── Alegeri parlamentare 2012, 2016, 2020
+│   ├── Alegeri locale 2012, 2016, 2020
+│   ├── Alegeri prezidențiale 2009, 2014
+│   ├── Alegeri europarlamentare 2009, 2014, 2019
+│   ├── Referendumuri (2009, 2012, 2018, 2019)
+│   ├── Venituri + cheltuieli partide
+│   └── Buget AEP, bilanț AEP, plăți AEP
+│
+└── 🏛️ ASF — PIAȚA FINANCIARĂ (site propriu)
+    ├── Piața de capital
+    ├── Fonduri de pensii private
+    ├── Asigurări
+    └── Emitenți și valori mobiliare
 ```
 
 ---
 
-## Inventar
+## Inventar Complet
 
-### A. Bugetul de Stat — Seturi Principale
+### A1. Ministerul Finanțelor (MFP) — 109 seturi
 
-| Set | Instituție | Format | Ani disponibili | Actualizare |
-|---|---|---|---|---|
-| Bugetul de stat | MFP | DOC, XLS | 2014-2026 | Anual |
-| Sinteză bugetară | MFP | XLS | 2014-2026 | Anual |
-| Clasificații bugetare | MFP | XLS | 2020+ | Anual |
-| Rectificări bugetare | MFP | XLS | 2024 | Anual |
-| Execuția bugetară | SGG | XLSX | 2022+ | Anual |
-
-### B. ANAF — Date Fiscale
-
-| Set | Instituție | Format | Ani | Actualizare |
-|---|---|---|---|---|
-| Buletin statistic fiscal | ANAF | PDF | 2013-2026 (trimestrial) | Trimestrial |
-| Situații financiare (companii) | ANAF/MFP | CSV | 2008-2022 | Anual |
-| Registrul plătitorilor TVA | ANAF | API JSON | curent | Continuu |
-| Datoriile către bugetul de stat | ANAF | XLSX, PDF | 2023+ | Periodic |
-| Lista entităților publice | ANAF/MFP | XLS | curent | Periodic |
-| Organisme sector public | ANAF/MFP | XLS, XLSX | curent | Periodic |
-| Achiziții ANAF | ANAF | XML, PDF | 2017-2026 | Anual |
-| Bugetul de cheltuieli ANAF | ANAF | XML, PDF | 2023-2026 | Anual |
-| Raport de performanță ANAF | ANAF | XML, PDF | 2025+ | Anual |
-
-### C. BNR — Indicatori Financiari
-
-| Set | URL | Format | Actualizare |
+#### Bugetul de Stat
+| Set | Format | Ani | Actualizare |
 |---|---|---|---|
-| Curs valutar zilnic | bnr.ro/nbrfxrates.xml | XML API | Zilnic |
-| Dobânda cheie | bnr.ro | HTML | Periodic |
-| Inflație | bnr.ro | PDF | Trimestrial |
-| Indicatori monetari | bnr.ro | HTML, PDF | Periodic |
+| Bugetul de stat | DOC, XML | 2014-2026 | Anual |
+| Sinteză bugetară | XLS | anual | Anual |
+| Clasificații bugetare | XLS | 2020+ | Anual |
+| Rectificări bugetare | XLS | 2024 | Periodic |
+| Execuții bugetare lunare | XLS, XLSX | 2016-2018, 2024+ | Lunar |
+| Rapoarte trimestriale | XLS | 2024+ | Trimestrial |
+| Rapoarte semestriale | XLS | 2024+ | Semestrial |
 
-### D. Bugete Locale (exemple)
-
-| Set | Instituție | Ani |
+#### Datorie Publică
+| Set | Format | Ani |
 |---|---|---|
-| Bugete Consiliul Județean Braila | CJ Braila | 2020-2025 |
-| Bugete Consiliul Județean Vrancea | CJ Vrancea | 2021-2025 |
-| Bugete Consiliul Județean Cluj | CJ Cluj | 2022-2025 |
-| Bugete Primăria Călărași | Primăria Călărași | 2023-2025 |
-| Bugete Primăria Cluj-Napoca | Primăria Cluj | 2022+ |
-| Buget local jud. Bistrița-Năsăud | CJ BN | 2022+ |
-| Bugete Primăria Săliștea AB | Primăria Săliștea | 2023-2025 |
-| + încă ~200 de seturi de bugete locale | Diverse primării | 2015-2026 |
+| Datoria guvernamentală 2025 | XLS | 2025 |
+| Datoria guvernamentală 2020-2024 | XLS | 2020-2024 |
+| Titluri de stat | — | curent |
 
-### E. Subvenții și Fonduri
+#### Situații Financiare (companii)
+| Set | Format | Ani | Actualizare |
+|---|---|---|---|
+| Situații financiare | CSV, TXT | 2008-2025 | Anual |
+| Date de identificare plătitori | CSV, TXT, ZIP | 2018-2026 | Trimestrial |
+| Arierate | XLS | curent | Periodic |
 
-| Set | Instituție | Ani |
+#### Liste și Nomenclatoare
+| Set | Format |
+|---|---|
+| Lista entităților publice | XLS |
+| Lista organismelor din sectorul public | XLSX, XLS |
+| Lista întreprinderilor publice monitorizate | XLSX |
+| Indicatori întreprinderi publice | PDF, XLSX, XLS |
+| Număr salariați bugetari | XLS |
+| Nomenclatoare geografice (străzi, 42 județe) | XML |
+
+### A2. ANAF — 49 seturi
+
+#### Buletine Statistice Fiscale
+| Set | Format | Ani | Actualizare |
+|---|---|---|---|
+| Buletin statistic fiscal | XLS, XLSX | 2013-2026 | Trimestrial (nr. 1-4) |
+| Datoriile către bugetul de stat | PDF, CSV | curent | Periodic |
+
+#### Buget și Achiziții ANAF
+| Set | Format | Ani |
 |---|---|---|
-| Subvenții de la bugetul de stat | ONRC/MFP | 2020-2026 |
-| Plăți fonduri externe | MDRAP | 2007-2023 |
-| Fondul de rezervă al Guvernului | Guvern | 2023+ |
-| Plăți Programul Anghel Saligny | MDRAP | 2022+ |
-| Plăți AFIR (fonduri agricole) | AFIR | 2020-2023 |
+| Bugetul de cheltuieli ANAF | XML, PDF | 2022-2026 |
+| Programul anual al achizițiilor publice | XML, XLS | 2021-2025 |
+| Situația executării contractelor | XML | 2025 |
+| Raport de performanță ANAF | XML | 2021-2025 |
+| Plan Strategic ANAF 2025-2028 | XML | 2025-2028 |
+| Strategia ANAF 2021-2024 | XML | 2021-2024 |
+| Calendarul obligațiilor fiscale | XML | 2021-2026 |
 
-### F. Finanțare Partide
+### A3. AEP — Autoritatea Electorală Permanentă — 24 seturi
 
-| Set | Instituție | Ani |
+| Set | Format | An |
 |---|---|---|
-| Alegeri parlamentare 2016 + 2020 | AEP | 2016, 2020 |
-| Alegeri locale 2012, 2014, 2020 | AEP | 2012-2020 |
-| Alegeri prezidențiale 2009, 2014 | AEP | 2009, 2014 |
-| Alegeri europarlamentare 2009, 2014 | AEP | 2009, 2014 |
+| Alegeri parlamentare | CSV, TXT | 2012, 2016, 2020 |
+| Alegeri locale | CSV, TXT, XLS | 2012, 2016, 2020 |
+| Alegeri prezidențiale | XLS | 2009, 2014 |
+| Alegeri europarlamentare | CSV, XLS | 2009, 2014, 2019 |
+| Referendumuri | XLS, XLSX | 2009, 2012, 2018, 2019 |
+| Salarii AEP | XLSX | 2018 |
+| Plăți AEP | XLSX | 2017, 2018 |
+| Bilanț AEP | XLSX | 2017, 2018 |
+| Bugetul AEP | XLSX | 2018 |
+
+### A4. Ministerul Energiei — 21 seturi
+
+| Set | Format | Ani |
+|---|---|---|
+| Execuție bugetară | XLS | 2016-2019 |
+| Bilanțuri | XLS | 2015-2016 |
+| Acțiuni deținute de stat la companii | XLS, XLSX | curent |
+| Portofoliul operatorilor economici | XLS, ODS | 2018 |
+| Contracte de concesiune | XML, ODS | 2017-2018 |
+| Contracte de achiziții publice | XML | 2016 |
+| Drepturi salariale | XML | curent |
+| Plăți salarii | XLS | 2016 |
+
+### A5. CNI — Compania Națională de Investiții — 17 seturi
+
+| Set | Ani |
+|---|---|
+| Obiective CNI recepționate | 2002-2020 (anual) |
+
+**Notă:** Fiecare set conține lista obiectivelor de investiții finanțate de stat în acel an.
+
+### A6. MFE — Ministerul Investițiilor Europene — 6 seturi
+
+| Set | Format |
+|---|---|
+| Proiecte contractate (fonduri europene) | XLSX |
+| Stadiul absorbției 2014-2020 | XLSX |
+| Stadiul absorbției 2021-2027 | XLSX |
+| Transparentizare SMIS 2007-2013 | XLS, ODT, CSV |
+| Informații fonduri europene din SMIS | CSV, XLSX, XLS |
+| Informații SMIS CSNR | XML |
+
+### A7. AMEPIP — 2 seturi
+
+| Set | Format |
+|---|---|
+| Indicatori financiari, nefinanciari și de guvernanță corporativă | XLSX |
+| Export date indicatori financiari | CSV |
+
+### A8. AAAS — 1 set
+
+| Set | Format |
+|---|---|
+| Plan anual de achiziții | XLS |
+
+### A9. Consilii Județene — ~200+ seturi
+
+Bugete locale și execuții de la: Brăila, Vrancea, Cluj, Bistrița-Năsăud, Mureș, Tulcea, Argeș, Suceava și altele. Formate: XLS, XLSX.
+
+### A10. Primării — ~50+ seturi
+
+Bugete locale de la: Cluj-Napoca, Călărași, Brașov, Craiova, Alba Iulia, Timișoara, Sebeș, Câmpia Turzii, Gherla, Odorheiu Secuiesc, Copșa Mică, Luduș, Sector 2, Sector 4, Sector 6 București + comune (Bolintin Deal, Bobicești, Berceni, Puiești, Călinești, Găgești, Joița, Săliștea, Ariceștii Rahtivani).
+
+### A11. ONRC — 76 seturi (relevante financiar: situații și date firme)
+
+| Set | Format | Ani |
+|---|---|---|
+| Firme înregistrate (dumps lunare CSV) | CSV | 2013-2026 (lunar) |
+| Nomenclatoare (cod stare, CAEN, etc.) | CSV | curent |
+| Activități autorizate | CSV | 2025 |
+| Buget ONRC 2013 | XLS | 2013 |
 
 ---
 
-## Prezentare
+## Surse Externe
+
+### BNR — Banca Națională a României (nu e pe data.gov.ro)
+
+| Date | URL | Format | Acces |
+|---|---|---|---|
+| Curs valutar zilnic | bnr.ro/nbrfxrates.xml | XML API | Gratuit, fără auth |
+| Dobânda de politică monetară | bnr.ro | HTML | Gratuit |
+| Raport asupra inflației | bnr.ro | PDF | Trimestrial |
+| Raport de stabilitate financiară | bnr.ro | PDF | Anual |
+| Balanța de plăți | bnr.ro | PDF | Lunar |
+| Indicatori monetari | bnr.ro | HTML, PDF | Periodic |
+
+### ASF — Autoritatea de Supraveghere Financiară (nu e pe data.gov.ro)
+
+| Date | URL |
+|---|---|
+| Piața de capital — rapoarte emitenți | asfromania.ro |
+| Fonduri de pensii private — active, contribuții | asfromania.ro |
+| Piața de asigurări — prime, daune | asfromania.ro |
+| Intermediari autorizați | asfromania.ro |
+| Rapoarte anuale | asfromania.ro |
+
+---
+
+## Prezentare Proposată
 
 ### Pagina Principală a Domeniului
 
@@ -212,153 +346,68 @@ banii pe care statul îi încasează (taxe, impozite, contribuții), banii pe ca
 ┌──────────────────────────────────────────────────────────────┐
 │ 💰 Buget și Finanțe                                           │
 │                                                               │
-│ Banii publici ai României — de unde vin și unde se duc.       │
+│ Banii publici ai României — de unde vin, unde se duc.         │
 │                                                               │
-│ ┌──────────────────────────────────────────────────────┐      │
-│ │ 📊 ÎN CIFRE                                            │      │
-│ │                                                        │      │
-│ │   Buget de stat 2026      Datorie publică    Curs euro │      │
-│ │   ┌──────────────┐       ┌──────────────┐  ┌─────────┐│      │
-│ │   │  ~686 mld lei│       │  ~580 mld lei│  │  5.23   ││      │
-│ │   │  (+8% vs 25) │       │  (52% din PIB)│  │  RON    ││      │
-│ │   └──────────────┘       └──────────────┘  └─────────┘│      │
-│ │                                                        │      │
-│ │   Deficit      TVA colectat  Cheltuieli cu personalul  │      │
-│ │   ┌──────────┐ ┌──────────┐  ┌────────────────────┐   │      │
-│ │   │  ~5.6%   │ │  ~15%    │  │  ~180 mld lei      │   │      │
-│ │   │  din PIB │ │  din PIB │  │  (cel mai mare cap)│   │      │
-│ │   └──────────┘ └──────────┘  └────────────────────┘   │      │
-│ └──────────────────────────────────────────────────────┘      │
+│ 📊 INSTITUȚII ÎN ACEST DOMENIU                                │
 │                                                               │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐          │
-│ │ 📋       │ │ 🏘️       │ │ 📈       │ │ 💳       │          │
-│ │ Buget    │ │ Bugete   │ │ Datorie  │ │ Taxe     │          │
-│ │ de Stat  │ │ Locale   │ │ Publică  │ │ Impozite │          │
-│ │ 6 seturi │ │ 200+ set │ │ 3 seturi │ │ 6+ seturi│          │
-│ └──────────┘ └──────────┘ └──────────┘ └──────────┘          │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐          │
-│ │ 💱       │ │ 📊       │ │ 🏗️       │ │ 🗳️       │          │
-│ │ Curs     │ │ Situații │ │ Fonduri  │ │ Partide  │          │
-│ │ Valutar  │ │ Financi- │ │ Subvenții│ │ 6 seturi │          │
-│ │ (API live│ │ are      │ │ 73+ set  │ └──────────┘          │
-│ │ zilnic)  │ │ 30 set   │ └──────────┘                       │
-│ └──────────┘ └──────────┘                                     │
+│ 🏛️ Ministerul Finanțelor (109 seturi)                        │
+│   📋 Bugetul de Stat · 📈 Datorie Publică · 💼 Situații Fin. │
+│                                                               │
+│ 💳 ANAF (49 seturi)                                           │
+│   📊 Buletine Fiscale · 💰 Buget ANAF · 📅 Obligații Taxe    │
+│                                                               │
+│ 🏛️ AEP (24 seturi)                                           │
+│   🗳️ Alegeri · 💰 Finanțare Partide                          │
+│                                                               │
+│ ⚡ Ministerul Energiei (21 seturi)                            │
+│   📋 Execuții · 📊 Acțiuni Stat · 🏗️ Concesiuni             │
+│                                                               │
+│ 🏗️ CNI (17 seturi)                                           │
+│   🏘️ Investiții Publice                                      │
+│                                                               │
+│ 🌐 MFE (6 seturi)                                             │
+│   💶 Fonduri Europene · Absorbție                             │
+│                                                               │
+│ 🏛️ BNR (API live)                                            │
+│   💱 Curs Valutar Zilnic · 📈 Dobânzi · 📉 Inflație          │
+│                                                               │
+│ 🏛️ ASF                                                        │
+│   📊 Piață Capital · Pensii · Asigurări                       │
+│                                                               │
+│ + AMEPIP, AAAS, Consilii Județene, Primării, ONRC             │
 └──────────────────────────────────────────────────────────────┘
 ```
 
-### Pagina Subdomeniu: Bugetul de Stat
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│ 💰 Buget → 📋 Bugetul de Stat                                │
-│                                                               │
-│ ┌──────────────────────────────────────────────────────┐      │
-│ │ 📊 EVOLUȚIA BUGETULUI DE STAT (2014-2026)            │      │
-│ │                                                        │      │
-│ │ 📈 Venituri ↗  Cheltuieli ↗  Deficit ↘                 │      │
-│ │                                                        │      │
-│ │  2014 ████████████████  = 220 mld                      │      │
-│ │  2015 █████████████████ = 240 mld                      │      │
-│ │  ...                                                    │      │
-│ │  2026 ██████████████████████████████ = 686 mld         │      │
-│ │                                                        │      │
-│ │  📥 Descarcă toate datele (CSV)                        │      │
-│ └──────────────────────────────────────────────────────┘      │
-│                                                               │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐          │
-│ │ Legea    │ │ Execuția │ │ Rectifi- │ │ Clasifi- │          │
-│ │ Bugetară │ │ Bugetară │ │ cări     │ │ cații    │          │
-│ │ anual    │ │ lunară   │ │           │ │ Bugetare │          │
-│ └──────────┘ └──────────┘ └──────────┘ └──────────┘          │
-│                                                               │
-│ ──────────────────────────────────────────────────────       │
-│ 💡 Știai că? Cel mai mare capitol bugetar este               │
-│     „Asistența socială" (~180 mld lei), urmat de             │
-│     „Sănătate" și „Educație".                                │
-└──────────────────────────────────────────────────────────────┘
-```
-
-### Pagina Detaliu: Bugetul pe un An
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│ 💰 Buget → 📋 Bugetul de Stat → 2026                          │
-│                                                               │
-│ Bugetul de Stat 2026                                          │
-│ ════════════════════════                                      │
-│                                                               │
-│ 📄 Legea bugetară: Legea nr. .../2026                        │
-│ 📅 Adoptat: Decembrie 2025                                   │
-│                                                               │
-│ ┌─────── VENITURI (total: 624 mld lei) ───────┐              │
-│ │                                                │              │
-│ │ 💳 TVA                    ████████████████  31% │              │
-│ │ 💳 Contribuții sociale    ██████████████    29% │              │
-│ │ 💳 Impozit pe venit       ████████          17% │              │
-│ │ 💳 Accize                 ████              8%  │              │
-│ │ 💳 Impozit pe profit      ███               6%  │              │
-│ │ 💳 Alte venituri          ████              9%  │              │
-│ └────────────────────────────────────────────────┘              │
-│                                                               │
-│ ┌─────── CHELTUIELI (total: 686 mld lei) ──────┐              │
-│ │                                                │              │
-│ │ 👥 Asistență socială   █████████████████████ 26% │              │
-│ │ 🏥 Sănătate           ██████████████        16% │              │
-│ │ 🎓 Educație           ████████████          15% │              │
-│ │ 🛡️ Apărare + Ordine  █████████             11% │              │
-│ │ 🏗️ Investiții         ███████               9%  │              │
-│ │ 💰 Dobânzi datorie    █████                 6%  │              │
-│ │ 🌾 Agricultură        ████                  5%  │              │
-│ │ 🏛️ Cultură + justiție ███                   4%  │              │
-│ │ 🌐 Altele             ████████             12%  │              │
-│ └────────────────────────────────────────────────┘              │
-│                                                               │
-│ 📊 📈 Compară cu 2025 | 2024 | 2023...                       │
-│                                                               │
-│ 📥 [DOC original] [XLS original] [CSV] [JSON]                │
-│ 🔗 Sursa: Ministerul Finanțelor — data.gov.ro                │
-│                                                               │
-│ ───────────────────────────────────────────────────────       │
-│ 🌍 Vezi și:                                                    │
-│   📈 Datoria publică — cât datorează statul                   │
-│   🏘️ Bugetul local al județului tău                          │
-│   📊 Execuția bugetară — cât s-a cheltuit efectiv             │
-└──────────────────────────────────────────────────────────────┘
-```
-
-### Cardul Rezumat (pentru pagina principală a site-ului)
+### Card Rezumat (pentru pagina principală a site-ului)
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │ 💰 Buget și Finanțe  ▸                                        │
 │                                                               │
-│ Banii publici ai României.                                    │
+│ 12 instituții · ~500+ seturi de date                          │
 │                                                               │
-│ 📋 Buget de stat (686 mld lei în 2026)                       │
-│ 🏘️ Bugete locale (200+ seturi per județ)                    │
-│ 📈 Datorie publică (52% din PIB)                             │
-│ 💳 Taxe (TVA 31% din venituri)                               │
-│ 💱 Curs valutar BNR (API live zilnic)                        │
-│                                                               │
-│ > 300 de seturi de date                                      │
+│ 📋 Bugetul de Stat        🏘️ Bugete Locale                   │
+│ 📈 Datorie Publică         💳 Taxe și Impozite                │
+│ 💱 Curs Valutar (live)    💼 Situații Financiare              │
+│ 🏗️ Fonduri Europene       🗳️ Finanțare Partide              │
 └──────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Întrebări
+## Întrebări Frecvente
 
-| Întrebare | Răspuns | Subdomeniu |
+| Întrebare | Răspuns rapid | Unde găsești |
 |---|---|---|
-| **„Cât a cheltuit guvernul anul trecut?"** | 686 mld lei (2026) | Buget de Stat |
-| **„Pe ce se duc cei mai mulți bani?"** | Asistență socială (26%) | Buget de Stat |
-| **„Cât e datoria publică a României?"** | ~580 mld lei (52% PIB) | Datorie Publică |
-| **„Ce salariu are primarul meu?"** | Vezi bugetul local → cheltuieli de personal | Bugete Locale |
-| **„Cât e cursul euro azi?"** | 5.2356 RON (BNR, zilnic) | Curs Valutar |
-| **„Câți bani a primit partidul X?"** | Subvenții + donații (AEP) | Finanțare Partide |
-| **„Cât TVA s-a colectat luna trecută?"** | Vezi Buletinul Statistic Fiscal | Taxe |
-| **„Ce firme au primit subvenții?"** | Subvenții de la buget | Subvenții |
-| **„Cât plătește statul pe dobânzi la datorie?"** | ~6% din cheltuieli | Datorie Publică |
-| **„Cum evoluează deficitul bugetar?"** | Creștere/scădere pe ani | Buget de Stat |
-| **„Ce buget are ministerul X?"** | Fiecare minister are alocare proprie | Bugete Instituții |
-| **„Cât a costat Programul Anghel Saligny?"** | Vezi plățile | Subvenții |
+| „Cât e bugetul pe 2026?" | ~686 mld lei | Bugetul de Stat |
+| „Pe ce se duc banii?" | Asistență socială (26%) | Bugetul de Stat → Cheltuieli |
+| „Cât e datoria publică?" | ~580 mld lei (52% PIB) | Datorie Publică |
+| „Cât e cursul euro azi?" | BNR, zilnic | Curs Valutar (API live) |
+| „Câte firme s-au înființat luna asta?" | ONRC, CSV lunar | Situații Financiare |
+| „Cât TVA s-a colectat?" | Vezi Buletinul Statistic Fiscal | Taxe |
+| „Câți bani a primit partidul X?" | AEP — venituri + subvenții | Finanțare Partide |
+| „Ce investiții a făcut statul în orașul meu?" | CNI + MDRAP | Investiții |
+| „Câți bani europeni a absorbit România?" | MFE — stadiu absorbție | Fonduri Europene |
+| „Ce buget are ministerul Sănătății?" | Bugetul de Stat | Bugetul de Stat |
+| „Ce salarii sunt la bugetari?" | Număr salariați + indicatori | Întreprinderi Publice |
+| „Câte firme au datorii la stat?" | Arierate + Datorii buget | Taxe |
