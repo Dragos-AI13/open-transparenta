@@ -1,7 +1,7 @@
 # Ticket #1.2 — Inițializare Next.js + Tailwind
 
 **ID:** TICKET-1.2
-**Status:** ⏳ Pending
+**Status:** ✅ Done
 **Feature:** 1 — 🏗️ Fundația
 **Dependențe:** — (poate rula în paralel cu 1.1)
 
