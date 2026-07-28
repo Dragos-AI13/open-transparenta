@@ -1,7 +1,7 @@
 # Ticket #1.1 — Instalare Meilisearch pe VPS
 
 **ID:** TICKET-1.1
-**Status:** ⏳ Pending
+**Status:** ✅ Done
 **Feature:** 1 — 🏗️ Fundația
 **Dependențe:** — (primul ticket)
 
