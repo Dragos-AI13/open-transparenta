@@ -1,110 +1,364 @@
-# 🏥 Sănătate
+# 🏥 Domeniul 2 — Sănătate
 
-### Descriere
+> Dosar complet: toate instituțiile, toate seturile de date, toate sursele.
+> Verificat pe data.gov.ro + surse proprii, Iulie 2026.
 
-Date despre sistemul medical românesc: spitale, paturi, personal, medicamente, boli, finanțare. Orice cetățean poate găsi informații despre spitalul din orașul lui, ce medicamente sunt compensate, sau câte cazuri de o boală s-au înregistrat.
+---
 
-### Instituții Principale
+## Cuprins
 
-| Instituție | Seturi | Site |
-|---|---|---|
-| Ministerul Sănătății | 111 | ms.ro |
-| CNAS — Casa Națională de Asigurări de Sănătate | 32 | cnas.ro |
-| ANMCS — Autoritatea Națională de Management al Calității în Sănătate | 7 | anmcs.ro |
-| INSP — Institutul Național de Sănătate Publică | 14 | insp.gov.ro |
+1. [Descriere](#descriere)
+2. [Instituții și surse](#instituții)
+3. [Arborele complet](#arborele-complet)
+4. [Inventar complet — toate seturile de date](#inventar-complet)
+5. [Surse din afara data.gov.ro](#surse-externe)
+6. [Prezentare propusă](#prezentare)
+7. [Întrebări frecvente](#întrebări)
 
-### Subdomenii
+---
+
+## Descriere
+
+Date despre sistemul medical românesc: spitale și paturi, personal medical, medicamente și prețuri,
+boli și prevenție, vaccinări, finanțarea sănătății și achiziții sanitare.
+
+**Pentru cetățean:** „Cum e sistemul medical în orașul meu?"
+
+---
+
+## Instituții
+
+### A. Pe data.gov.ro
+
+| # | Instituție | Tip | Seturi | Cod organizație |
+|---|---|---|---|---|
+| 1 | **Ministerul Sănătății (MS)** | Minister | **111** | `ms` |
+| 2 | **CNAS — Casa Națională de Asigurări de Sănătate** | Casă | **32** | `casa-nationala-de-asigurari-de-sanatate` |
+| 3 | **INSP — Institutul Național de Sănătate Publică** | Institut | **14** | `institutul-national-de-sanatate-publica` |
+| 4 | **ANAD — Agenția Națională Anti-Doping** | Agenție | **12** | `agentia-nationala-anti-doping` |
+| 5 | **ANA — Agenția Națională Antidrog** | Agenție | **10** | `agentia-nationala-antidrog` |
+| 6 | **ANMCS — Autoritatea Națională de Management al Calității în Sănătate** | Autoritate | **7** | `autoritatea-nationala-de-managament-al-calitatii-in-sanatate` |
+
+### B. În afara data.gov.ro
+
+| # | Instituție | Tip | Date disponibile | Acces |
+|---|---|---|---|---|
+| 7 | **ANMDMR — Agenția Națională a Medicamentului și Dispozitivelor Medicale** | Agenție | Medicamente autorizate, prospecte, dispozitive medicale | anm.ro |
+| 8 | **Ordinul Asistenților Medicali (OAMGMAMR)** | Ordin | Registru asistenți medicali | oammr.ro |
+
+---
+
+## Arborele Complet
 
 ```
-🏥 Sănătate
-├── 🏥 Spitale
-│   ├── Paturi clinice
-│   │   ├── Pe județe
-│   │   ├── Pe specialități
-│   │   └── Pe tip proprietate (public/privat)
-│   ├── Cheltuieli spitale
+🏥 SĂNĂTATE
+│
+├── 🏥 SPITALE
+│   ├── Unități sanitare și paturi
+│   │   ├── Paturi clinice în spitale (2015-2024, MS + INSP)
+│   │   ├── Paturi de spital pentru copii (MS)
+│   │   ├── Lista unităților cu paturi publice
+│   │   ├── Unități sanitare și paturi (2015, 2016, MS)
+│   │   └── Indicatori sintetici (unități, paturi, personal)
+│   │
 │   ├── Personal medical
-│   │   ├── Medici
-│   │   ├── Asistenți
-│   │   └── Personal auxiliar
-│   ├── Acreditări unități sanitare
-│   └── Dotări și aparatură
+│   │   ├── Personal medico-sanitar în România (2015-2024, MS)
+│   │   ├── Personalul medico-sanitar (INSP)
+│   │   └── Resurse în cadrul sistemului de sănătate
+│   │
+│   ├── Finanțare spitale
+│   │   ├── Monitorizarea execuției bugetare a spitalelor (2017-2025, MS)
+│   │   ├── Cheltuieli în spitale (2015, 2018, MS)
+│   │   ├── Cheltuieli sanitare (2015, MS)
+│   │   └── Achiziții derulate de unitățile sanitare (2021-2026, MS)
+│   │
+│   ├── Acreditări ANMCS
+│   │   ├── Unități acreditate (2020-2025)
+│   │   └── Unități în curs de acreditare
+│   │
+│   └── Consilii etice
+│       └── Activitatea consiliilor etice (2016-2023, MS)
 │
-├── 💊 Medicamente
-│   ├── Catalog național prețuri
-│   ├── Medicamente compensate și gratuite
-│   ├── Medicamente autorizate
-│   └── Farmacii
+├── 💊 MEDICAMENTE ȘI FARMACII
+│   ├── Catalogul Național al Prețurilor Medicamentelor (MS)
+│   ├── Consum medicamente suportate din FNUASS și Buget MS (CNAS)
+│   ├── TOP 10 medicamente după DCI (CNAS)
+│   ├── Situația farmaciilor din România (2016-2022, MS)
+│   └── Autorizații tratament planificat în UE (CNAS)
 │
-├── 🦠 Boli și Prevenție
-│   ├── Boli infecțioase
-│   │   ├── Gripă / SARS-CoV-2 / VRS
-│   │   ├── Hepatite virale
-│   │   ├── Tuberculoză
-│   │   ├── HIV / SIDA
-│   │   └── Boli cu potențial epidemic
-│   ├── Boli cronice
-│   │   ├── Diabet
-│   │   ├── Boli cardiovasculare
-│   │   └── Cancer (incidență, prevalență)
-│   ├── Vaccinări
-│   │   ├── Copii (scheme de vaccinare)
-│   │   └── Adulți (gripă, COVID-19)
-│   └── Sănătate mintală
+├── 🦠 BOLI ȘI MORBIDITATE
+│   ├── Boli infecțioase și parazitare (2018+)
+│   ├── Infecții interioare (2018+)
+│   ├── Morbiditate generală (2015-2017+)
+│   ├── Evidența bolnavilor (2018)
+│   ├── Cancer
+│   ├── Diabet
+│   ├── Boli cardiovasculare
+│   ├── Tuberculoză
+│   ├── Hepatite
+│   └── HIV
 │
-├── 📊 Statistici Sanitare
-│   ├── Mortalitate
-│   │   ├── Pe cauze de deces
-│   │   └── Pe județe
+├── 👶 MATERNITATE ȘI COPII
+│   ├── Evidența gravidelor (2018)
+│   ├── Paturi de spital pentru copii
+│   ├── Morbiditate (pediatrie)
+│   └── Demografie (nașteri, mortalitate infantilă)
+│
+├── 💉 VACCINĂRI
+│   ├── Vaccinări 2016-2018 (INSP)
+│   ├── Transparență COVID-19 (MS)
+│   └── Situație vaccinări 2016, 2017 (INSP)
+│
+├── 📊 STATISTICI SANITARE
+│   ├── Mortalitate (MS)
 │   ├── Speranța de viață
-│   ├── Internări spitalicești
-│   ├── Consultații medicale
-│   └── Cheltuieli per capita
+│   ├── Date demografice (MS, INSP)
+│   ├── Principalii indicatori ai stării de sănătate (2015)
+│   ├── Statistică internațională HFA (2014)
+│   ├── Ancheta medicală a stării de sănătate (1997!)
+│   └── Date statistice CNAS
 │
-└── 💰 Finanțare Sănătate
-    ├── Buget Ministerul Sănătății
-    ├── Buget CNAS
-    ├── Achiziții publice în sistemul sanitar
-    ├── Decontări servicii medicale
-    └── Cheltuieli cu medicamentele
+├── 💰 FINANȚARE SĂNĂTATE
+│   ├── Buget venituri-cheltuieli CNAS
+│   ├── Cheltuieli sanitare (2015)
+│   ├── Cheltuieli în spitale
+│   ├── Sistemul asigurărilor sociale de sănătate (2016)
+│   └── Achiziții publice în sistemul sanitar (2016-2026, MS)
+│
+├── 🧪 CALITATEA APEI ȘI MEDIU
+│   ├── Calitatea apei potabile (INSP)
+│   ├── Calitatea apei de îmbăiere (INSP)
+│   └── Deșeuri medicale (2015, MS)
+│
+├── 👥 PACIENT ȘI ACCES LA SERVICII
+│   ├── Mecanismul de Feedback al Pacientului (2017-2026, MS)
+│   ├── Lista spitalelor publice (MS)
+│   ├── Lista furnizori servicii medicale (CNAS)
+│   ├── Denumire furnizori pe specialități și județe
+│   ├── Număr de puncte (CNAS)
+│   ├── Valoarea punctelor și numărul de puncte
+│   └── Raport privind mobilitatea pacientului
+│
+├── 🔬 INDICATORI PROGRAME NAȚIONALE DE SĂNĂTATE
+│   ├── Indicatori PNS (2021-2026, CNAS)
+│   ├── Indicatori programe de sănătate (2021)
+│   └── Programa Națională de Oncologie
+│
+├── 💪 DOPING ȘI DROGURI
+│   ├── Statistici testări doping (2013-2024, ANAD)
+│   └── Consum de droguri în România (2014-2023, ANA)
+│
+└── 🏛️ MEDICAMENTE AUTORIZATE (ANMDMR — sursă externă)
+    ├── Medicamente autorizate
+    ├── Prospecte
+    └── Dispozitive medicale
 ```
 
-### Exemple de Întrebări
+---
 
-1. **„Câte paturi are spitalul din orașul meu?"** → Paturi clinice → filtrează pe județ
-2. **„Ce medicamente sunt compensate pentru diabet?"** → Medicamente compensate
-3. **„Câte cazuri de cancer s-au înregistrat anul trecut?"** → Boli cronice → Cancer
-4. **„Cât cheltuiește statul pe spitalul județean?"** → Cheltuieli spitale
-5. **„Este spitalul din orașul meu acreditat?"** → Acreditări unități sanitare
-6. **„Câți medici sunt în județul meu?"** → Personal medical → Medici
-7. **„Cât a costat vaccinarea anti-COVID?"** → Buget MS / Achiziții
+## Inventar Complet
 
-### Statistici
+### A1. Ministerul Sănătății (MS) — 111 seturi
 
-| Indicator | Valoare |
+#### Spitale și Paturi
+| Set | Format | Ani |
+|---|---|---|
+| Paturi clinice în spitale | XLS | 2024 |
+| Paturi în spitale | XLS | 2023+ |
+| Spitale (unități-paturi) | XLS | multipli |
+| Paturi de spital pentru copii | XLSX | curent |
+| Unități sanitare și paturi | XLS | 2015, 2016 |
+| Lista unităților cu paturi publice | XLS | curent |
+| Indicatori sintetici (unități, paturi, personal) | XLS | multipli |
+
+#### Personal Medical
+| Set | Format | Ani |
+|---|---|---|
+| Personal medico-sanitar în România | XLS, XLSX | 2015-2024 |
+| Personal sanitar 2018 | XLS | 2018 |
+| Resurse în cadrul sistemului de sănătate | XLS | curent |
+
+#### Finanțe Spitale
+| Set | Format | Ani |
+|---|---|---|
+| Monitorizare execuție bugetară spitale (Formulare 1-5) | XLS, XLSX | 2017-2025 |
+| Cheltuieli în spitale | XLS | 2018 |
+| Cheltuieli sanitare | XLS, XLSX | 2015 |
+| Achiziții derulate de unitățile sanitare | XLS | 2021-2026 |
+
+#### Boli și Morbiditate
+| Set | Format | Ani |
+|---|---|---|
+| Boli infecțioase și parazitare | XLS, XLSX | 2018+ |
+| Infecții interioare | XLS | 2018 |
+| Morbiditate | XLS, XLSX | 2015-2017+ |
+| Evidența bolnavilor | XLS | 2018 |
+| Principalii indicatori ai stării de sănătate | XLSX | 2015 |
+
+#### Vaccinări
+| Set | Format | Ani |
+|---|---|---|
+| Vaccinări | XLS | 2018 |
+| Transparență COVID-19 | XLSX | 2020+ |
+
+#### Farmacii și Medicamente
+| Set | Format | Ani |
+|---|---|---|
+| Situația farmaciilor din România | XLS, XLSX | 2016-2022 |
+| Catalogul Național al Prețurilor Medicamentelor | XLS | 2015+ |
+
+#### Pacient
+| Set | Format | Ani |
+|---|---|---|
+| Mecanismul de Feedback al Pacientului | XLS, XLSX | 2017-2026 |
+| Chestionar încredere pacienți | XLS | 2015, 2016 |
+| Lista spitalelor publice | XLS | curent |
+
+#### Altele
+| Set | Format | Ani |
+|---|---|---|
+| Activitatea consiliilor etice | XLS, XLSX | 2016-2023 |
+| Date demografice | XLS, XLSX | 2015, 2024+ |
+| Statistică internațională HFA | XLS | 2014 |
+| Demografie | XLS | 2015+ |
+| Deșeuri medicale | XLS | 2015 |
+| Sistemul asigurărilor sociale de sănătate | XLSX | 2016 |
+| Bolnavi externați din violență domestică | XLSX | 2015+ |
+| Ancheta medicală a stării de sănătate | XLS | 1997 |
+| Mortalitate | XLS | curent |
+| Evidența gravidelor | XLS | 2018 |
+| Situația financiară | XLS | curent |
+
+### A2. CNAS — 32 seturi
+
+| Set | Format | Ani |
+|---|---|---|
+| Indicatori PNS | XLSX, XLS | 2021-2026 |
+| Date statistice CNAS | XLSX | curent |
+| Consum medicamente suportate din FNUASS | XLSX | curent |
+| TOP 10 medicamente după DCI | XLSX | curent |
+| Lista furnizori servicii medicale | XLSX, XLS | curent |
+| Denumire furnizori pe specialități și județe | XLS | curent |
+| Număr de puncte | XLSX | curent |
+| Valoarea punctelor | XLSX | curent |
+| Raport mobilitate pacient | XLSX | curent |
+| Buget venituri-cheltuieli | XLSX, PDF | 2020+ |
+| Autorizații tratament planificat UE | PDF | curent |
+| Seturi de date furnizate de CNAS | XLSX, DOCX | curent |
+| Plan de publicare CNAS | XLSX | 2022 |
+| Indicatori programe de sănătate (inclusiv Oncologie) | XLSX | 2021 |
+
+### A3. INSP — 14 seturi
+
+| Set | Format |
 |---|---|
-| Total seturi de date | ~150 |
-| Instituții implicate | 4 principale |
-| Formate dominante | XLSX, XLS, PDF |
-| Actualizare | Anuală (majoritatea), trimestrial (achiziții) |
+| Unități cu paturi | CSV, XLS, XLSX |
+| Personalul medico-sanitar | CSV |
+| Morbiditate | CSV, XLSX |
+| Infecții interioare | CSV |
+| Cheltuieli în spitale | CSV |
+| Demografie | CSV |
+| Boli infecțioase și parazitare | CSV |
+| Vaccinări | CSV |
+| Evidența gravidelor | CSV |
+| Calitatea apei potabile | XLSX |
+| Calitatea apei de îmbăiere | XLSX |
+| Situație vaccinări | CSV | 2016, 2017 |
 
-### Seturi de Date Notabile (pe data.gov.ro)
+### A4. ANAD — 12 seturi
 
-| Set | Instituție | Format | An |
-|---|---|---|---|
-| Paturi clinice în spitale | MS | XLS | 2018-2024 |
-| Cheltuieli în spitale | MS | XLS | 2018 |
-| Acreditarea unităților sanitare | MS | XLSX | 2020-2025 |
-| Boli infecțioase și parazitare | MS | XLS | 2018+ |
-| Boli infecțioase (anual) | MS | XLS | 2014+ |
-| Catalogul național al prețurilor medicamentelor | MS | XLS | curent |
-| Activitate sanitară | MS | XLS | 2015+ |
-| Consilii etice în spitale | MS | XLSX | 2017-2022 |
-| Achiziții publice în sistemul sanitar | MS/CNAS | XLSX | 2017-2026 |
-| Bolnavi externați din violență domestică | MS | XLS | 2015+ |
+| Set | Format | Ani |
+|---|---|---|
+| Statistică testări doping | XLS, XLSX | 2013-2024 (anual) |
 
-### Riscuri Cunoscute
+### A5. ANA — 10 seturi
 
-- Catalogul medicamentelor e uneori în PDF, dificil de extras tabelele
-- Unele seturi sunt istorice (2015, 2018) — nu mai au actualizări
-- Datele despre personal medical nu sunt defalcate suficient de granular
+| Set | Format | Ani |
+|---|---|---|
+| Date statistice consum droguri | XLS, XLSX | 2014-2023 (anual) |
+
+### A6. ANMCS — 7 seturi
+
+| Set | Format | Ani |
+|---|---|---|
+| Acreditarea unităților sanitare | **CSV, XLSX, JSON, XML** | 2020-2025 |
+
+---
+
+## Surse Externe
+
+| Instituție | Date publice | URL |
+|---|---|---|
+| **ANMDMR** | Medicamente autorizate, prospecte, dispozitive medicale, registru | anm.ro |
+| **OAMGMAMR** | Registrul asistenților medicali | oammr.ro |
+
+---
+
+## Prezentare Propusă
+
+### Pagina Principală a Domeniului
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│ 🏥 Sănătate                                                   │
+│                                                               │
+│ Datele sistemului medical românesc.                           │
+│                                                               │
+│ 📊 INSTITUȚII ÎN ACEST DOMENIU                                │
+│                                                               │
+│ 🏛️ Ministerul Sănătății (111 seturi)                         │
+│   🏥 Spitale · 💊 Medicamente · 🦠 Boli · 💰 Finanțare       │
+│                                                               │
+│ 🏛️ CNAS (32 seturi)                                          │
+│   🩺 Asigurări · 📊 Indicatori · 💊 Medicamente              │
+│                                                               │
+│ 🏛️ INSP (14 seturi)                                          │
+│   💧 Apă · 📈 Statistici · 💉 Vaccinări                      │
+│                                                               │
+│ 🏛️ ANMCS (7 seturi)                                          │
+│   ✅ Acreditări spitale (CSV/JSON/XML)                        │
+│                                                               │
+│ 🏛️ ANAD (12 seturi) · Agenția Națională Anti-Doping          │
+│ 🏛️ ANA (10 seturi) · Consum droguri                          │
+│ 🏛️ ANMDMR · Medicamente autorizate (site propriu)            │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### Card Rezumat (pentru pagina principală a site-ului)
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│ 🏥 Sănătate  ▸                                               │
+│                                                               │
+│ 6+ instituții · ~186 seturi de date                           │
+│                                                               │
+│ 🏥 Spitale și Paturi     💊 Medicamente și Farmacii          │
+│ 🦠 Boli și Morbiditate   💉 Vaccinări                       │
+│ 💰 Finanțare Sănătate    📊 Statistici Sanitare             │
+│ ✅ Acreditări spitale    🧪 Calitate Apă                    │
+└──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Întrebări Frecvente
+
+| Întrebare | Răspuns rapid | Unde găsești |
+|---|---|---|
+| „Câte paturi are spitalul din orașul meu?" | Paturi clinice pe județe | Spitale → Paturi |
+| „Câți medici sunt în județul meu?" | Personal medico-sanitar | Spitale → Personal |
+| „Cât cheltuiește statul pe spitalul X?" | Monitorizare execuție bugetară | Finanțare |
+| „Ce medicamente sunt compensate?" | Catalog prețuri + CNAS | Medicamente |
+| „Este spitalul acreditat?" | Acreditări ANMCS (CSV/JSON) | Acreditări |
+| „Câte cazuri de cancer s-au înregistrat?" | Evidența bolnavi / Indicatori PNS | Boli |
+| „Câți asistenți medicali sunt în România?" | Personal medico-sanitar | Spitale → Personal |
+| „Ce achiziții face un spital?" | Achiziții unități sanitare | Finanțare |
+| „Cât de curată e apa în orașul meu?" | Calitatea apei potabile | Calitate Apă |
+| „Ce vaccinări se fac în România?" | Vaccinări (INSP + MS) | Vaccinări |
+| „Câte testări doping s-au făcut?" | ANAD — statistici anuale | Doping |
+| „Cât e bugetul CNAS?" | Buget venituri-cheltuieli | Finanțare |
+| „Câți bani se dau pe medicamente?" | Consum medicamente suportate | Medicamente |
+| „Ce spitale sunt acreditate?" | Acreditări ANMCS | Acreditări |
+| „Cum evaluează pacienții spitalele?" | Mecanism Feedback Pacient | Pacient |
+| „Ce droguri se consumă în România?" | ANA — statistici | Droguri |
+| „Ce medicamente sunt autorizate?" | ANMDMR (site extern) | Surse externe |
