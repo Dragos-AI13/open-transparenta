@@ -60,6 +60,9 @@ aeroporturi, porturi și metrou.
 │   ├── Promovabilitate prima examinare (2013-2016)
 │   └── Statistici deținători permise
 │
+├── 🚲 MOBILITATE URBANĂ
+│   └── ClujBike — situația bicicletelor din stații (Primăria Cluj, JSON, live)
+│
 ├── 🚂 TRANSPORT FEROVIAR
 │   ├── Mersul trenurilor (9 companii: CFR Călători, Regio, Softrans, Interregional, Astra Trans Carpatic, Transferoviar, FEROTRAFIC, Calea Ferată Moldova, Regiotrans Brașov)
 │   └── Licențe feroviare (AFER — sursă externă)
@@ -184,9 +187,9 @@ aeroporturi, porturi și metrou.
 │ 5+ instituții · ~36+ seturi de date                          │
 │                                                               │
 │ 🚗 Parc Auto și Permise   🚂 Trenuri (mersul trenurilor)    │
-│ 🚌 Transport Public        ✈️ Aeroporturi                  │
-│ ⚓ Transport Naval         🛣️ Drumuri (CNAIR)              │
-│ 🚇 Metrou                  📊 Statistici Transport          │
+│ 🚌 Transport Public        🚲 Mobilitate Urbană            │
+│ ✈️ Aeroporturi             🛣️ Drumuri (CNAIR)             │
+│ ⚓ Transport Naval         🚇 Metrou                       │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -204,3 +207,4 @@ aeroporturi, porturi și metrou.
 | „Ce drumuri sunt blocate/în lucru?" | CNAIR (sursă externă) | Drumuri |
 | „Câți operatori de transport sunt?" | Situația operatorilor (MT) | Marfă/Persoane |
 | „Cum ajung cu metroul?" | METROREX | Metrou |
+| „Unde pot închiria o bicicletă în Cluj?" | ClujBike — stații live (JSON) | Mobilitate Urbană |
