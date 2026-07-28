@@ -43,8 +43,8 @@ boli și prevenție, vaccinări, finanțarea sănătății și achiziții sanita
 
 | # | Instituție | Tip | Date disponibile | Acces |
 |---|---|---|---|---|
-| 7 | **ANMDMR — Agenția Națională a Medicamentului și Dispozitivelor Medicale** | Agenție | Medicamente autorizate, prospecte, dispozitive medicale | anm.ro |
-| 8 | **Ordinul Asistenților Medicali (OAMGMAMR)** | Ordin | Registru asistenți medicali | oammr.ro |
+| 7 | **ANMDMR — Agenția Națională a Medicamentului** | Agenție | **Nomenclator complet medicamente** (XLSX) | nomenclator.anm.ro + anm.ro |
+| 8 | **OAMGMAMR — Ordinul Asistenților Medicali** | Ordin | Registrul asistenților medicali | oammr.ro |
 
 ---
 
@@ -289,7 +289,8 @@ boli și prevenție, vaccinări, finanțarea sănătății și achiziții sanita
 
 | Instituție | Date publice | URL |
 |---|---|---|
-| **ANMDMR** | Medicamente autorizate, prospecte, dispozitive medicale, registru | anm.ro |
+| **ANMDMR** | **Nomenclatorul medicamentelor** — listă completă medicamente autorizate în România (Denumire comercială, DCI, Formă farmaceutică, Cod ATC, Firmă deținătoare) — pagini web + **XLSX descărcabil** | nomenclator.anm.ro/medicamente + nomenclator.anm.ro/files/nomenclator.xlsx |
+| **ANMDMR** | Medicamente autorizate, prospecte, dispozitive medicale | anm.ro |
 | **OAMGMAMR** | Registrul asistenților medicali | oammr.ro |
 
 ---
