@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment
+.env
+.env.*
+!.env.example
+*.token
+*.secret
+*.key
+*.pem
+*.cert
+credentials.json
+secrets/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Next.js
+.next/
+out/
+
+# Meilisearch
+meili_data/
+
+# Crawler data
+crawler/data/
+crawler/*.db
+crawler/*.sqlite
+
+# Logs
+*.log

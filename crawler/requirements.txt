@@ -1,0 +1,9 @@
+# Crawler — Open Transparență
+# Rulează: pip install -r requirements.txt
+
+requests
+scrapy
+python-dotenv
+meilisearch
+pandas
+openpyxl

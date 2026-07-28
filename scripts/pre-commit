@@ -1,0 +1,35 @@
+#!/bin/bash
+# Pre-commit hook — scanează fixture staged pentru secrete
+# Instalare: ln -sf ../../scripts/pre-commit .git/hooks/pre-commit
+
+RED='\033[0;31m'
+NC='\033[0m'
+
+# Patterns de căutat
+PATTERNS=(
+  'ghp_[0-9a-zA-Z]{36}'           # GitHub PAT
+  'gho_[0-9a-zA-Z]{36}'           # GitHub OAuth
+  'github_pat_[0-9a-zA-Z]{85}'    # GitHub fine-grained PAT
+  'sk-[0-9a-zA-Z]{32,}'           # OpenAI
+  'xox[baprs]-[0-9a-zA-Z]{10,}'   # Slack
+  'AKIA[0-9A-Z]{16}'              # AWS AK
+  '-----BEGIN PRIVATE KEY-----'
+  '-----BEGIN RSA PRIVATE KEY-----'
+)
+
+FILES=$(git diff --cached --name-only)
+
+for file in $FILES; do
+  if [ -f "$file" ]; then
+    for pattern in "${PATTERNS[@]}"; do
+      if grep -qE "$pattern" "$file" 2>/dev/null; then
+        echo -e "${RED}⚠️  SECRET DETECTAT in $file${NC}"
+        echo "Pattern: $pattern"
+        echo "Commit BLOCAT. Rulează: git reset HEAD $file"
+        exit 1
+      fi
+    done
+  fi
+done
+
+exit 0

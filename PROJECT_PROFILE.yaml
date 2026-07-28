@@ -1,0 +1,89 @@
+# =============================================================================
+# PROJECT PROFILE — Open Transparență
+# Motor de căutare pentru toate datele publice din România
+# =============================================================================
+
+project:
+  name: "Open Transparență"
+  slug: "open-transparenta"
+  tagline: "Caută orice dată publică din România. Instant."
+  mission: >
+    Să facem datele publice ale statului român cu adevărat accesibile
+    oricărui cetățean — fără conturi, fără birocrație, fără complicații.
+  status: "initial"
+  repo: "https://github.com/Dragos-AI13/open-transparenta"
+
+stack:
+  frontend: "Next.js (PWA) + Tailwind CSS"
+  search: "Meilisearch"
+  crawler: "Python + Scrapy + CKAN API"
+  hosting: "VPS (Hetzner) sau Cloudflare Pages + Workers"
+  database: "Niciuna — doar Meilisearch index"
+
+features:
+  core:
+    - "Căutare full-text peste toate datele publice din România"
+    - "Filtre pe categorii, instituții, formate, județe"
+    - "Legături directe la sursa originală + descărcare fișiere"
+    - "PWA — funcționează pe telefon fără instalare din store"
+  phase1:
+    - "Indexarea celor ~5.192 seturi de pe data.gov.ro"
+    - "Indexare ONRC (dumps CSV lunare — toate firmele din RO)"
+    - "Indexare BNR (curs valutar zilnic API XML)"
+    - "Indexare SEAP (achiziții publice)"
+  phase2:
+    - "Indexare INS TEMPO (1.700+ indicatori statistici)"
+    - "Indexare ANAF (plătitori TVA, buletine fiscale)"
+    - "Indexare portal.just.ro (când revine online)"
+    - "Indexare ANCPI (când revine din atac cibernetic)"
+    - "Hărți cu MapLibre pentru date geospațiale"
+  phase3:
+    - "API public pentru developeri"
+    - "Export bulk pentru firme"
+    - "Rapoarte și analize"
+
+non_goals:
+  - "Autentificare sau conturi de utilizator"
+  - "Notificări push"
+  - "Procesare sau transformare a datelor originale"
+  - "Stocare sau custodie a datelor cu caracter personal"
+  - "Aplicație nativă iOS/Android (PWA e suficient)"
+
+monetization:
+  model: "Freemium — gratuit pentru cetățeni, plată pentru business"
+  free:
+    - "Căutare nelimitată"
+    - "Vizualizare rezultate"
+    - "Descărcări individuale"
+    - "Hartă interactivă"
+  paid:
+    - "API pentru integrare (abonament lunar)"
+    - "Export bulk date"
+    - "Rapoarte personalizate"
+    - "Monitorizare / alerte"
+  note: "Cetățeanul nu plătește NICIODATĂ să acceseze date publice."
+
+legal:
+  license: "MIT (codul) / OGL-ROU-1.0 + CC-BY-4.0 (datele)"
+  data_sources:
+    - "data.gov.ro (OGL-ROU-1.0, CC-BY-4.0)"
+    - "ONRC — dumps CSV lunare (Legea 26/1990, Legea 31/1990)"
+    - "BNR — API curs valutar XML (public, fără auth)"
+    - "SEAP — achiziții publice (Legea 98/2016)"
+    - "INS — TEMPO Online (după înregistrare gratuită)"
+    - "ANAF — date fiscale publice (Legea 544/2001)"
+  rights: >
+    Reutilizarea datelor publice în scop comercial este permisă
+    explicit de Legea 109/2007 și Directiva UE 2019/1024.
+  attribution: "Se menționează sursa pentru fiecare set de date afișat."
+
+architecture:
+  summary: "Crawler → Meilisearch (index) → Next.js (frontend)"
+  flow: |
+    Utilizator → Caută pe site
+           ↓
+    Next.js → Meilisearch (căutare instant ~20ms)
+           ↓
+    Rezultate afișate cu link direct la sursă + download
+           ↑
+    Crawler Python (cron zilnic) → adună date de la 100+ surse
