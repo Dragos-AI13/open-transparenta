@@ -1,20 +1,24 @@
-# Documentație — Open Transparență
+# 📖 Indexul Documentației — Open Transparență
 
 ```
 docs/
-├── planning/           ← Planul proiectului, roadmap, decizii
-│   ├── PLAN.md         ← Documentul fundațional (austă)
-│   ├── ROADMAP.md      ← Etapele de dezvoltare
-│   └── NEXT_ACTIONS.md ← Următoarele task-uri
-├── architecture/       ← Decizii arhitecturale (ADR)
-│   └── 001-stack-choice.md
-└── state/              ← Status curent (se actualizează pe parcurs)
-    ├── PROJECT_STATUS.md
-    └── CHANGELOG.md
+├── 01-vision/             ← De ce facem asta
+├── 02-architecture/       ← Cum e construit
+├── 03-legal/              ← Cadrul legal
+├── 04-domains/            ← Cele 17 domenii de date
+├── 05-features/           ← Specificații funcționalități
+├── 06-development/        ← Ghiduri dezvoltare
+└── 07-research/           ← Cercetare și cataloage de date
 ```
 
-## Documente importante
+## 📋 Rezumat pe Secțiuni
 
-| Document | Ce conține |
-|---|---|
-| [PLAN.md](planning/PLAN.md) | Tot planul: viziune, tehnologii, domenii, design, MVP, monetizare, legal |
+| Secțiune | Ce conține | Cine citește |
+|---|---|---|
+| [01-vision](01-vision/README.md) | Viziune, misiune, principii, model de business | Toată lumea |
+| [02-architecture](02-architecture/README.md) | Arhitectură, stack, decizii tehnice, deploy | Developeri |
+| [03-legal](03-legal/README.md) | Licențe, drepturi de reutilizare, GDPR, atribuire | Legal + Developeri |
+| [04-domains](04-domains/README.md) | Lista completă domenii + subdomenii | Product + Developeri |
+| [05-features](05-features/README.md) | Specificații fiecare feature | Developeri |
+| [06-development](06-development/README.md) | Setup, roadmap, task-uri | Developeri |
+| [07-research](07-research/README.md) | Cercetare surse publice | Product |
