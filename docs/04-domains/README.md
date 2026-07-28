@@ -16,7 +16,7 @@
 | 8 | Mediu | 🌳 | ANPM, ANM, Apele Române, Institutul Geologic | ~255+ | [→ Dosar](08-mediu/README.md) |
 | 9 | Transport | 🚗 | MT, DRPCIV, Informatică Feroviară, METROREX, AFDJ | ~36+ | [→ Dosar](09-transport/README.md) |
 | 10 | Muncă și Social | 👥 | ANOFM, MMFPSPV, ANPIS, ANES, ANPDCA | ~207+ | [→ Dosar](10-munca-si-social/README.md) |
-| 11 | Siguranță și Ordine | 🛡️ | MAI, IGPR, IGPF, IGSU, DGA, IGI, ANP | ~700 | [→](11-siguranta-si-ordine/README.md) |
+| 11 | Siguranță și Ordine | 🛡️ | MAI, IGSU, IGI, DGA, ANP, IGPF, IGPR, Jandarmeria | ~925+ | [→ Dosar](11-siguranta-si-ordine/README.md) |
 | 12 | Agricultură | 🌾 | MADR, APIA, AFIR, ANSVSA | ~30 | [→](12-agricultura/README.md) |
 | 13 | Energie | ⚡ | ANRE, Ministerul Energiei | ~30 | [→](13-energie/README.md) |
 | 14 | Cultură și Patrimoniu | 🏛️ | MC, INP, Arhive, Biblioteci, CNSAS | ~100 | [→](14-cultura-si-patrimoniu/README.md) |
