@@ -34,16 +34,18 @@ bugete administrative, investiții publice, dezvoltare regională, locuințe, ur
 | # | Instituție | Tip | Seturi | Cod |
 |---|---|---|---|---|
 | 1 | **MDRAP / MDLPA — Dezvoltare, Lucrări Publice** | Minister | **1.452** | `mdrap` |
-| 2 | **INA — Institutul Național de Administrație** | Institut | **167** | `institutul-national-de-administratie` |
-| 3 | **ANFP — Funcționari Publici** | Agenție | **140** | `agentia-nationala-a-functionarilor-publici` |
-| 4 | **ANC — Autoritatea pentru Cetățenie** | Autoritate | **38** | `autoritatea-nationala-pentru-cetatenie` |
-| 5 | **ADR — Digitalizare României** | Autoritate | **16** | `agentia-pentru-agenda-digitala-a-romaniei` |
-| 6 | **SGG — Secretariatul General al Guvernului** | Secret. | **13** | `secretariatul-general-al-guvernului` |
-| 7 | **ANRSC — Utilități Publice** | Autoritate | **3** | `autoritatea-nationala-de-reglementare-pentru-serviciile-comunitare-de-utilitati-publice` |
-| 8 | **Cancelaria Prim-Ministrului** | Cancelarie | **2** | `cancelaria-prim-ministrului` |
-| 9 | **Guvernul României** | Guvern | **0** | `guvernul-romaniei` |
-| 10 | **Primării** (~30) | Primărie | ~50+ | fiecare |
-| 11 | **Consilii Județene** (~20) | CJ | ~200+ | fiecare |
+| 2 | **DEPABD — Evidența Persoanelor** | Direcție | **85** | `directia-evidenta-persoanelor-admin-baze-de-date` |
+| 3 | **INA — Institutul Național de Administrație** | Institut | **167** | `institutul-national-de-administratie` |
+| 4 | **ANFP — Funcționari Publici** | Agenție | **140** | `agentia-nationala-a-functionarilor-publici` |
+| 5 | **ANC — Autoritatea pentru Cetățenie** | Autoritate | **38** | `autoritatea-nationala-pentru-cetatenie` |
+| 6 | **ADR — Digitalizare României** | Autoritate | **16** | `agentia-pentru-agenda-digitala-a-romaniei` |
+| 7 | **SGG — Secretariatul General al Guvernului** | Secret. | **13** | `secretariatul-general-al-guvernului` |
+| 8 | **ANRSC — Utilități Publice** | Autoritate | **3** | `autoritatea-nationala-de-reglementare-pentru-serviciile-comunitare-de-utilitati-publice` |
+| 9 | **Cancelaria Prim-Ministrului** | Cancelarie | **2** | `cancelaria-prim-ministrului` |
+| 10 | **Guvernul României** | Guvern | **0** | `guvernul-romaniei` |
+| 11 | **Primării** (~30) | Primărie | ~50+ | fiecare |
+| 12 | **Consilii Județene** (~20) | CJ | ~200+ | fiecare |
+| 13 | **Poliții Locale** (~2) | Poliție | ~12 | `politia-locala-iasi`, `politia-locala-ploiesti` |
 
 ### B. În afara data.gov.ro
 
@@ -99,11 +101,19 @@ bugete administrative, investiții publice, dezvoltare regională, locuințe, ur
 │   ├── Utilitate publică — persoane juridice
 │   └── Buget SGG
 │
+├── 🆔 EVIDENȚA PERSOANELOR (DEPABD)
+│   ├── Acte de naștere (semestrial, 2014-2023, 85 seturi)
+│   ├── Acte de căsătorie (semestrial)
+│   ├── Acte de deces (semestrial)
+│   ├── Acte de identitate / Cărți de identitate (semestrial)
+│   └── Furnizări de date din Registrul Național de Evidență a Persoanelor
+│
 ├── 🏙️ URBANISM ȘI CONSTRUCȚII
+│   ├── Certificate de urbanism (CJ Vrancea, CJ Mureș, Primăria Cluj)
+│   ├── Autorizații de construire (CJ Vrancea, CJ Mureș, etc.)
 │   ├── PUG — Planuri Urbanistice Generale
-│   ├── Autorizații de construire
-│   ├── Certificate de urbanism
-│   └── RLU — Regulamente Locale de Urbanism
+│   ├── RLU — Regulamente Locale de Urbanism
+│   └── Arhitectură, urbanism, amenajarea teritoriului
 │
 ├── 🏘️ LOCUINȚE
 │   ├── Locuințe sociale
@@ -140,10 +150,10 @@ bugete administrative, investiții publice, dezvoltare regională, locuințe, ur
 │ 11+ instituții · ~1.600+ seturi de date                      │
 │                                                               │
 │ 🏛️ Dezvoltare Regională   👥 Funcționari Publici           │
-│ 🎓 INA — Formare           🛂 Cetățenie                     │
-│ 📋 Transparență            🏙️ Urbanism                     │
-│ 🏘️ Locuințe                💡 Utilități Publice            │
-│ 🏛️ Bugete Locale           📊 Statistici Funcții Publice   │
+│ 🎓 INA — Formare           🆔 Evidența Persoanelor        │
+│ 🛂 Cetățenie                🏙️ Urbanism                   │
+│ 🏘️ Locuințe                💡 Utilități Publice           │
+│ 🏛️ Bugete Locale           📊 Statistici Funcții Publice │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -154,6 +164,10 @@ bugete administrative, investiții publice, dezvoltare regională, locuințe, ur
 | Întrebare | Răspuns rapid | Unde găsești |
 |---|---|---|
 | „Câți funcționari publici sunt în România?" | ANFP — structură funcționari | Funcționari Publici |
+| „Câte nașteri s-au înregistrat anul trecut?" | DEPABD — acte de naștere | Evidența Persoanelor |
+| „Câte căsătorii s-au înregistrat?" | DEPABD — acte de căsătorie | Evidența Persoanelor |
+| „Câte decese s-au înregistrat?" | DEPABD — acte de deces | Evidența Persoanelor |
+| „Câte cărți de identitate s-au eliberat?" | DEPABD — cărți de identitate | Evidența Persoanelor |
 | „Ce proiecte se finanțează prin PNDL?" | MDRAP — PNDL | Dezvoltare Regională |
 | „Ce investiții se fac prin Anghel Saligny?" | Plăți PNIAS | Dezvoltare Regională |
 | „Cum obțin cetățenia română?" | ANC — date statistice | Cetățenie |
