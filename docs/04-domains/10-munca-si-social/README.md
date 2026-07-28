@@ -37,13 +37,14 @@ egalitate de șanse, violență domestică, condiții de muncă.
 | 3 | **ANPIS — Plăți și Inspecție Socială** | Agenție | **6** | `agentia-nationala-pentru-plati-si-inspectie-sociala` |
 | 4 | **ANES — Egalitate de Șanse** | Agenție | **5** | `agentia-nationala-pentru-egalitatea-de-sanse-intre-femei-si-barbati` |
 | 5 | **ANPDCA — Protecția Copilului** | Autoritate | **2** | `autoritatea-nationala-pentru-protectia-drepturilor-copilului-si-adoptie` |
+| 6 | **Consultare Publică** | Minister | **18** | `ministerul-pentru-consultare-publica-si-dialog-civic` |
 
 ### B. În afara data.gov.ro
 
 | # | Instituție | Date disponibile | Acces |
 |---|---|---|---|
-| 6 | **CNPP — Casa Națională de Pensii Publice** | Pensii, pensionari, punct de pensie | cnpp.ro |
-| 7 | **Inspecția Muncii** | Accidente muncă, contracte muncă, amenzi | inspectiamuncii.ro |
+| 7 | **CNPP — Casa Națională de Pensii Publice** | Pensii, pensionari, punct de pensie | cnpp.ro |
+| 8 | **Inspecția Muncii** | Accidente muncă, contracte muncă, amenzi | inspectiamuncii.ro |
 
 ---
 
