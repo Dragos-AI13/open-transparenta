@@ -10,7 +10,7 @@
 | 2 | Sănătate | 🏥 | MS, CNAS, INSP, ANMCS, ANAD, ANA | ~186 | [→ Dosar complet](02-sanatate/README.md) |
 | 3 | Educație | 🎓 | MEN, ARACIP, UEFISCDI, ARACIS | ~92+ | [→ Dosar complet](03-educatie/README.md) |
 | 4 | Justiție | ⚖️ | MJ, DGA, ANP, ANITP, ORDA, CSM | ~215+ | [→ Dosar complet](04-justitie/README.md) |
-| 5 | Administrație | 🏛️ | MDRAP, ANFP, INA, Primării | ~1.600 | [→](05-administratie/README.md) |
+| 5 | Administrație | 🏛️ | MDRAP, ANFP, INA, ANC, ADR, SGG | ~1.600+ | [→ Dosar](05-administratie/README.md) |
 | 6 | Companii și Comerț | 🏢 | ONRC, ASF, BPI, ANPC | ~100 | [→](06-companii-si-comert/README.md) |
 | 7 | Achiziții Publice | 📋 | SEAP, ANAP, CNSC | ~700 | [→](07-achizitii-publice/README.md) |
 | 8 | Mediu | 🌳 | ANPM, ANANP, Apele Române, Garda de Mediu, ANM | ~500 | [→](08-mediu/README.md) |
