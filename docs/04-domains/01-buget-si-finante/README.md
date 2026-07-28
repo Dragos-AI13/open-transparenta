@@ -41,9 +41,10 @@ Include și **indicatorii financiari** (curs valutar, inflație, dobânzi) și *
 | 6 | **MFE — Ministerul Investițiilor Europene** | Minister | **6** | `mfe` |
 | 7 | **AMEPIP — Agenția pentru Monitorizarea Întreprinderilor Publice** | Agenție | **2** | `agentia-pentru-monitorizarea-si-evaluarea-performantelor-intreprinderilor-publice` |
 | 8 | **AAAS — Administrația Activelor Statului** | Agenție | **1** | `aaas` |
-| 9 | **Consilii Județene** (~20) | CJ | ~200+ | fiecare CJ |
-| 10 | **Primării** (~30) | Primărie | ~50+ | fiecare primărie |
-| 11 | **ONRC** (doar situații financiare) | Oficiu | 76 | `onrc` |
+| 9 | **MDRAP** (PNRR — 50 seturi, bugete locale) | Minister | ~50+ | `mdrap` |
+| 10 | **Consilii Județene** (~20) | CJ | ~200+ | fiecare CJ |
+| 11 | **Primării** (~30) | Primărie | ~50+ | fiecare primărie |
+| 12 | **ONRC** (date firme relevante financiar) | Oficiu | 76 | `onrc` |
 
 ### B. În afara data.gov.ro
 
@@ -51,6 +52,10 @@ Include și **indicatorii financiari** (curs valutar, inflație, dobânzi) și *
 |---|---|---|---|---|
 | 12 | **BNR — Banca Națională a României** | Bancă centrală | Curs valutar zilnic, dobânzi, inflație, indicatori monetari, rapoarte stabilitate financiară | bnr.ro/nbrfxrates.xml (API XML gratuit) |
 | 13 | **ASF — Autoritatea de Supraveghere Financiară** | Autoritate | Piață de capital, fonduri de pensii, asigurări, emitenți | asfromania.ro |
+| 14 | **Curtea de Conturi a României** | Instituție supremă de audit | Rapoarte de audit public, datorie publică, cheltuieli bugetare | curteadeconturi.ro |
+| 15 | **Consiliul Fiscal** | Autoritate independentă | Opinii privind bugetul, sustenabilitate fiscală, prognoze | consiliulfiscal.ro |
+| 16 | **FGDB — Fondul de Garantare a Depozitelor Bancare** | Fond de garantare | Depozite garantate, instituții membre, statistici | fgdb.ro |
+| 17 | **BVB — Bursa de Valori București** | Piață de capital | Cotații, indici bursieri, emitenți, dividende, rapoarte | bvb.ro |
 
 ---
 
@@ -97,7 +102,9 @@ Include și **indicatorii financiari** (curs valutar, inflație, dobânzi) și *
 │   ├── Datorie internă
 │   ├── Datorie externă
 │   ├── Serviciul datoriei (dobânzi + rambursări)
-│   └── Titluri de stat emise
+│   ├── Titluri de stat emise
+│   ├── Garanții de stat (OUG 64/2007)
+│   └── Datorie publică locală (evidențe consilii județene)
 │
 ├── 💳 TAXE ȘI IMPOZITE
 │   ├── Buletin statistic fiscal ANAF (trimestrial, 2013-2026)
@@ -135,6 +142,7 @@ Include și **indicatorii financiari** (curs valutar, inflație, dobânzi) și *
 │
 ├── 🏗️ INVESTIȚII ȘI FONDURI
 │   ├── CNI — Obiective de investiții recepționate (2002-2020)
+│   ├── PNRR — Plăți din Planul Național de Redresare și Reziliență (50 seturi lunare, 2022-2026, MDRAP)
 │   ├── Fonduri europene
 │   │   ├── Proiecte contractate (fonduri europene)
 │   │   ├── Stadiul absorbției 2014-2020
@@ -336,6 +344,16 @@ Bugete locale de la: Cluj-Napoca, Călărași, Brașov, Craiova, Alba Iulia, Tim
 | Intermediari autorizați | asfromania.ro |
 | Rapoarte anuale | asfromania.ro |
 
+### Alte surse externe relevante
+
+| Instituție | Date publice | URL |
+|---|---|---|
+| **Curtea de Conturi a României** | Rapoarte de audit public, datorie publică, cheltuieli bugetare | curteadeconturi.ro |
+| **Consiliul Fiscal** | Opinii privind bugetul, sustenabilitate fiscală | consiliulfiscal.ro |
+| **FGDB — Fondul de Garantare a Depozitelor Bancare** | Date despre depozite garantate, instituții membre | fgdb.ro |
+| **BVB — Bursa de Valori București** | Cotații, indici, emitenți, dividende | bvb.ro |
+| **FNGCIMM — Fondul Național de Garantare** | Garanții credite IMM, Prima Casă / Noua Casă | fnGCimm.ro |
+
 ---
 
 ## Prezentare Proposată
@@ -402,12 +420,18 @@ Bugete locale de la: Cluj-Napoca, Călărași, Brașov, Craiova, Alba Iulia, Tim
 | „Cât e bugetul pe 2026?" | ~686 mld lei | Bugetul de Stat |
 | „Pe ce se duc banii?" | Asistență socială (26%) | Bugetul de Stat → Cheltuieli |
 | „Cât e datoria publică?" | ~580 mld lei (52% PIB) | Datorie Publică |
+| „Câte garanții a emis statul?" | Garanții de stat (OUG 64/2007) | Datorie Publică |
 | „Cât e cursul euro azi?" | BNR, zilnic | Curs Valutar (API live) |
 | „Câte firme s-au înființat luna asta?" | ONRC, CSV lunar | Situații Financiare |
 | „Cât TVA s-a colectat?" | Vezi Buletinul Statistic Fiscal | Taxe |
 | „Câți bani a primit partidul X?" | AEP — venituri + subvenții | Finanțare Partide |
-| „Ce investiții a făcut statul în orașul meu?" | CNI + MDRAP | Investiții |
+| „Ce investiții a făcut statul în orașul meu?" | CNI + PNRR + MDRAP | Investiții |
 | „Câți bani europeni a absorbit România?" | MFE — stadiu absorbție | Fonduri Europene |
+| „Câți bani a primit România din PNRR?" | Plăți PNRR lunare (MDRAP) | Investiții → PNRR |
 | „Ce buget are ministerul Sănătății?" | Bugetul de Stat | Bugetul de Stat |
 | „Ce salarii sunt la bugetari?" | Număr salariați + indicatori | Întreprinderi Publice |
 | „Câte firme au datorii la stat?" | Arierate + Datorii buget | Taxe |
+| „Ce spune Curtea de Conturi despre buget?" | Rapoarte de audit | Curtea de Conturi (sursă externă) |
+| „Cum vede Consiliul Fiscal bugetul?" | Opinii și prognoze | Consiliul Fiscal (sursă externă) |
+| „Cât valorează acțiunile pe Bursă?" | Cotații BVB | BVB (sursă externă) |
+| „Ce depozite sunt garantate?" | FGDB — plafon 100.000 EUR | FGDB (sursă externă) |
