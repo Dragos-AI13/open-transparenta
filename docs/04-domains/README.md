@@ -7,7 +7,7 @@
 | # | Domeniu | Icon | Instituții | Seturi | Link |
 |---|---|---|---|---|---|
 | 1 | Buget și Finanțe | 💰 | MFP, ANAF, BNR, AEP | ~300 | [→ Dosar complet](01-buget-si-finante/README.md) |
-| 2 | Sănătate | 🏥 | MS, CNAS, ANMCS, INSP | ~150 | [→](02-sanatate/README.md) |
+| 2 | Sănătate | 🏥 | MS, CNAS, INSP, ANMCS, ANAD, ANA | ~186 | [→ Dosar complet](02-sanatate/README.md) |
 | 3 | Educație | 🎓 | MEN, ARACIP, UEFISCDI | ~200 | [→](03-educatie/README.md) |
 | 4 | Justiție | ⚖️ | MJ, portal.just, ICCJ, CCR, CSM | ~100 | [→](04-justitie/README.md) |
 | 5 | Administrație | 🏛️ | MDRAP, ANFP, INA, Primării | ~1.600 | [→](05-administratie/README.md) |
