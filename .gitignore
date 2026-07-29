@@ -47,7 +47,9 @@ meili_data/
 crawler/data/
 crawler/*.db
 crawler/*.sqlite
-
+crawler/.crawler_*
+crawler/.*_state.json
+crawler/.*_cache*
 # Logs
 *.log
 crawler/.crawler_*

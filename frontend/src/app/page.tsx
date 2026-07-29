@@ -1,6 +1,21 @@
+"use client";
+
 import { DomainGrid } from "@/components/DomainGrid";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const q = query.trim();
+    if (q) {
+      router.push(`/companii/cauta?q=${encodeURIComponent(q)}`);
+    }
+  };
+
   return (
     <div className="flex flex-1 flex-col items-center">
       {/* Hero Section */}
@@ -13,7 +28,7 @@ export default function Home() {
         </p>
 
         {/* Search Bar */}
-        <div className="mt-8 w-full">
+        <form onSubmit={handleSearch} className="mt-8 w-full">
           <div className="relative">
             <svg
               className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-text-muted"
@@ -30,18 +45,22 @@ export default function Home() {
             </svg>
             <input
               type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Caută bugete, firme, spitale, licitații..."
               className="w-full rounded-xl border border-border-subtle bg-bg-surface py-3.5 pl-12 pr-4 text-text-primary placeholder-text-muted transition-all focus:border-border-default focus:bg-bg-elevated focus:shadow-search focus:outline-none"
-              disabled
             />
-            <kbd className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-border-subtle bg-bg-elevated px-2 py-0.5 text-xs text-text-muted sm:inline-block">
-              în curând
-            </kbd>
+            <button
+              type="submit"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md bg-accent-primary px-3 py-1 text-xs font-medium text-white transition-all hover:bg-accent-hover"
+            >
+              Caută
+            </button>
           </div>
           <p className="mt-2 text-xs text-text-muted">
-            Peste 5.000 de seturi de date din 100+ surse oficiale
+            Peste 4 milioane de firme și 5.000 de seturi de date din surse oficiale
           </p>
-        </div>
+        </form>
       </section>
 
       {/* Domain Grid */}

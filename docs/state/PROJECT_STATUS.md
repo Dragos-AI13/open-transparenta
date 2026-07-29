@@ -14,7 +14,7 @@
 
 ## Current Phase
 
-**Phase 1 — 🏗️ Fundația** (≈80% complete)
+**Phase 1 — 🏗️ Fundația** (≈90% complete)
 - ✅ TICKET-1.1 Meilisearch install (Docker, local)
 - ✅ TICKET-1.2 Next.js + Tailwind init
 - ✅ TICKET-1.3 Design tokens + theme config
@@ -22,7 +22,13 @@
 - ⏳ TICKET-1.5 PWA manifest + service worker
 - ⏳ TICKET-1.6 Deploy scripts
 
-**Next up:** Phase 2 — 🎯 Motor de Căutare
+**Phase 2 — 🎯 Motor de Căutare** (≈20% complete)
+- ✅ TICKET-2.7 Meilisearch Index Config + API Client (companii)
+- ✅ TICKET-2.8 Crawler ONRC — 4.2M firme indexate cu date reale
+- ✅ TICKET-2.9 API Routes search + detail + stare parser (4.2M stare populată)
+- ⏳ TICKET-2.10 Search Results Page (/companii/cauta)
+- ⏳ TICKET-2.11 Company Profile Page (/companii/firma/[cui])
+- ⏳ TICKET-2.12 Connect Search Flow (legare tot)
 
 ---
 

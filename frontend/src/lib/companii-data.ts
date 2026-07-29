@@ -17,6 +17,7 @@ export interface FeaturePlaceholder {
   icon: string;
   name: string;
   description: string;
+  href?: string;
 }
 
 export interface FaqItem {
@@ -49,11 +50,13 @@ const extendedData: Record<string, Omit<CategoryExtended, "category">> = {
         icon: "🔍",
         name: "Căutare firmă",
         description: "Caută orice firmă după nume, CUI sau domeniu de activitate.",
+        href: "/companii/cauta",
       },
       {
         icon: "📄",
         name: "Profil firmă",
         description: "Date complete: stare, adresă, formă juridică, cod CAEN.",
+        href: "/companii/cauta",
       },
       {
         icon: "📋",
@@ -74,34 +77,37 @@ const extendedData: Record<string, Omit<CategoryExtended, "category">> = {
       {
         institution: "Ministerul Finanțelor",
         count: 2,
-        format: ["CSV", "TXT", "ZIP"],
+        format: ["TXT", "CSV"],
         frequency: "Anual",
-        years: "2008-2025",
+        years: "2024-2025",
         description:
-          "Situații financiare anuale: cifră de afaceri, profit net, pierdere netă, active, datorii, capitaluri proprii, număr angajați.",
+          "Situații financiare anuale pentru TOATE firmele din România: cifră de afaceri, profit net/pierdere, active imobilizate și circulante, datorii, capitaluri proprii, număr mediu de salariați.",
       },
     ],
     features: [
       {
         icon: "📊",
-        name: "Vizualizare evoluție",
-        description: "Grafic cu evoluția cifrei de afaceri, profitului și activelor pe ani.",
+        name: "Vizualizare date financiare",
+        description: "Vezi bilanțul și contul de profit și pierdere pentru orice firmă, direct pe profil.",
+        href: "/companii/cauta",
       },
       {
-        icon: "📋",
-        name: "Tabel comparativ",
-        description: "Compară indicatorii financiari între ani diferiți.",
+        icon: "📈",
+        name: "Grafice evoluție",
+        description: "Evoluția cifrei de afaceri, profitului, activelor și datoriilor pe ani.",
+        href: "/companii/cauta",
       },
       {
         icon: "📥",
-        name: "Export date",
+        name: "Export date (în curând)",
         description: "Descarcă situațiile financiare în CSV sau Excel.",
       },
     ],
     faq: [
-      { q: "Ce informații financiare sunt disponibile?", a: "Cifra de afaceri, profit/pierdere, active totale, datorii, capitaluri proprii și număr de angajați." },
-      { q: "Din ce an sunt datele?", a: "Date istorice începând din 2008 până în prezent." },
-      { q: "Pot compara două firme?", a: "Funcționalitatea de comparare va fi disponibilă într-o versiune viitoare." },
+      { q: "Ce informații financiare sunt disponibile?", a: "Cifra de afaceri, profit net/pierdere netă, active imobilizate, active circulante, stocuri, creanțe, numerar, datorii, capitaluri proprii și număr mediu de salariați." },
+      { q: "Din ce ani sunt datele?", a: "Date disponibile pentru 2024 și 2025, actualizate anual de Ministerul Finanțelor." },
+      { q: "Toate firmele au date financiare?", a: "Nu, doar firmele care au depus situații financiare la Ministerul Finanțelor apar în bază. Firmele nou-înființate sau radiate pot să nu aibă date." },
+      { q: "Pot vedea datele financiare pe profilul firmei?", a: "Da, caută o firmă și accesează profilul — secțiunea Situații Financiare arată tabelul și graficele." },
     ],
   },
 

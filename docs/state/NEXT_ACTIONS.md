@@ -1,45 +1,25 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-07-28
+**Last updated:** 2026-07-29
 
 ---
 
 ## Active Feature
 
-**Phase 1 — 🏗️ Fundația**
-- Ticket Index: `tickets/`
+**Phase 2 — 🎯 Motor de Căutare**
+- ✅ TICKET-2.9 — API Routes + Stare Parser (just completed)
 
 ## Implementation Order
 
-- [x] TICKET-1.1 — Meilisearch install (Docker)
-- [x] TICKET-1.2 — Next.js + Tailwind init
-- [x] TICKET-1.3 — Design tokens + theme config
-- [x] TICKET-1.4 — Base layout (Header, Footer, Search, Domain Grid)
-- [ ] TICKET-1.5 — PWA manifest + service worker
-- [ ] TICKET-1.6 — Deploy scripts
+- [x] TICKET-2.7 — Meilisearch Index Config + API Client
+- [x] TICKET-2.8 — Crawler ONRC (4.2M firme)
+- [x] TICKET-2.9 — API Routes + Stare Parser
 
-**→ Next:** TICKET-1.5 — PWA manifest + service worker
+**→ Next:** TICKET-2.10 — Search Results Page (/companii/cauta)
 
 ---
 
-## Phase 2 — 🎯 Motor de Căutare (planned)
+## Phase 1 — 🏗️ Fundația (remaining)
 
-- [ ] TICKET-2.1 — API route Meilisearch query
-- [ ] TICKET-2.2 — Search bar functional + autocomplete
-- [ ] TICKET-2.3 — Results page
-- [ ] TICKET-2.4 — Seed data from data.gov.ro
-- [ ] TICKET-2.5 — Filters (category, institution, format, county)
-
-## Phase 3 — 🕷️ Crawler (planned)
-
-- [ ] Crawler data.gov.ro (CKAN API)
-- [ ] Crawler ONRC firme
-- [ ] Crawler BNR curs valutar
-- [ ] Cron scheduling
-
-## Phase 4 — 🚀 Launch (planned)
-
-- [ ] PWA finalization
-- [ ] Deploy production
-- [ ] Custom domain
-- [ ] Open source announcement
+- [ ] TICKET-1.5 — PWA manifest + service worker
+- [ ] TICKET-1.6 — Deploy scripts

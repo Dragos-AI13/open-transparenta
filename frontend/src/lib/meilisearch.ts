@@ -21,6 +21,7 @@ export interface CompanyDoc {
   judet: string;
   cod_caen: string;
   cod_caen_denumire: string;
+  caen_sectiune?: string;
   telefon?: string;
   email?: string;
   website?: string;
@@ -30,6 +31,7 @@ export interface CompanyDoc {
 
 export interface SearchFilters {
   judet?: string;
+  localitate?: string;
   forma_juridica?: string;
   stare?: string;
 }
@@ -65,7 +67,7 @@ export async function ensureIndex() {
       "localitate",
       "judet",
     ],
-    filterableAttributes: ["judet", "forma_juridica", "stare", "localitate"],
+    filterableAttributes: ["judet", "forma_juridica", "stare", "localitate", "cui"],
     sortableAttributes: ["denumire"],
     rankingRules: ["words", "typo", "proximity", "attribute", "sort", "exactness"],
   });
@@ -86,6 +88,7 @@ export async function searchCompanies(
   // Build filter string
   const filterParts: string[] = [];
   if (filters?.judet) filterParts.push(`judet = "${filters.judet}"`);
+  if (filters?.localitate) filterParts.push(`localitate = "${filters.localitate}"`);
   if (filters?.forma_juridica)
     filterParts.push(`forma_juridica = "${filters.forma_juridica}"`);
   if (filters?.stare) filterParts.push(`stare = "${filters.stare}"`);

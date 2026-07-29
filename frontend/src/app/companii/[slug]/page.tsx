@@ -87,7 +87,7 @@ export default async function CategoryPage({
         </div>
       </section>
 
-      {/* Features Placeholder */}
+      {/* Features */}
       <section>
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-muted">
           🚀 Funcționalități
@@ -105,9 +105,18 @@ export default async function CategoryPage({
               <p className="mt-1 text-xs text-text-muted">
                 {feat.description}
               </p>
-              <span className="mt-3 inline-block rounded-full bg-status-warning/15 px-2 py-0.5 text-xs text-status-warning">
-                în curând
-              </span>
+              {feat.href ? (
+                <a
+                  href={feat.href}
+                  className="mt-3 inline-flex items-center gap-1 rounded-full bg-accent-primary/15 px-3 py-1 text-xs font-medium text-accent-primary transition-colors hover:bg-accent-primary/25"
+                >
+                  Accesează →
+                </a>
+              ) : (
+                <span className="mt-3 inline-block rounded-full bg-status-warning/15 px-2 py-0.5 text-xs text-status-warning">
+                  în curând
+                </span>
+              )}
             </div>
           ))}
         </div>

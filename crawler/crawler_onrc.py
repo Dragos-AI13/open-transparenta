@@ -58,7 +58,7 @@ def find_latest_onrc_dataset() -> dict | None:
 
     for r in results:
         title = r.get("title", "")
-        if "Firme" in title and "Registrul Comertului" in title:
+        if "Firme" in title and ("Registrul Comertului" in title or "Registrul Comerțului" in title):
             return r
     return results[0] if results else None
 
@@ -193,7 +193,7 @@ def prepare_staging_index(client: Client):
             "denumire", "cui", "adresa", "localitate", "judet",
             "cod_inmatriculare",
         ],
-        "filterableAttributes": ["judet", "forma_juridica", "stare", "localitate"],
+        "filterableAttributes": ["judet", "forma_juridica", "stare", "localitate", "cui"],
         "sortableAttributes": ["denumire"],
     })
     time.sleep(1)
@@ -210,7 +210,7 @@ def prepare_staging_index(client: Client):
                 "denumire", "cui", "adresa", "localitate", "judet",
                 "cod_inmatriculare",
             ],
-            "filterableAttributes": ["judet", "forma_juridica", "stare", "localitate"],
+            "filterableAttributes": ["judet", "forma_juridica", "stare", "localitate", "cui"],
             "sortableAttributes": ["denumire"],
         })
         time.sleep(1)

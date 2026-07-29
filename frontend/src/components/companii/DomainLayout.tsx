@@ -11,17 +11,27 @@ export function DomainLayout({ children }: { children: React.ReactNode }) {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const segments = pathname.split("/").filter(Boolean);
 
-  // Build breadcrumb segments from path
-  const breadcrumbSegments = segments.map((seg, i) => {
-    if (i === 0) {
-      return { label: "Companii și Comerț", href: "/companii" };
-    }
-    const category = companiiCategories.find((c) => c.slug === seg);
-    if (category) {
-      return { label: category.name };
-    }
-    return { label: seg.replace(/-/g, " ") };
-  });
+  // Detect paths
+  const isFirmaPage = segments[1] === "firma";
+  const isCautaPage = segments[1] === "cauta";
+
+  // Build breadcrumb segments from path (skip for firma pages)
+  const breadcrumbSegments = isFirmaPage
+    ? [
+        { label: "Companii și Comerț", href: "/companii" },
+        { label: "Căutare", href: "/companii/cauta" },
+        { label: "Profil Firmă" },
+      ]
+    : segments.map((seg, i) => {
+        if (i === 0) {
+          return { label: "Companii și Comerț", href: "/companii" };
+        }
+        const category = companiiCategories.find((c) => c.slug === seg);
+        if (category) {
+          return { label: category.name };
+        }
+        return { label: seg.replace(/-/g, " ") };
+      });
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-6 md:flex-row md:gap-8 md:px-6">
@@ -100,7 +110,7 @@ export function DomainLayout({ children }: { children: React.ReactNode }) {
 
       {/* Main content */}
       <div className="flex flex-1 flex-col">
-        <Breadcrumb segments={breadcrumbSegments} />
+        {!isFirmaPage && <Breadcrumb segments={breadcrumbSegments} />}
         <div className="mt-4 flex-1">{children}</div>
       </div>
     </div>
