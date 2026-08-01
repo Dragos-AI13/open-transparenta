@@ -1,7 +1,7 @@
 # Ticket 8.2 — API + pagina `/buget-si-finante/taxe-si-impozite`
 
 **ID:** TICKET-8.2
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 8 — 💳 Taxe și Impozite (ANAF)
 **Dependențe:** TICKET-8.1
 

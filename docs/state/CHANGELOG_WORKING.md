@@ -4,6 +4,25 @@
 
 ---
 
+## [2026-08-01] — TICKET-8.1 + 8.2: Taxe și Impozite live (Buletin Statistic Fiscal ANAF)
+
+### Added
+- `crawler/crawler_anaf.py` — descoperă buletinele ANAF (CKAN), parsează XLSX openpyxl: cap. 4.1 venituri bugetare + cap. 2.2 contribuabili activi
+- **125 docs** — 6 trimestre (2024 T4, 2025 T1-T4, 2026 T1) × 2 secțiuni; TVA 2026 T1 = 29.177,8 mil lei (+17,9%)
+- `GET /api/taxe-impozite` (q, sectiune, an, trimestru) + `GET /api/taxe-impozite/rezumat` (total + TVA pe trimestre)
+- Pagină `/buget-si-finante/taxe-si-impozite` — carduri (venituri T1 2026: 119.228 mil lei ▲9,4%; TVA 29.177,8), tabel cu evoluții ▲/▼ verde/roșu, selector secțiune + an, căutare; badge → **Live** (3/7 subdomenii live)
+- Tip `TaxaImpozitDoc` în lib
+
+### Fixed
+- `trimestru` lipsea din sortableAttributes (sort an+trimestru dădea eroare)
+
+### Verified
+- Rezumat: 2026 T1 total 119.228 mil lei (▲9,4%), 2025 T4 136.512 mil lei; TVA pe 4 trimestre 2025 (24.737,9 → 34.350,3)
+- Browser: tabel complet (Impozit profit ▲22,2%, TVA ▲17,9%, Accize ▲4,5%, Alte venituri ▼15,2%), carduri corecte
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-7.5 + 7.6: Bugetul de Stat live (480 rânduri, 3 ani)
 
 ### Added

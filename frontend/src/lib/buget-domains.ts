@@ -44,7 +44,8 @@ export const bugetSubdomains: BugetSubdomain[] = [
     name: "Taxe și Impozite",
     icon: "💳",
     shortDesc: "Buletin statistic fiscal ANAF, datorii la buget, arierate",
-    status: "planned",
+    status: "live",
+    href: "/buget-si-finante/taxe-si-impozite",
   },
   {
     slug: "investitii-si-fonduri",

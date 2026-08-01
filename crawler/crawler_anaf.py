@@ -284,7 +284,7 @@ def prepare_staging_index(client: Client):
     idx.update_settings({
         "searchableAttributes": ["indicator"],
         "filterableAttributes": ["sectiune", "an", "trimestru"],
-        "sortableAttributes": ["an", "valoare_curent"],
+        "sortableAttributes": ["an", "valoare_curent", "trimestru"],
     })
     time.sleep(1)
     try:
@@ -296,7 +296,7 @@ def prepare_staging_index(client: Client):
         client.index(INDEX_NAME).update_settings({
             "searchableAttributes": ["indicator"],
             "filterableAttributes": ["sectiune", "an", "trimestru"],
-            "sortableAttributes": ["an", "valoare_curent"],
+            "sortableAttributes": ["an", "valoare_curent", "trimestru"],
         })
         time.sleep(1)
 

@@ -82,6 +82,21 @@ export interface BugetStatDoc {
   estimari_3?: number | null;
 }
 
+// ─── Taxe și Impozite (ANAF) ────────────────────
+
+export interface TaxaImpozitDoc {
+  id: string;             // "tva_2026_T1"
+  indicator: string;      // "TVA", "Impozit pe profit"...
+  sectiune: string;       // "Venituri bugetare" | "Contribuabili înregistrați"
+  an: number;             // 2026
+  trimestru: number;      // 1-4
+  valoare_curent: number | null;    // trimestrul curent
+  valoare_anterior: number | null;  // trimestrul anului anterior
+  total_an_anterior: number | null; // realizări anul anterior
+  indice: number | null;  // % față de trim. anterior
+  unitate: string;        // "milioane lei" | "număr contribuabili"
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;
