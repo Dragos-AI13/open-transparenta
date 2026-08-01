@@ -4,6 +4,27 @@
 
 ---
 
+## [2026-08-01] — TICKET-11.2: Rețea școlară live (ME) — 18.022 unități de învățământ
+
+### Added
+- `crawler/crawler_educatie_retea.py` — descoperă pachetul `Rețea scolară 2025-2026` (data.gov.ro, org `ministerul-educatiei`), parsează XLSX (header detectat dinamic, mapare coloane după nume, normalizare diacritice), indexează în Meilisearch
+- **18.022 unități** indexate (`retea_scolara`): 42 județe, mediu rural 11.160 / urban 6.862, cu denumire, adresă, telefon, email
+- `GET /api/retea-scolara` (q, judet, mediu, tip, sort, paginare) — facet județ/mediu, total exact (facet pentru județe mari)
+- `GET /api/retea-scolara/rezumat` — total unități, județe, urban/rural
+- Pagină `/educatie/retea-scolara` — carduri hero (18.022 unități, 38,1% urban), tabel (denumire+adresă, badge județ, localitate, mediu colorat, tip, email mailto + telefon), filtre județ (din facet, sortat desc) + mediu + căutare, stări complete, responsive
+- Tip `ReteaScolaraDoc` în lib; cardul din pagina domeniului → **Live** (1/3 Educație)
+- Comandă npm: `crawl:educatie-retea`
+
+### Fixed
+- **Performanță openpyxl**: `ws.cell(row, col)` pe read_only e FOARTE lent (~15s/500 rânduri) → `iter_rows(values_only=True)` (~0.1s/1000); 18k rânduri parsen în 2.7s
+
+### Verified
+- `?q=oradea` → 131 unități Bihor; județe distincte 42; mediu rural 62%
+- Browser: carduri hero corecte, tabel cu unități reale (Casa Corpului Didactic, CȘEI, cluburi sportive școlare), email-uri link-uite, filtre + paginare
+- Cardul Educație → Rețea Școlară **Live**; `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-10.1 + 10.2: Investiții și Fonduri live (MFE) — 17.879 proiecte europene
 
 ### Added

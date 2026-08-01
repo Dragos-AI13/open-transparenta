@@ -126,6 +126,27 @@ export interface AbsorbtieFondDoc {
   unitate: string;        // "EUR"
 }
 
+// ─── Educație — Rețea școlară (ME) ─────────────
+
+export interface ReteaScolaraDoc {
+  id: string;             // "{cod_siiir}_{hash}"
+  denumire: string;       // denumirea unității
+  judet: string;          // cod județ (AB)
+  judet_nume: string;     // nume județ (Alba)
+  localitate: string | null;
+  mediu: string | null;   // URBAN | RURAL
+  cod_siiir: string | null;
+  tip: string | null;     // "Unitate de învățământ"
+  statut: string | null;  // "PJ"
+  mod_functionare: string | null; // "Două schimburi/zi"
+  finantare: string | null;       // "Buget"
+  adresa: string | null;
+  cod_postal: string | null;
+  telefon: string | null;
+  email: string | null;
+  an: string;             // "2025-2026"
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;

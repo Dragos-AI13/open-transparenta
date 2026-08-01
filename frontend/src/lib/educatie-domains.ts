@@ -19,7 +19,8 @@ export const educatieSubdomains: EducatieSubdomain[] = [
     name: "Rețea Școlară",
     icon: "🏫",
     shortDesc: "Toate unitățile de învățământ — adresă, județ, mediu, tip",
-    status: "planned",
+    status: "live",
+    href: "/educatie/retea-scolara",
   },
   {
     slug: "bacalaureat",

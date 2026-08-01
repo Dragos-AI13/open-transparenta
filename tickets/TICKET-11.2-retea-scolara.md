@@ -1,7 +1,7 @@
 # Ticket 11.2 — Crawler ME + Rețea școlară live
 
 **ID:** TICKET-11.2
-**Status:** 📋 ready
+**Status:** ✅ done
 **Feature:** 11 — 🎓 Educație
 **Dependențe:** TICKET-11.1
 
@@ -18,21 +18,21 @@ Crawler pentru rețeaua școlară a României + API + pagina subdomeniului `/edu
 
 ## Cerințe
 
-- [ ] `crawler/crawler_educatie_retea.py`:
+- [x] `crawler/crawler_educatie_retea.py`:
   - Descoperă pachetul CKAN (q=`Rețea scolară`, org `ministerul-educatiei`), ia cel mai recent XLSX
-  - Parsează: header la r4, mapează coloane după nume (pattern MFE — normalizare ASCII, header detectat dinamic)
-  - Normalizează diacriticele; id = `{cod_siiir}_{hash(denumire|localitate|strada)}`
-  - Index Meilisearch `retea_scolara` — searchable: denumire, localitate, email; filterable: judet, mediu, tip_unitate; sortable: denumire
+  - Parsează: header detectat dinamic, mapare coloane după nume (normalizare ASCII)
+  - Normalizează diacriticele; id = `{cod_siiir}_{hash(denumire|localitate|strada)}` (aceeași unitate apare de mai multe ori)
+  - Index Meilisearch `retea_scolara` — searchable: denumire, localitate, judet_nume, email; filterable: judet, judet_nume, mediu, tip; sortable: denumire
   - `--dry-run`, `--max`, `--force`, state hash, staging + swap atomic, wait_for_task
   - Comandă npm: `crawl:educatie-retea` (ACELAȘI commit)
-- [ ] `GET /api/retea-scolara?q=&judet=&mediu=&tip=&page=&limit=` — listă `{hits, total, page, totalPages}`; total exact (stats fără filtre, facet judet pentru județe mari)
-- [ ] Pagina `/educatie/retea-scolara`:
+- [x] `GET /api/retea-scolara?q=&judet=&mediu=&tip=&page=&limit=` — listă `{hits, total, page, totalPages, facetJudete, facetMediu}`; total exact (stats fără filtre, facet judet pentru județe mari)
+- [x] Pagina `/educatie/retea-scolara`:
   - Hero: 🏫 Rețea Școlară + descriere
-  - Carduri hero: număr unități, județe, mediu urban/rural (din rezumat)
-  - Tabel: Denumire, Județ (badge), Localitate, Mediu, Tip, Telefon/Email
-  - Filtre: județ (select din date), mediu (Urban/Rural), căutare
+  - Carduri hero: **18.022 unități**, urban 6.862 (38,1%), rural 11.160, 42 județe
+  - Tabel: Denumire + adresă, Județ (badge), Localitate, Mediu (colorat), Tip, Email (mailto) + Telefon
+  - Filtre: județ (select din facet, sortat desc după număr), mediu (Urban/Rural), căutare
   - Stări: skeleton, eroare, gol, cu date; responsive
-- [ ] Update `lib/educatie-domains.ts`: Rețea Școlară → `live` + href
+- [x] Update `lib/educatie-domains.ts`: Rețea Școlară → `live` + href
 
 ## Fișiere
 
@@ -45,10 +45,10 @@ Crawler pentru rețeaua școlară a României + API + pagina subdomeniului `/edu
 
 ## Acceptance criteria
 
-- [ ] Index cu unități reale (18.026+ rânduri, 2025-2026)
-- [ ] `/educatie/retea-scolara` — tabel + filtre funcționale
-- [ ] Cardul Rețea Școlară → **Live**
-- [ ] `npm run build` trece
+- [x] Index cu unități reale — **18.022 rânduri** (2025-2026), 42 județe, mediu: rural 11.160 / urban 6.862
+- [x] `/educatie/retea-scolara` — tabel + filtre funcționale („oradea" → 131 hit-uri Bihor)
+- [x] Cardul Rețea Școlară → **Live**
+- [x] `npm run build` trece
 
 ## Security
 
