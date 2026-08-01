@@ -1,7 +1,7 @@
 # Ticket 5.6 — QA complet subdomeniu + state docs + README
 
 **ID:** TICKET-5.6
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 5 — 🏛️ Întreprinderi Publice
 **Dependențe:** TICKET-5.3, 5.4, 5.5
 

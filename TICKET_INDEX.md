@@ -54,7 +54,7 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 4.4 | Header links reale (Domenii, Despre) în loc de `#` | ⏳ pending |
 | 4.5 | Administratori și Acționari — crawler ONRC reprezentanți legali | ✅ **done** |
 
-## Phase 5 — 🏛️ Întreprinderi Publice (AMEPIP) — 📋 planificat
+## Phase 5 — 🏛️ Întreprinderi Publice (AMEPIP) — ✅ Complet
 
 | ID | Ticket | Status |
 |----|--------|--------|
@@ -63,7 +63,7 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 5.3 | Sub-category page `/companii/intreprinderi-publice` | ✅ **done** |
 | 5.4 | Card „🏛️ Întreprindere publică" pe profil firmă | ✅ **done** |
 | 5.5 | Integrare sidebar + navigare cap-coadă | ✅ **done** |
-| 5.6 | QA complet + state docs + README | 📋 ready (ticket scris) |
+| 5.6 | QA complet + state docs + README | ✅ **done** |
 
 ---
 

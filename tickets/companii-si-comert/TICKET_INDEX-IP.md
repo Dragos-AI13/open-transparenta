@@ -17,7 +17,7 @@
 | 5.3 | Sub-category page `/companii/intreprinderi-publice` (tabel + filtre) | ✅ **done** | 5.2 | ~20 min |
 | 5.4 | Card „🏛️ Întreprindere publică" pe profil firmă (indicatori + mini-chart) | ✅ **done** | 5.2 | ~25 min |
 | 5.5 | Integrare sidebar + navigare cap-coadă | ✅ **done** | 5.3, 5.4 | ~10 min |
-| 5.6 | QA complet subdomeniu + state docs + README | ⏳ pending | 5.3-5.5 | ~15 min |
+| 5.6 | QA complet subdomeniu + state docs + README | ✅ **done** | 5.3-5.5 | ~15 min |
 
 **Total efort estimat:** ~105 minute
 

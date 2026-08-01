@@ -57,8 +57,15 @@ function Skeleton() {
 export default function IntreprinderiPubliceTable() {
   const [data, setData] = useState<ListResponse | null>(null);
   const [error, setError] = useState(false);
-  const [q, setQ] = useState("");
-  const [input, setInput] = useState("");
+  // Citește q din URL la mount (ex. /companii/intreprinderi-publice?q=apa)
+  const [q, setQ] = useState<string>(() => {
+    if (typeof window === "undefined") return "";
+    return new URLSearchParams(window.location.search).get("q") ?? "";
+  });
+  const [input, setInput] = useState<string>(() => {
+    if (typeof window === "undefined") return "";
+    return new URLSearchParams(window.location.search).get("q") ?? "";
+  });
   const [page, setPage] = useState(1);
   const [sort, setSort] = useState<"denumire:asc" | "denumire:desc">(
     "denumire:asc",

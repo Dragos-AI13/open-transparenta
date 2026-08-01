@@ -8,8 +8,8 @@
 ## Lifecycle
 
 ```
-🔵 Vision → 🟢 Fundația → ✅ Registrul Comerțului → ✅ Situații Financiare → ⏳ Deploy/PWA → ⏳ 16 domenii rămase
-                                                                         ↑ (we are here)
+🔵 Vision → 🟢 Fundația → ✅ Registrul Comerțului → ✅ Situații Financiare → ✅ Întreprinderi Publice → ⏳ PWA/Deploy → ⏳ 16 domenii rămase
+                                                                                                       ↑ (we are here)
 ```
 
 ## Current Phase
@@ -32,7 +32,10 @@
 **Phase 3 — 📊 Situații Financiare** (≈100% complete)
 - ✅ TICKET-3.1–3.5 Crawler MF (1.7M doc), API `/api/financiar/{cui}`, tabel indicatori, grafice Chart.js, integrare profil
 
-**Phase 4 — 🚧 Următorul**
+**Phase 5 — 🏛️ Întreprinderi Publice** (≈100% complete)
+- ✅ TICKET-5.1–5.6 Crawler AMEPIP (1.259 firme, 17 indicatori, 2019-2023), API listă+detalii, pagina subdomeniului cu tabel live, card IP pe profil, navigare, QA
+
+**Phase 6 — 🚧 Următorul**
 - ⏳ 4.1 Deploy producție (VPS)
 - ⏳ 4.2 PWA manifest + service worker
 - ⏳ 4.3 Pagini pentru restul de 16 domenii (doar Companii e live)
@@ -90,3 +93,5 @@ Docs-urile de stare erau în urmă cu 2 faze față de cod. Corectat:
 - **Reconciliere cod ↔ docs**: Feature 3 (Situații Financiare) marcat done (era „planificat" în docs, codul era complet de pe 29.07); 2.10–2.12 promovate la done; TICKET_INDEX rescris ca hartă Phase 1–4
 - **Fix hydration dev**: `allowedDevOrigins` adăugat în next.config.ts + cache `.next` șters → React hidratează corect în dev, cele 3 grafice Chart.js se desenează (line/bar/donut), filtrele funcționează
 - **Verificat live**: homepage → căutare „Autonom" (958 firme, 7 filtre) → profil firmă (stare, CAEN, adresă) → grafice financiare pe firme cu bilanț depus
+- **TICKET-4.5 — Administratori și Acționari**: crawler ONRC reprezentanți legali — 3.68M înregistrări indexate, API + card cu badge-uri pe profil
+- **Phase 5 — Întreprinderi Publice (AMEPIP)**: 1.259 firme cu capital de stat, 17 indicatori pe an (2019-2023), pagina subdomeniului cu tabel live, card IP pe profil cu mini-chart, navigare completă — 6/6 tickete done

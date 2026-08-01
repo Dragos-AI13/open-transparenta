@@ -4,6 +4,19 @@
 
 ---
 
+## [2026-08-01] — TICKET-5.6: QA complet Phase 5 (Întreprinderi Publice)
+
+### Fixed
+- `IntreprinderiPubliceTable`: `?q=apa` din URL nu era citit la mount (arăta toate cele 1259 în loc de 144 filtrate) → lazy init din `window.location.search` (client-safe, cu guard SSR)
+
+### Verified
+- Build curat; rutele Phase 5 în build: 2 API + pagina statică `/companii/intreprinderi-publice` + `[slug]` SSG
+- QA browser: tabel (desktop) + căutare „apa" → 144 rezultate corecte + paginare + sortare + 404 pe firme normale
+- Flow cap-coadă complet verificat (homepage → Companii → IP → profil → înapoi)
+- Toate state docs actualizate: TICKET_INDEX (Phase 5 ✅ Complet), TICKET_INDEX-IP, NEXT_ACTIONS, PROJECT_STATUS, CHANGELOG
+
+---
+
 ## [2026-08-01] — TICKET-5.5: Integrare sidebar + navigare cap-coadă
 
 ### Verified

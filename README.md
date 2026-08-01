@@ -30,7 +30,16 @@ Phase 3 — Situații Financiare     ██████████ 100%
   ✅ 20 indicatori per firmă/an
   ✅ Tabel trenduri ▲/▼ + grafice Chart.js
 
-Phase 4 — În lucru
+Phase 4 — Administratori        ██████████ 100%
+  ✅ 3.68M reprezentanți legali indexați
+  ✅ Card pe profil cu badge-uri pe funcție
+
+Phase 5 — Întreprinderi Publice  ██████████ 100%
+  ✅ 1.259 firme cu capital de stat (AMEPIP)
+  ✅ 17 indicatori per firmă/an (2019-2023)
+  ✅ Pagină subdomeniu + card profil + grafice
+
+Phase 6 — În lucru
   ⬜ Deploy producție (VPS)
   ⬜ PWA manifest + service worker
   ⬜ Pagini pentru restul de 16 domenii
