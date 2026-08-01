@@ -48,10 +48,14 @@ Phase 7 — Buget și Finanțe     ██████████ 100%
   ✅ Bugetul de Stat live (480 rânduri, 3 ani, deficit)
   ✅ Pagină domeniu + link homepage (2/17 domenii live)
 
-Phase 8 — În lucru
-  ⬜ Subdomeniul 3 Buget și Finanțe (Taxe și Impozite — ANAF)
-  ⬜ Deploy producție (VPS)
+Phase 8 — Taxe și Impozite      ██████████ 100%
+  ✅ 125 indicatori fiscali ANAF (6 trimestre)
+  ✅ Evoluții trimestriale ▲/▼ (TVA +17,9%, profit +22,2%)
+  ✅ 3/7 subdomenii live în Buget și Finanțe
+
+Phase 9 — În lucru
   ⬜ PWA manifest + service worker
+  ⬜ Datoria Publică
   ⬜ Domenii noi (sănătate, educație)
 ```
 

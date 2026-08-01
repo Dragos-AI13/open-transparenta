@@ -1,23 +1,19 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 7 completă — 7/7)
+**Last updated:** 2026-08-01 (Phase 8 completă — 8/8)
 
 ---
 
 ## Active Feature
 
-**Phase 7 — 💰 Buget și Finanțe** — ✅ Complet (2 subdomenii live: 💱 Curs Valutar + 📋 Bugetul de Stat)
+**Phase 8 — 💳 Taxe și Impozite (ANAF)** — ✅ Complet
 
-- [x] TICKET-7.1 — Spike + Crawler BNR curs valutar (37 valute, XML live)
-- [x] TICKET-7.2 — API + pagina subdomeniului `/buget-si-finante/curs-valutar`
-- [x] TICKET-7.3 — Pagina principală a domeniului `/buget-si-finante` + link homepage
-- [x] TICKET-7.4 — QA + state docs + README
-- [x] TICKET-7.5 — Crawler Bugetul de Stat (480 docs, 2023-2025)
-- [x] TICKET-7.6 — API + pagina `/buget-si-finante/bugetul-de-stat`
-- [x] TICKET-7.7 — QA + state docs + README
+- [x] TICKET-8.1 — Spike + Crawler Buletin Statistic Fiscal ANAF (125 docs, 6 trimestre)
+- [x] TICKET-8.2 — API + pagina `/buget-si-finante/taxe-si-impozite`
+- [x] TICKET-8.3 — QA + state docs + README
 
-**→ Next:** TICKET-8.1 — Spike + Crawler Buletin Statistic Fiscal ANAF (tickete 8.1-8.3 scrise)
-**→ După:** TICKET-4.2 PWA SAU următorul subdomeniu Buget și Finanțe (Datoria Publică)
+**→ Next:** TICKET-4.2 — PWA manifest + service worker
+**→ După:** următorul subdomeniu Buget și Finanțe (📈 Datoria Publică) SAU domeniu nou (Sănătate, Educație — de verificat sursele)
 
 ---
 

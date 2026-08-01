@@ -1,7 +1,7 @@
 # Ticket 8.3 — QA complet + state docs + README
 
 **ID:** TICKET-8.3
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 8 — 💳 Taxe și Impozite (ANAF)
 **Dependențe:** TICKET-8.2
 
