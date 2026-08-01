@@ -1,9 +1,17 @@
 # Ticket 6.1 — Spike + Crawler decizii Consiliul Concurenței (HTML scraping)
 
 **ID:** TICKET-6.1
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 6 — 🔒 Concurență
 **Dependențe:** —
+
+## Rezultat spike (2026-08-01)
+
+- Structura deciziei găsită: `<div class="post-preview__date">180/2026</div>` + link PDF direct (`/wp-content/uploads/2026/07/Decizia-180-din-2026.pdf`)
+- Titlul descriptiv NU e în listă (doar în PDF) → documentul folosește numărul deciziei
+- robots.txt permite scraping (Disallow: gol)
+- Paginare: `/decizii/page/{n}/` — 241 pagini principală + subcategorii cu paginare proprie
+- **2.380 decizii unice indexate** (după dedupe principal + subcategorii)
 
 ## Context (investigație făcută)
 

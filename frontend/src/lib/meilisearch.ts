@@ -42,6 +42,18 @@ export interface IntreprinderePublicaDoc {
   indicatori: Record<number, Record<string, number | null>>;  // an → indicator → valoare
 }
 
+// ─── Decizii Concurență (Consiliul Concurenței) ──
+
+export interface DecizieConcurentaDoc {
+  id: string;         // slug PDF sanitizat
+  numar: string;      // "180/2026"
+  an?: string;        // "2026"
+  categorie: string;  // "Servicii", "Industrie și energie"...
+  titlu: string;      // "Decizia 180/2026"
+  url_pdf: string;    // link direct PDF
+  url_sursa: string;  // link sursă
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;

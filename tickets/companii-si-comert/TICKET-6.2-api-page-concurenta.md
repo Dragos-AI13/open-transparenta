@@ -1,7 +1,7 @@
 # Ticket 6.2 — API Routes + pagina `/companii/concurenta` (tabel decizii)
 
 **ID:** TICKET-6.2
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 6 — 🔒 Concurență
 **Dependențe:** TICKET-6.1
 

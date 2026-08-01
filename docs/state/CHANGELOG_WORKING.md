@@ -4,6 +4,24 @@
 
 ---
 
+## [2026-08-01] — TICKET-6.1 + 6.2: Concurență live (2.380 decizii CC)
+
+### Added
+- `crawler/crawler_concurenta.py` — HTML scraping consiliulconcurentei.ro: lista principală (241 pagini) + 8 subcategorii, rate limiting 0.6s, robots.txt respectat, dedupe pe id
+- **2.380 decizii unice indexate** (număr, an, categorie, URL PDF direct)
+- `GET /api/decizii-concurenta?q=&categorie=&an=&page=&limit=` — căutare număr, filtru categorie/an, paginare, total exact din stats
+- Pagină dedicată `/companii/concurenta` — tabel: Decizie (link PDF), Categorie (badge amber), An, PDF ↗; căutare + filtru + paginare; stări complete (skeleton/eroare/gol/date); responsive
+- Tip `DecizieConcurentaDoc` în lib
+
+### Verified
+- Index: 2.380 docs; API total corect
+- `?q=44` → 20 decizii (44/2026...44/2019); `?categorie=Servicii` → 686; `?categorie=Carteluri` funcțional
+- Browser: `/companii/concurenta` → 2.380 decizii, badge-uri, PDF link, paginare
+- Notă: căutarea full-text pe cuvinte (ex. „concentrare") → 0 — titlul descriptiv e doar în PDF, nu în listă; căutarea funcționează pe număr + filtru categorie
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — Sidebar curat: eliminate subdomeniile fără date reale
 
 ### Changed
