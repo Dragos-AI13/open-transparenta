@@ -59,7 +59,7 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | ID | Ticket | Status |
 |----|--------|--------|
 | 5.1 | Crawler AMEPIP: CSV 2023 + XLSX 2024 → Meilisearch | ✅ **done** |
-| 5.2 | API Routes: listă + detalii | ⏳ pending |
+| 5.2 | API Routes: listă + detalii | ✅ **done** |
 | 5.3 | Sub-category page `/companii/intreprinderi-publice` | 📋 ready (ticket scris) |
 | 5.4 | Card „🏛️ Întreprindere publică" pe profil firmă | 📋 ready (ticket scris) |
 | 5.5 | Integrare sidebar + navigare cap-coadă | 📋 ready (ticket scris) |

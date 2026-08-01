@@ -4,6 +4,23 @@
 
 ---
 
+## [2026-08-01] — TICKET-5.2: API Routes întreprinderi publice
+
+### Added
+- `GET /api/intreprinderi-publice?q=&page=&limit=&caen=&sort=` — listă cu căutare full-text, filtru CAEN, sortare denumire asc/desc, paginare; `total` exact din `stats.numberOfDocuments` când nu sunt filtre (Meilisearch 1.12 capătă totalHits la 1000)
+- `GET /api/intreprinderi-publice/{cui}` — detalii complete cu indicatorii pe ani; 404 cu mesaj clar dacă firma nu e întreprindere publică
+- Tip `IntreprinderePublicaDoc` în `lib/meilisearch.ts`
+- Cache-Control: `public, max-age=60, stale-while-revalidate=300`
+
+### Verified
+- Lista generală: total 1259, paginare corectă (page 2 → 20 hit-uri)
+- `?q=apa` → 144 rezultate; `?caen=3600` → 294; `?sort=denumire:desc` → ZONE VERZI SRL primul
+- `RO54760` → COMPANIA DE APĂ ORADEA SA cu indicatori 2019-2023 (ROE 10.74, EBITDA 30.5M)
+- `RO28397` (firmă normală) → 404 corect
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-5.1: Crawler AMEPIP (întreprinderi publice)
 
 ### Added

@@ -1,7 +1,7 @@
 # Ticket 5.2 — API Routes: listă + detalii întreprinderi publice
 
 **ID:** TICKET-5.2
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 5 — 🏛️ Întreprinderi Publice
 **Dependențe:** TICKET-5.1
 

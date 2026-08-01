@@ -29,6 +29,19 @@ export interface CompanyDoc {
   numar_registru_comert?: string;
 }
 
+// ─── Întreprinderi Publice (AMEPIP) ──────────────
+
+export interface IntreprinderePublicaDoc {
+  cui: string;                    // RO54760
+  denumire: string;               // COMPANIA DE APĂ ORADEA SA
+  numar_registru_comert?: string; // J05/14/1991
+  ticker_symbol?: string;         // ex. SNP
+  caen?: string;                  // 3600
+  caen_denumire?: string;         // Captarea, tratarea si distributia apei
+  ani: number[];                  // [2019, 2020, 2021, 2022, 2023]
+  indicatori: Record<number, Record<string, number | null>>;  // an → indicator → valoare
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;
