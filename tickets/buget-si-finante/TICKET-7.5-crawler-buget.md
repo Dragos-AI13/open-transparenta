@@ -1,9 +1,17 @@
 # Ticket 7.5 — Crawler Bugetul de Stat (XML MF 2023-2025 → Meilisearch)
 
 **ID:** TICKET-7.5
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 7 — 💰 Buget și Finanțe (subdomeniul: 📋 Bugetul de Stat)
 **Dependențe:** —
+
+## Rezultat implementare (2026-08-01)
+
+- **480 documente indexate** (2023: 159, 2024: 159, 2025: 162)
+- **Venituri totale** (mii lei): 2023 = 275.364.504, 2024 = 308.204.963, 2025 = 357.353.033 (~357 mld lei)
+- **Cheltuieli totale**: 2025 = 499.582.980 (~499,6 mld) — pe funcțiuni: Asigurări sociale 76,98 mld, Servicii publice 67,68 mld, Învățământ 60,30 mld, Transporturi 42,38 mld, Apărare 27,33 mld, Sănătate 24,21 mld
+- **Deficit**: 2023 = -77,95 mld, 2024 = -96,03 mld, 2025 = -142,23 mld lei
+- Bug-uri rezolvate: coloanele XML depind de an (PROGRAM_2024 ≠ PROGRAM_2025), id-uri unice pe ierarhie+denumire (nu doar capitol), sort pe `valoare` configurat, `wait_for_task` înainte de swap
 
 ## Context (investigație făcută)
 

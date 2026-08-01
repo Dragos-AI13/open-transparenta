@@ -11,7 +11,8 @@
     "crawl:reprezentanti": "cd ../crawler && python crawler_reprezentanti.py",
     "crawl:amepip": "cd ../crawler && python crawler_amepip.py",
     "crawl:concurenta": "cd ../crawler && python crawler_concurenta.py",
-    "crawl:bnr": "cd ../crawler && python crawler_bnr.py"
+    "crawl:bnr": "cd ../crawler && python crawler_bnr.py",
+    "crawl:buget": "cd ../crawler && python crawler_buget.py"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
