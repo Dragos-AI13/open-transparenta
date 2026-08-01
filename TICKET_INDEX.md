@@ -115,7 +115,7 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 |----|--------|--------|
 | 11.1 | Pagina principală a domeniului `/educatie` (grid subdomenii) | ✅ **done** |
 | 11.2 | Rețea școlară (crawler ME + API + pagină) | ✅ **done** |
-| 11.3 | Bacalaureat (crawler ME + API + pagină) | 📋 ready (ticket scris) |
+| 11.3 | Bacalaureat (crawler ME + API + pagină) | ✅ **done** |
 | 11.4 | Cadre didactice (crawler ME + API + pagină) | 📋 ready (ticket scris) |
 
 ---

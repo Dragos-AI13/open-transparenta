@@ -15,7 +15,7 @@
 |----|--------|--------|------------|-------|
 | 11.1 | Pagina principală `/educatie` (grid subdomenii) | ✅ **done** | — | ~20 min |
 | 11.2 | Rețea școlară (crawler + API + pagină) | ✅ **done** | 11.1 | ~60 min |
-| 11.3 | Bacalaureat (crawler + API + pagină) | 📋 ready (ticket scris) | 11.1 | ~60 min |
+| 11.3 | Bacalaureat (crawler + API + pagină) | ✅ **done** | 11.1 | ~60 min |
 | 11.4 | Cadre didactice (crawler + API + pagină) | 📋 ready (ticket scris) | 11.1 | ~45 min |
 
 **Total efort estimat:** ~3h

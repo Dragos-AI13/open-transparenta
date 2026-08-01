@@ -15,7 +15,8 @@
     "crawl:buget": "cd ../crawler && python crawler_buget.py",
     "crawl:anaf": "cd ../crawler && python crawler_anaf.py",
     "crawl:mfe": "cd ../crawler && python crawler_mfe.py",
-    "crawl:educatie-retea": "cd ../crawler && python crawler_educatie_retea.py"
+    "crawl:educatie-retea": "cd ../crawler && python crawler_educatie_retea.py",
+    "crawl:educatie-bac": "cd ../crawler && python crawler_educatie_bac.py"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",

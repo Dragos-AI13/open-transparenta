@@ -147,6 +147,22 @@ export interface ReteaScolaraDoc {
   an: string;             // "2025-2026"
 }
 
+// ─── Educație — Bacalaureat (ME) ──────────────
+
+export interface BacalaureatDoc {
+  id: string;             // "bac_{siiir}"
+  siiir: string;          // cod unitate SIIIR
+  denumire: string;       // denumirea școlii (din rețea)
+  judet: string;          // cod județ (AB)
+  judet_nume: string;     // nume județ (Alba)
+  localitate: string;     // localitate (din rețea)
+  candidati: number;      // total candidați înscriși
+  prezenti: number;       // candidați prezenți
+  promovati: number;      // candidați promovați
+  rata_promovare: number; // % promovați / prezenți
+  sesiune: string;        // "sesiunea 2-2025"
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;

@@ -27,7 +27,8 @@ export const educatieSubdomains: EducatieSubdomain[] = [
     name: "Bacalaureat",
     icon: "📝",
     shortDesc: "Rezultate la examenul de bacalaureat, pe sesiuni",
-    status: "planned",
+    status: "live",
+    href: "/educatie/bacalaureat",
   },
   {
     slug: "cadre-didactice",

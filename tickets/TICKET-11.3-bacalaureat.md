@@ -1,7 +1,7 @@
 # Ticket 11.3 — Crawler ME + Bacalaureat live
 
 **ID:** TICKET-11.3
-**Status:** 📋 ready
+**Status:** ✅ done
 **Feature:** 11 — 🎓 Educație
 **Dependențe:** TICKET-11.1
 
@@ -19,19 +19,21 @@ Crawler pentru rezultatele la bacalaureat + API + pagina `/educatie/bacalaureat`
 
 ## Cerințe
 
-- [ ] `crawler/crawler_educatie_bac.py`:
-  - Descoperă pachetele (q=`Rezultate Bacalaureat`), ia cel mai recent XLSX (parse_report_date pattern MFE)
-  - Parsează: header r1, mapează coloane după nume; id = `{sesiune}_{cod_unic}`
-  - **Agregare**: indexează pe candidat (30.280 docs) — pentru rata de promovare pe județ/școală se grupează în API; sau index separat agregat pe școală (`cod_siiir` + medie + status) — decide la spike, preferă agregat pe școală + raw pe candidat dacă volumul permite
-  - Index `bacalaureat` — filterable: judet (dacă există în date — verifică dacă `Unitate (SIRUES)` mapează la județ), sesiune, profil, mediu; searchable: specializare
-  - `--dry-run`, `--max`, `--force`, state, staging + swap, wait_for_task; npm `crawl:educatie-bac`
-- [ ] `GET /api/bacalaureat?q=&judet=&sesiune=&page=&limit=` + `rezumat` (rata promovare totală + pe județ)
-- [ ] Pagina `/educatie/bacalaureat`:
+- [x] `crawler/crawler_educatie_bac.py`:
+  - Descoperă pachetele (q=`Rezultate Bacalaureat`), ia cea mai recentă sesiune (comparație dată numerică — fallback pe an pentru „sesiunea 2- 2025")
+  - Parsează: header r1, candidați anonimizați (cod unic); STATUS final → promovat/prezent
+  - **Join local cu rețeaua școlară** (parsează și XLSX-ul rețelei — SIIIR → județ/denumire; 1.341/1.382 școli mapate, 97%)
+  - Agregare pe școală: `{siiir, denumire, judet, candidati, prezenti, promovati, rata_promovare}`
+  - Index `bacalaureat` — searchable: denumire, judet_nume, localitate; filterable: judet, judet_nume, sesiune, candidati; sortable: rata_promovare, candidati
+  - `--dry-run`, `--force`, state, staging + swap, wait_for_task; npm `crawl:educatie-bac`
+- [x] `GET /api/bacalaureat?q=&judet=&sesiune=&minCand=&page=&limit=` + `rezumat` (rata națională + top județe)
+- [x] Pagina `/educatie/bacalaureat`:
   - Hero: 📝 Bacalaureat + sesiunea curentă
-  - Carduri hero: candidați, promovați, **rata de promovare %**
-  - Tabel: Școală (SIIIR→denumire din rețea dacă se poate), Județ, Candidați, Promovați, Rată %
-  - Filtre: județ, sesiune; stări complete; responsive
-- [ ] Update `educatie-domains.ts`: Bacalaureat → `live` + href
+  - Carduri hero: **rată națională 32%**, 25.665 prezenți / 8.202 promovați, top județ Caraș-Severin 41,6%
+  - Tabel: Școală (denumire din rețea), Județ (badge), Candidați/Prezenți/Promovați, Rată (colorată)
+  - Filtre: județ, min candidați (Toți/≥10/≥30/≥50 — elimină zgomotul școlilor mici), căutare
+  - Stări: skeleton, eroare, gol, cu date; responsive
+- [x] Update `educatie-domains.ts`: Bacalaureat → `live` + href
 
 ## Fișiere
 
@@ -44,10 +46,10 @@ Crawler pentru rezultatele la bacalaureat + API + pagina `/educatie/bacalaureat`
 
 ## Acceptance criteria
 
-- [ ] Index cu candidați reali (30.280, sesiunea 2-2025)
-- [ ] `/educatie/bacalaureat` — rată promovare + tabel pe școli/județe
-- [ ] Cardul Bacalaureat → **Live**
-- [ ] `npm run build` trece
+- [x] Index cu școli reale — **1.382 școli** (sesiunea 2-2025), rata națională 32% (8.202/25.665 prezenți)
+- [x] `/educatie/bacalaureat` — rată promovare + tabel pe școli (912 cu ≥10 candidați), filtre funcționale
+- [x] Cardul Bacalaureat → **Live** (2/3 Educație)
+- [x] `npm run build` trece
 
 ## Security
 

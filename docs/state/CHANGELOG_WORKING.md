@@ -4,6 +4,28 @@
 
 ---
 
+## [2026-08-01] — TICKET-11.3: Bacalaureat live (ME) — 1.382 școli, rată națională 32%
+
+### Added
+- `crawler/crawler_educatie_bac.py` — descoperă pachetul `Rezultate Bacalaureat` (cea mai recentă sesiune — fallback pe an pentru „sesiunea 2- 2025"), parsează candidații (30.279, anonimizați), **join local cu rețeaua școlară** (SIIIR → județ/denumire, 97% mapate), agreghează pe școală
+- **1.382 școli** indexate (`bacalaureat`): candidati/prezenti/promovati/rata_promovare + județ din rețea
+- `GET /api/bacalaureat` (q, judet, sesiune, **minCand**, sort, paginare) + `rezumat` (rata națională + top județe)
+- Pagină `/educatie/bacalaureat` — carduri hero (**32% național**, 25.665 prezenți/8.202 promovați, top Caraș-Severin 41,6%), tabel (denumire școală, badge județ, candidați/prezenți/promovați, rată colorată), filtre județ + **min candidați** (elimină zgomotul școlilor mici cu 100% pe 1-2 candidați), stări complete, responsive
+- Tip `BacalaureatDoc` în lib; cardul → **Live (2/3 Educație)**; npm `crawl:educatie-bac`
+
+### Fixed
+- `parse_report_date` fără lună („sesiunea 2- 2025") → fallback pe an (comparat numeric)
+- **Rezumat subestima**: search cu `limit: 1000` nu aducea toate școlile (cap Meilisearch) → `getDocuments` paginat (fără cap)
+- **Filtru minCand client rupea paginarea** (elimina toate hit-urile din pagina 1 sortată după rată) → mutat în API ca filtru Meilisearch `candidati >= N`; `candidati` adăugat la filterableAttributes
+
+### Verified
+- Rata națională 32% = 8.202/25.665 (identic calculului direct pe fișier); top: Caraș-Severin 41,6%, Olt 38,7%
+- minCand: 10 → 912 școli, 50 → 140; `?q=oradea` → colegii din Bihor
+- Browser: carduri hero, tabel colegii naționale (S. Haret Tulcea 90,9%, Cuza Vodă 88,9%), filtre + paginare
+- Cardul Educație → Bacalaureat **Live**; `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-11.2: Rețea școlară live (ME) — 18.022 unități de învățământ
 
 ### Added
