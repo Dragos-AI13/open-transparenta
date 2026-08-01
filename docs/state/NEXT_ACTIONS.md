@@ -1,18 +1,19 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 9 completă — PWA)
+**Last updated:** 2026-08-01 (Phase 10 planificată — Investiții și Fonduri)
 
 ---
 
 ## Active Feature
 
-**Phase 9 — 📱 PWA (Manifest + Service Worker)** — ✅ Complet
+**Phase 10 — 🏗️ Investiții și Fonduri (MFE)** — 📋 planificat
 
-- [x] TICKET-9.1 — Manifest PWA + iconițe (app/manifest.ts + icons)
-- [x] TICKET-9.2 — Service worker Serwist (cache runtime + offline)
-- [x] TICKET-9.3 — QA + Lighthouse + state docs
+- [ ] TICKET-10.1 — Crawler MFE (proiecte contractate + stadiul absorbției)
+- [ ] TICKET-10.2 — API + pagina `/buget-si-finante/investitii-si-fonduri`
+- [ ] TICKET-10.3 — QA + state docs
 
-**→ Next:** următorul subdomeniu Buget și Finanțe (📈 Datoria Publică) SAU domeniu nou (Sănătate, Educație — de verificat sursele)
+**→ Next:** TICKET-10.1 — Crawler MFE (tickete 10.1-10.3 scrise, sursă verificată)
+**→ După:** domeniu nou (Sănătate, Educație — de verificat sursele)
 
 ---
 

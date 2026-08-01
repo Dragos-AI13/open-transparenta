@@ -23,9 +23,12 @@
 | 7.5 | Crawler Bugetul de Stat (XML MF 2023-2025) | ✅ **done** | — | ~35 min |
 | 7.6 | API + pagina `/buget-si-finante/bugetul-de-stat` | ✅ **done** | 7.5 | ~25 min |
 | 7.7 | QA + state docs + README | ✅ **done** | 7.6 | ~15 min |
-| 8.1 | Spike + Crawler Buletin Statistic Fiscal ANAF | 📋 ready (ticket scris) | — | ~40 min |
-| 8.2 | API + pagina `/buget-si-finante/taxe-si-impozite` | 📋 ready (ticket scris) | 8.1 | ~25 min |
-| 8.3 | QA + state docs + README | 📋 ready (ticket scris) | 8.2 | ~15 min |
+| 8.1 | Spike + Crawler Buletin Statistic Fiscal ANAF | ✅ **done** | — | ~40 min |
+| 8.2 | API + pagina `/buget-si-finante/taxe-si-impozite` | ✅ **done** | 8.1 | ~25 min |
+| 8.3 | QA + state docs + README | ✅ **done** | 8.2 | ~15 min |
+| 10.1 | Crawler MFE (proiecte contractate + stadiul absorbției) | 📋 ready (ticket scris) | — | ~45 min |
+| 10.2 | API + pagina `/buget-si-finante/investitii-si-fonduri` | 📋 ready (ticket scris) | 10.1 | ~40 min |
+| 10.3 | QA + state docs + README | 📋 ready (ticket scris) | 10.2 | ~20 min |
 
 **Total efort estimat:** ~90 minute
 

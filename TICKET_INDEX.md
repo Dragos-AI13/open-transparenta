@@ -101,6 +101,14 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 9.2 | Service worker Serwist (cache runtime + offline) | ✅ **done** |
 | 9.3 | QA + Lighthouse + state docs | ✅ **done** |
 
+## Phase 10 — 🏗️ Investiții și Fonduri (MFE) — 📋 planificat
+
+| ID | Ticket | Status |
+|----|--------|--------|
+| 10.1 | Crawler MFE (proiecte contractate + stadiul absorbției) | 📋 ready (ticket scris) |
+| 10.2 | API + pagina `/buget-si-finante/investitii-si-fonduri` | 📋 ready (ticket scris) |
+| 10.3 | QA + state docs | 📋 ready (ticket scris) |
+
 ---
 
 ## Legendă
