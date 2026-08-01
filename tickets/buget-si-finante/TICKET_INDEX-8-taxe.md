@@ -19,7 +19,7 @@
 
 | ID | Ticket | Status | Depends On | Efort |
 |----|--------|--------|------------|-------|
-| 8.1 | Spike + Crawler Buletin Statistic Fiscal ANAF | ⏳ pending | — | ~40 min |
+| 8.1 | Spike + Crawler Buletin Statistic Fiscal ANAF | ✅ **done** | — | ~40 min |
 | 8.2 | API + pagina `/buget-si-finante/taxe-si-impozite` | ⏳ pending | 8.1 | ~25 min |
 | 8.3 | QA + state docs + README | ⏳ pending | 8.2 | ~15 min |
 

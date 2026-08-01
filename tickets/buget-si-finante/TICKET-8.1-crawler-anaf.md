@@ -1,9 +1,18 @@
 # Ticket 8.1 — Spike + Crawler Buletin Statistic Fiscal ANAF (XLSX → Meilisearch)
 
 **ID:** TICKET-8.1
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 8 — 💳 Taxe și Impozite (ANAF)
 **Dependențe:** —
+
+## Rezultat spike + implementare (2026-08-01)
+
+- Structura capitolului 4.1 (venituri bugetare): header pe 3 rânduri (Realizări Anul anterior | Trim. anterior | Trim. curent | %), date de la „Total venituri administrate de ANAF"
+- Structura capitolului 2.2 (contribuabili activi): header „Total contribuabili activi" în col. B, date de la primul rând cu text în col. A
+- **125 documente indexate** (6 trimestre: 2024 T4, 2025 T1-T4, 2026 T1) × 2 secțiuni
+- Verificat: TVA 2026 T1 = 29.177,8 mil lei (vs 24.737,9 T1 2025, +17,9%); Total venituri 119.228,0 mil lei
+- Bug-uri rezolvate: cuprinsul avea „4.1" cu puncte suspensive (prindea rândul greșit → caut „Total venituri administrate" unic), „Total contribuabili înregistrați" (2.1) ≠ „Total contribuabili activi" (2.2), header-ul cu 2025|2026 sărit
+- Notă: buletinele 2023-2024 (parțial) au dat HTTP 502 la descărcare — retry la următorul crawl
 
 ## Context (investigație făcută)
 
