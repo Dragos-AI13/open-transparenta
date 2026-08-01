@@ -4,6 +4,29 @@
 
 ---
 
+## [2026-08-01] — TICKET-7.5 + 7.6: Bugetul de Stat live (480 rânduri, 3 ani)
+
+### Added
+- `crawler/crawler_buget.py` — XML MF (anexa1_bs_{an}.xml, ISO-8859-2): venituri pe capitole + cheltuieli pe funcțiuni + deficit, 2023-2025
+- **480 docs** — Venituri: 275,4 / 308,2 / 357,4 mld lei; Cheltuieli 2025: 499,6 mld (Învățământ 60,3 / Sănătate 24,2 / Apărare 27,3 mld); Deficit: -77,9 / -96,0 / -142,2 mld
+- `GET /api/buget-stat` (q, tip, an, nivel, sort valoare) + `GET /api/buget-stat/rezumat` (totaluri pe ani)
+- Pagină `/buget-si-finante/bugetul-de-stat` — carduri top (venituri/cheltuieli/deficit), tabel pe funcțiuni, selector an + tip, căutare; badge-ul din pagina domeniului → **Live**
+- Tip `BugetStatDoc` în lib
+
+### Fixed
+- Coloanele XML depind de an (`PROGRAM_2024` ≠ `PROGRAM_2025`) → nume dinamice
+- Id-uri unice pe ierarhie+denumire (același capitol apare de mai multe ori)
+- Denumirile funcțiunilor (ÎNVĂȚĂMÂNT, SĂNĂTATE) capturate din rândurile fără valoare
+- `VENITURI - TOTAL` are SUBCAPITOL=01 → nivel „total" și pe rândurile cu „TOTAL"
+- Sort pe `valoare` configurat + `wait_for_task` înainte de swap (race condition)
+
+### Verified
+- Browser: carduri 357,35 / 499,58 / -142,23 mld ✓; tabel 22 funcțiuni ✓; căutare „sanatate" → 24,21 mld ✓
+- Pagina domeniului: 2 subdomenii LIVE (Curs Valutar + Bugetul de Stat)
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-7.3: Pagina principală a domeniului Buget și Finanțe
 
 ### Added

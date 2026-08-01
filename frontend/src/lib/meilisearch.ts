@@ -66,6 +66,22 @@ export interface CursValutarDoc {
   multiplier: number;  // 1 (sau 100 pentru HUF, JPY...)
 }
 
+// ─── Bugetul de Stat (MF) ───────────────────────
+
+export interface BugetStatDoc {
+  id: string;          // hash unic
+  an: number;          // 2025
+  denumire: string;    // "VENITURI - TOTAL", "INVATAMANT"...
+  capitol: string;     // "0001", "6501"...
+  subcapitol?: string; // "01"
+  nivel: "total" | "detalii";  // sinteza vs detalii
+  tip: "venituri" | "cheltuieli" | "deficit";
+  valoare: number;     // mii lei
+  estimari_1?: number | null;
+  estimari_2?: number | null;
+  estimari_3?: number | null;
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;

@@ -21,7 +21,7 @@
 | 7.3 | Pagina principală a domeniului `/buget-si-finante` + link homepage | ✅ **done** | 7.2 | ~20 min |
 | 7.4 | QA + state docs + README | ✅ **done** | 7.2, 7.3 | ~15 min |
 | 7.5 | Crawler Bugetul de Stat (XML MF 2023-2025) | ✅ **done** | — | ~35 min |
-| 7.6 | API + pagina `/buget-si-finante/bugetul-de-stat` | 📋 ready (ticket scris) | 7.5 | ~25 min |
+| 7.6 | API + pagina `/buget-si-finante/bugetul-de-stat` | ✅ **done** | 7.5 | ~25 min |
 | 7.7 | QA + state docs + README | 📋 ready (ticket scris) | 7.6 | ~15 min |
 
 **Total efort estimat:** ~90 minute

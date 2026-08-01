@@ -166,6 +166,9 @@ def parse_budget_xml(content: bytes, year: int) -> list[dict]:
     docs = []
     venituri_total = None
     cheltuieli_total = None
+    # Denumirile funcțiunilor (INVATAMANT, SANATATE...) sunt pe rânduri fără
+    # valoare — le capturez separat pe capitol și le atașez documentului de total
+    cheltuieli_nume = {}
 
     for r in rows:
         cap = (r.findtext("CAPITOL") or "").strip()
@@ -175,11 +178,24 @@ def parse_budget_xml(content: bytes, year: int) -> list[dict]:
         art = (r.findtext("ARTICOL") or "").strip()
         den = (r.findtext("DENUMIRE") or "").strip()
         prog = parse_num(r.findtext(col_program))
-        if not cap or not den or prog is None:
+        if not cap or not den:
+            continue
+
+        # Capturează numele funcțiunii de cheltuieli (rând simplu, fără valoare)
+        if cap >= "5000" and cap != "9901" and prog is None and "credite" not in den.lower():
+            cheltuieli_nume[cap] = den
+            continue
+
+        if prog is None:
             continue
 
         # Nivel "total" = rândul de sinteză al capitolului (fără detalii)
-        nivel = "total" if (sub == "" and par == "" and grupa == "" and art == "") else "detalii"
+        # VENITURI - TOTAL are SUBCAPITOL=01 în XML, deci tratăm și „TOTAL" în denumire
+        nivel = (
+            "total"
+            if (sub == "" and par == "" and grupa == "" and art == "") or "TOTAL" in den.upper()
+            else "detalii"
+        )
 
         if cap < "5000":
             # ── VENITURI: valoarea direct pe rândul capitolului ──
@@ -229,7 +245,7 @@ def parse_budget_xml(content: bytes, year: int) -> list[dict]:
                 docs.append({
                     "id": f"c{cap}_{year}",
                     "an": year,
-                    "denumire": den,
+                    "denumire": cheltuieli_nume.get(cap) or den,
                     "capitol": cap,
                     "subcapitol": sub,
                     "nivel": "total",

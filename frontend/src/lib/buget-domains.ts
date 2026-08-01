@@ -22,7 +22,8 @@ export const bugetSubdomains: BugetSubdomain[] = [
     name: "Bugetul de Stat",
     icon: "📋",
     shortDesc: "Legea bugetară anuală, execuții lunare, rectificări",
-    status: "planned",
+    status: "live",
+    href: "/buget-si-finante/bugetul-de-stat",
   },
   {
     slug: "bugete-locale",

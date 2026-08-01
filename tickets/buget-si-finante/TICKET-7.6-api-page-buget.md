@@ -1,7 +1,7 @@
 # Ticket 7.6 — API + pagina subdomeniului `/buget-si-finante/bugetul-de-stat`
 
 **ID:** TICKET-7.6
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 7 — 💰 Buget și Finanțe (subdomeniul: 📋 Bugetul de Stat)
 **Dependențe:** TICKET-7.5
 
