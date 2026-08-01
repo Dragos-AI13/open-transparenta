@@ -4,6 +4,23 @@
 
 ---
 
+## [2026-08-01] — TICKET-4.5: Administratori și Acționari (reprezentanți legali ONRC)
+
+### Added
+- `crawler/crawler_reprezentanti.py` — descarcă `OD_REPREZENTANTI_LEGALI.CSV` (335 MB, dataset ONRC lunar), parsează `^` delimiter, indexează în Meilisearch (index `reprezentanti`) cu swap atomic
+- **3,679,100 reprezentanți indexați** în ~80s (46k docs/s)
+- `GET /api/companies/{cui}/reprezentanti` — caută firma după CUI, filtrează reprezentanții după `cod_inmatriculare`, sortează (administratori → asociați → directori → restul)
+- `RepresentativesCard.tsx` — card pe profil firmă cu nume + badge de funcție colorat (indigo=administrator, verde=asociat, cyan=director, orange=lichidator), 4 stări: loading skeleton, eroare, gol, cu date
+- Comandă npm: `crawl:reprezentanti`
+
+### Verified
+- API: `RO28397` → ARGINTARU MIHAIL (administrator) ✅
+- API: `RO10654053` → STRNAD EUGEN + STRNAD GABRIELA (2 administratori, sortare ok) ✅
+- UI: card afișat pe profil firmă, badge corect, verificat vizual în browser ✅
+- `npm run build` — compilează curat, ruta `/api/companies/[cui]/reprezentanti` prezentă
+
+---
+
 ## [2026-08-01] — UI: monedă pe grafice + fallback-uri elegante
 
 ### Added

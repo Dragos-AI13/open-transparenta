@@ -1,7 +1,7 @@
 # Ticket 4.5 — Administratori și Acționari (reprezentanți legali ONRC)
 
 **ID:** TICKET-4.5
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 2 — 🏢 Registrul Comerțului (ONRC)
 **Dependențe:** TICKET-2.8 (crawler ONRC), TICKET-2.11 (Company Profile Page)
 **Sursă:** `OD_REPREZENTANTI_LEGALI.CSV` din dataset-ul ONRC lunar (data.gov.ro)

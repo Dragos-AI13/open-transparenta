@@ -5,6 +5,7 @@ import type { CompanyDoc } from "@/lib/meilisearch";
 import { getFinancialData } from "@/lib/financiar";
 import FinancialTable from "@/components/companii/FinancialTable";
 import FinancialCharts from "@/components/companii/FinancialCharts";
+import RepresentativesCard from "@/components/companii/RepresentativesCard";
 
 // ── Meilisearch client ─────────────────────────
 
@@ -241,15 +242,7 @@ export default async function CompanyProfile({
 
       {/* Future features placeholder */}
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
-        <div className="flex flex-col items-center justify-center rounded-xl border border-border-subtle border-dashed bg-bg-surface/50 p-6 text-center">
-          <div className="text-3xl">🧑‍💼</div>
-          <h3 className="mt-3 text-sm font-semibold text-text-primary">Administratori și Acționari</h3>
-          <p className="mt-1.5 max-w-xs text-xs leading-relaxed text-text-muted">
-            Datele despre reprezentanții legali ai firmei vor apărea aici în curând.
-            Sursa (ONRC) publică aceste informații într-un set de date separat, pe care
-            îl vom indexa în următoarea etapă.
-          </p>
-        </div>
+        <RepresentativesCard cui={normalizedCui} />
       </div>
     </div>
   );

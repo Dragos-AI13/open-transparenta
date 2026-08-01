@@ -82,7 +82,7 @@ Docs-urile de stare erau în urmă cu 2 faze față de cod. Corectat:
 - Header: linkurile „Domenii” și „Despre” sunt `#` — TICKET-4.4
 - Fără PWA (manifest/service worker) — TICKET-4.2
 - Fără deploy producție — TICKET-4.1
-- Administratori/Acționari pe profil firmă: placeholder (dataset ONRC „persoane cu funcții" nu e încă crawl-uit)
+- Administratori/Acționari pe profil firmă: ✅ REZOLVAT — 3.68M reprezentanți indexați, card live (TICKET-4.5)
 - Telefon/Email pe profil firmă: `—` (ONRC nu publică aceste date în open data)
 
 ## Session 2026-08-01 (rezumat)

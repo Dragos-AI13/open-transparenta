@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "crawl:onrc": "cd ../crawler && python crawler_onrc.py",
+    "crawl:reprezentanti": "cd ../crawler && python crawler_reprezentanti.py"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
