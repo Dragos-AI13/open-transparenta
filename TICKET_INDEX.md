@@ -1,5 +1,11 @@
 # TICKET INDEX — Open Transparență
 
+**Ultima actualizare:** 2026-08-01 (reconciliere cod ↔ docs)
+
+Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKET_INDEX.md = Feature 1, TICKET_INDEX-F2.md = Feature 2 + 3). Acest fișier e harta de ansamblu a tuturor fazelor.
+
+---
+
 ## Phase 1 — 🏗️ Fundația
 
 | ID | Ticket | Status | Depends On |
@@ -11,21 +17,46 @@
 | 1.5 | PWA manifest + service worker | ⏳ pending | 1.4 |
 | 1.6 | Deploy scripts | ⏳ pending | 1.1, 1.4 |
 
-## Phase 2 — 🎯 Motor de Căutare (planned)
+## Phase 2 — 🏢 Registrul Comerțului (ONRC) — ✅ Complet
 
 | ID | Ticket | Status | Depends On |
 |----|--------|--------|------------|
-| 2.1 | API route Meilisearch query | ⏳ pending | 1.1 |
-| 2.2 | Search bar functional + autocomplete | ⏳ pending | 2.1 |
-| 2.3 | Results page | ⏳ pending | 2.2 |
-| 2.4 | Seed data from data.gov.ro | ⏳ pending | 2.1 |
-| 2.5 | Filters (category, institution, format, county) | ⏳ pending | 2.3 |
+| 2.1 | Domain Design Tokens + Constants | ✅ **done** | — |
+| 2.2 | Domain Layout (Sidebar + Breadcrumb) | ✅ **done** | 2.1 |
+| 2.3 | Route Group + Domain Homepage | ✅ **done** | 2.2 |
+| 2.4 | Sub-Category Pages (8 sub-categorii) | ✅ **done** | 2.3 |
+| 2.5 | Domain Search Bar + Global Nav Update | ✅ **done** | 2.3 |
+| 2.6 | Mobile Responsive + Navigation State | ✅ **done** | 2.4, 2.5 |
+| 2.7 | Meilisearch Index Config + API Client | ✅ **done** | 1.1 |
+| 2.8 | Crawler ONRC (4.2M firme reale) | ✅ **done** | 2.7 |
+| 2.9 | API Routes: Search + Company Detail + Stare Parser | ✅ **done** | 2.8 |
+| 2.10 | Search Results Page (/companii/cauta) cu filtre complete | ✅ **done** | 2.9 |
+| 2.11 | Company Profile Page (/companii/firma/[cui]) | ✅ **done** | 2.9 |
+| 2.12 | Connect Search Bar + Navigation Flow | ✅ **done** | 2.10, 2.11 |
 
-## Phase 3 — 🕷️ Crawler (planned)
+## Phase 3 — 📊 Situații Financiare — ✅ Complet
 
 | ID | Ticket | Status | Depends On |
 |----|--------|--------|------------|
-| 3.1 | Crawler data.gov.ro (CKAN API) | ⏳ pending | 1.1 |
-| 3.2 | Crawler ONRC firme | ⏳ pending | 3.1 |
-| 3.3 | Crawler BNR curs valutar | ⏳ pending | 3.1 |
-| 3.4 | Cron scheduling | ⏳ pending | 3.1–3.3 |
+| 3.1 | Research + Crawler situații financiare (MF, 1.7M doc) | ✅ **done** | — |
+| 3.2 | Index Meilisearch + API Routes | ✅ **done** | 3.1 |
+| 3.3 | UI — Tabel indicatori pe profil firmă | ✅ **done** | 3.2 |
+| 3.4 | UI — Grafice evoluție (Chart.js) | ✅ **done** | 3.3 |
+| 3.5 | Integrare sidebar + feature flags | ✅ **done** | 3.3, 3.4 |
+
+## Phase 4 — 🚧 Următorul (propuneri)
+
+| ID | Ticket | Status |
+|----|--------|--------|
+| 4.1 | Deploy producție (VPS) — incl. Docker compose prod | ⏳ pending |
+| 4.2 | PWA manifest + service worker | ⏳ pending |
+| 4.3 | Pagini pentru restul de 16 domenii (doar Companii e live) | ⏳ pending |
+| 4.4 | Header links reale (Domenii, Despre) în loc de `#` | ⏳ pending |
+
+---
+
+## Legendă
+
+- ✅ **done** — implementat și verificat (build trece)
+- ⏳ pending — de făcut
+- Detalii per ticket: `tickets/companii-si-comert/TICKET-*.md`

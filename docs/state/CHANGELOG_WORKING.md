@@ -4,6 +4,20 @@
 
 ---
 
+## [2026-08-01] — Reconciliere cod ↔ docs
+
+### Changed
+- TICKET_INDEX.md rescris ca hartă de ansamblu (era în urmă cu structura veche Phase 1/2/3)
+- Feature 3 (Situații Financiare) marcat ✅ done în TICKET_INDEX-F2.md — codul era complet de pe 29.07, docs ziceau „planificat”
+- NEXT_ACTIONS.md: 2.10–2.12 + 3.1–3.5 promovate la done; next real = PWA, deploy
+- PROJECT_STATUS.md: Phase 2+3 complete, secțiune de reconcilere adăugată
+
+### Verified
+- `npx next build` — compilează curat; rutele `/companii/cauta`, `/companii/firma/[cui]`, `/api/companies/search`, `/api/companies/[cui]`, `/api/financiar/[cui]` toate prezente în build
+- Rutele există: 3 API routes + 2 pagini dinamice + pagina domeniu + 9 sub-categorii SSG
+
+---
+
 ## [2026-07-29] — TICKET-2.9: API Routes + Stare Parser
 
 ### Added

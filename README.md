@@ -13,18 +13,27 @@ Open Transparență e un motor de căutare care agreghează **toate datele publi
 ## 🚀 Status
 
 ```
-Phase 1 — Fundația                ████████░░  80%
+Phase 1 — Fundația                ██████████ 100%
   ✅ Next.js + Tailwind (frontend)
   ✅ Design tokens + dark theme
   ✅ Layout (Header, Footer, Domain Grid)
   ✅ Meilisearch (motor căutare)
-  🏗 PWA manifest
-  ⬜ Deploy
 
-Phase 2 — Motor de Căutare        ░░░░░░░░░░   0%
-  ⬜ Search bar funcțional
-  ⬜ Rezultate live
-  ⬜ Indexare data.gov.ro
+Phase 2 — Registrul Comerțului    ██████████ 100%
+  ✅ Crawler ONRC (4.2M firme reale)
+  ✅ Căutare full-text + 7 filtre
+  ✅ Profil firmă (stare, CAEN, înființare)
+  ✅ Parser stare (activă/dizolvată/radiată)
+
+Phase 3 — Situații Financiare     ██████████ 100%
+  ✅ Crawler Ministerul Finanțelor (1.7M doc)
+  ✅ 20 indicatori per firmă/an
+  ✅ Tabel trenduri ▲/▼ + grafice Chart.js
+
+Phase 4 — În lucru
+  ⬜ Deploy producție (VPS)
+  ⬜ PWA manifest + service worker
+  ⬜ Pagini pentru restul de 16 domenii
 ```
 
 ## 🧱 Stack
