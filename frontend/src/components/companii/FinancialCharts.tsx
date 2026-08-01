@@ -42,12 +42,12 @@ ChartJS.defaults.font.family = "Inter, system-ui, sans-serif";
 function formatShort(value: number): string {
   const abs = Math.abs(value);
   if (abs >= 1_000_000) {
-    return `${(abs / 1_000_000).toFixed(1)}M`;
+    return `${(abs / 1_000_000).toFixed(1)}M RON`;
   }
   if (abs >= 1_000) {
-    return `${(abs / 1_000).toFixed(0)}k`;
+    return `${(abs / 1_000).toFixed(0)}k RON`;
   }
-  return String(value);
+  return `${value.toLocaleString("ro-RO")} RON`;
 }
 
 // ── Props ──────────────────────────────────────
@@ -305,7 +305,16 @@ function StructureChart({ data }: Props) {
   const latestYear = years[0];
   const latestData = data.find((d) => d.an === latestYear);
 
-  if (!latestData) return null;
+  if (!latestData) {
+    return (
+      <div className="flex h-56 flex-col items-center justify-center gap-2 text-center">
+        <div className="text-2xl opacity-40">🧩</div>
+        <p className="text-sm text-text-muted">
+          Nu există date despre structura activelor pentru {latestYear ?? "acest an"}.
+        </p>
+      </div>
+    );
+  }
 
   const hasBreakdown =
     latestData.active_imobilizate != null ||
@@ -313,8 +322,6 @@ function StructureChart({ data }: Props) {
     latestData.stocuri != null ||
     latestData.creante != null ||
     latestData.numerar != null;
-
-  if (!hasBreakdown) return null;
 
   const breakdownItems: { label: string; value: number; color: string }[] = [];
 
@@ -348,7 +355,17 @@ function StructureChart({ data }: Props) {
   }
 
   // If only a couple of items, not useful for doughnut
-  if (breakdownItems.length < 2) return null;
+  if (!hasBreakdown || breakdownItems.length < 2) {
+    return (
+      <div className="flex h-56 flex-col items-center justify-center gap-2 text-center">
+        <div className="text-2xl opacity-40">🧩</div>
+        <p className="text-sm text-text-muted">
+          Nu sunt suficiente detalii despre structura activelor pentru{" "}
+          {latestYear} pentru a desena graficul.
+        </p>
+      </div>
+    );
+  }
 
   const chartData = {
     labels: breakdownItems.map((i) => i.label),
@@ -415,7 +432,8 @@ function StructureChart({ data }: Props) {
 export default function FinancialCharts({ data }: Props) {
   if (!data || data.length < 1) return null;
 
-  const years = [...new Set(data.map((d) => d.an))];
+  const years = [...new Set(data.map((d) => d.an))].sort((a, b) => b - a);
+  const latestYear = years[0];
 
   // Need at least 2 data points for trend charts
   const hasTrend = data.length >= 2;
@@ -445,7 +463,7 @@ export default function FinancialCharts({ data }: Props) {
       {/* Structure doughnut */}
       <div className="rounded-xl border border-border-subtle bg-bg-surface p-5">
         <h4 className="mb-4 text-sm font-semibold text-text-primary">
-          🧩 Structura Activelor ({years[years.length - 1]})
+          🧩 Structura Activelor ({latestYear})
         </h4>
         <StructureChart data={data} />
       </div>
