@@ -85,6 +85,14 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 7.6 | API + pagina `/buget-si-finante/bugetul-de-stat` | ✅ **done** |
 | 7.7 | QA + state docs + README | ✅ **done** |
 
+## Phase 8 — 💳 Taxe și Impozite (ANAF) — 📋 planificat
+
+| ID | Ticket | Status |
+|----|--------|--------|
+| 8.1 | Spike + Crawler Buletin Statistic Fiscal ANAF | 📋 ready (ticket scris) |
+| 8.2 | API + pagina `/buget-si-finante/taxe-si-impozite` | 📋 ready (ticket scris) |
+| 8.3 | QA + state docs + README | 📋 ready (ticket scris) |
+
 ---
 
 ## Legendă

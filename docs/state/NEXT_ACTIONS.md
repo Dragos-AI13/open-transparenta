@@ -16,8 +16,8 @@
 - [x] TICKET-7.6 — API + pagina `/buget-si-finante/bugetul-de-stat`
 - [x] TICKET-7.7 — QA + state docs + README
 
-**→ Next:** subdomeniul 3 din Buget și Finanțe (💳 Taxe și Impozite — ANAF) SAU TICKET-4.2 PWA
-**→ După:** alte domenii din grid (Sănătate, Educație — de verificat sursele)
+**→ Next:** TICKET-8.1 — Spike + Crawler Buletin Statistic Fiscal ANAF (tickete 8.1-8.3 scrise)
+**→ După:** TICKET-4.2 PWA SAU următorul subdomeniu Buget și Finanțe (Datoria Publică)
 
 ---
 
