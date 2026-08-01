@@ -43,10 +43,15 @@ Phase 6 — Concurență           ██████████ 100%
   ✅ 2.380 decizii Consiliul Concurenței
   ✅ Pagină subdomeniu + filtre + link-uri PDF
 
-Phase 7 — În lucru
+Phase 7 — Buget și Finanțe     ██████████ 100%
+  ✅ Curs Valutar BNR live (37 valute, zilnic)
+  ✅ Pagină domeniu + link homepage (2/17 domenii live)
+
+Phase 8 — În lucru
+  ⬜ Subdomeniul 2 Buget și Finanțe (Bugetul de Stat)
   ⬜ Deploy producție (VPS)
   ⬜ PWA manifest + service worker
-  ⬜ Domenii noi (bugete, sănătate, educație)
+  ⬜ Domenii noi (sănătate, educație)
 ```
 
 ## 🧱 Stack

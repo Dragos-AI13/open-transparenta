@@ -1,7 +1,7 @@
 # Ticket 7.4 — QA complet + state docs + README
 
 **ID:** TICKET-7.4
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 7 — 💰 Buget și Finanțe
 **Dependențe:** TICKET-7.2, 7.3
 
