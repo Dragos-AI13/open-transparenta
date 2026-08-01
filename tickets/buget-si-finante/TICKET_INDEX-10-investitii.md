@@ -18,7 +18,7 @@
 |----|--------|--------|------------|-------|
 | 10.1 | Crawler MFE (proiecte contractate + stadiul absorbției) | ✅ **done** | — | ~45 min |
 | 10.2 | API + pagina `/buget-si-finante/investitii-si-fonduri` | ✅ **done** | 10.1 | ~40 min |
-| 10.3 | QA + state docs | 📋 ready | 10.2 | ~20 min |
+| 10.3 | QA + state docs | ✅ **done** | 10.2 | ~20 min |
 
 **Total efort estimat:** ~105 minute
 

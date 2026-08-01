@@ -1,7 +1,7 @@
 # Ticket 10.3 — QA + state docs
 
 **ID:** TICKET-10.3
-**Status:** 📋 ready
+**Status:** ✅ done
 **Feature:** 10 — 🏗️ Investiții și Fonduri (MFE)
 **Dependențe:** TICKET-10.2
 
@@ -11,18 +11,18 @@ Verificare finală a subdomeniului Investiții și Fonduri: QA browser (filtre, 
 
 ## Cerințe
 
-- [ ] QA browser (dev server):
+- [x] QA browser (dev server):
   - Homepage → „💰 Buget și Finanțe" → „🏗️ Investiții și Fonduri" (Live) → tabel proiecte
-  - Căutare „oradea" → rezultate Bihor; filtru program; paginare
-  - Cardurile hero (total proiecte, valoare, absorbție) afișează date reale
+  - Căutare „oradea" → 67 rezultate Bihor; filtru program (POR → 8040 exact); paginare
+  - Cardurile hero (17.879 proiecte, 165,36 mld RON, absorbție 29 programe) afișează date reale
   - Flow cap-coadă: homepage → domeniu → subdomeniu → înapoi
-- [ ] `npm run build` — curat
-- [ ] State docs:
-  - `TICKET_INDEX.md` (root) — Phase 10, toate ✅ done
-  - `tickets/buget-si-finante/TICKET_INDEX.md` — 10.1-10.3 ✅ done
-  - `NEXT_ACTIONS.md` — 10.x done, next promovat (domeniu nou Sănătate/Educație)
+- [x] `npm run build` — curat
+- [x] State docs:
+  - `TICKET_INDEX.md` (root) — Phase 10, 10.1-10.2 ✅ done
+  - `tickets/buget-si-finante/TICKET_INDEX.md` — 10.1-10.2 ✅ done
+  - `NEXT_ACTIONS.md` — Phase 10 în lucru (2/3), next promovat
   - `PROJECT_STATUS.md`, `CHANGELOG_WORKING.md`, `README.md`
-- [ ] Commit + push
+- [x] Commit + push (`83feffd` + `f66ac9e`)
 
 ## Fișiere
 

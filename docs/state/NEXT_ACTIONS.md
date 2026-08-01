@@ -6,14 +6,14 @@
 
 ## Active Feature
 
-**Phase 10 — 🏗️ Investiții și Fonduri (MFE)** — în lucru (2/3)
+**Phase 10 — 🏗️ Investiții și Fonduri (MFE)** — ✅ Complet (3/3)
 
 - [x] TICKET-10.1 — Crawler MFE (proiecte contractate + stadiul absorbției)
 - [x] TICKET-10.2 — API + pagina `/buget-si-finante/investitii-si-fonduri`
-- [ ] TICKET-10.3 — QA + state docs
+- [x] TICKET-10.3 — QA + state docs
 
-**→ Next:** TICKET-10.3 — QA + state docs (închide Phase 10)
-**→ După:** domeniu nou (Sănătate, Educație — de verificat sursele)
+**→ Next:** domeniu nou (Sănătate, Educație — de verificat sursele)
+**→ După:** subdomeniu nou Buget și Finanțe cu sursă validată (dacă apare)
 
 ---
 

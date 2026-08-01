@@ -107,7 +107,7 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 |----|--------|--------|
 | 10.1 | Crawler MFE (proiecte contractate + stadiul absorbției) | ✅ **done** |
 | 10.2 | API + pagina `/buget-si-finante/investitii-si-fonduri` | ✅ **done** |
-| 10.3 | QA + state docs | 📋 ready (ticket scris) |
+| 10.3 | QA + state docs | ✅ **done** |
 
 ---
 
