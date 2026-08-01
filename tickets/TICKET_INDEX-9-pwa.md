@@ -17,7 +17,7 @@
 | ID | Ticket | Status | Depends On | Efort |
 |----|--------|--------|------------|-------|
 | 9.1 | Manifest PWA + iconițe (app/manifest.ts + icons) | ✅ **done** | — | ~25 min |
-| 9.2 | Service worker Serwist (cache runtime + offline) | ⏳ pending | 9.1 | ~30 min |
+| 9.2 | Service worker Serwist (cache runtime + offline) | ✅ **done** | 9.1 | ~30 min |
 | 9.3 | QA + Lighthouse + state docs | ⏳ pending | 9.2 | ~20 min |
 
 **Total efort estimat:** ~75 minute

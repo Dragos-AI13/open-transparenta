@@ -4,6 +4,7 @@ import "@fontsource/jetbrains-mono";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SerwistProvider } from "@serwist/turbopack/react";
 
 export const viewport: Viewport = {
   themeColor: "#08090b",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     "ONRC",
     "BNR",
   ],
-  manifest: "/manifest.json",
+  manifest: "/manifest.webmanifest",
   icons: {
     icon: "/favicon.ico",
     apple: "/icons/icon-192.png",
@@ -40,12 +41,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ro" className="h-full antialiased">
-      <body className="flex min-h-full flex-col" suppressHydrationWarning>
-        <Header />
-        <main className="flex flex-1 flex-col">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <SerwistProvider swUrl="/sw/sw.js" register cacheOnNavigation>
+      <html lang="ro" className="h-full antialiased">
+        <body className="flex min-h-full flex-col" suppressHydrationWarning>
+          <Header />
+          <main className="flex flex-1 flex-col">{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </SerwistProvider>
   );
 }
