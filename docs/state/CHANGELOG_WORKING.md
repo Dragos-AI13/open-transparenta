@@ -4,6 +4,24 @@
 
 ---
 
+## [2026-08-01] — Fix: grafice financiare goale în dev mode
+
+### Fixed
+- **Hydration rupt în dev mode**: HMR era blocat cross-origin (lipsea `allowedDevOrigins` în next.config.ts) → React nu hidrata → toate componentele client moarte (grafice goale, filtre nefuncționale)
+- **Cache `.next` corupt**: erori „Jest worker exceeded retry limit" → 500 pe `/companii/firma/[cui]`; rezolvat prin ștergere cache + restart
+- Verificat: cele 3 grafice Chart.js (line/bar/donut) se desenează corect, React hidratat, pagina firmei 200
+
+### Verified
+- `npx next build` + `next start` (producție) — grafice desenate, zero erori
+- Dev: `/companii/firma/RO25629090` — 200, 3 canvas-uri desenate, `__reactFiber` prezent
+- API financiar: `RO25629090` → 2 ani (2024+2025), 20 indicatori
+
+### Known (data coverage)
+- Administratori/Acționari: placeholder — ONRC publică dataset separat (persoane cu funcții), nu e încă crawl-uit
+- Telefon/Email: `—` pe profil — ONRC nu publică aceste date în datele deschise
+
+---
+
 ## [2026-08-01] — Reconciliere cod ↔ docs
 
 ### Changed

@@ -82,3 +82,11 @@ Docs-urile de stare erau în urmă cu 2 faze față de cod. Corectat:
 - Header: linkurile „Domenii” și „Despre” sunt `#` — TICKET-4.4
 - Fără PWA (manifest/service worker) — TICKET-4.2
 - Fără deploy producție — TICKET-4.1
+- Administratori/Acționari pe profil firmă: placeholder (dataset ONRC „persoane cu funcții" nu e încă crawl-uit)
+- Telefon/Email pe profil firmă: `—` (ONRC nu publică aceste date în open data)
+
+## Session 2026-08-01 (rezumat)
+
+- **Reconciliere cod ↔ docs**: Feature 3 (Situații Financiare) marcat done (era „planificat" în docs, codul era complet de pe 29.07); 2.10–2.12 promovate la done; TICKET_INDEX rescris ca hartă Phase 1–4
+- **Fix hydration dev**: `allowedDevOrigins` adăugat în next.config.ts + cache `.next` șters → React hidratează corect în dev, cele 3 grafice Chart.js se desenează (line/bar/donut), filtrele funcționează
+- **Verificat live**: homepage → căutare „Autonom" (958 firme, 7 filtre) → profil firmă (stare, CAEN, adresă) → grafice financiare pe firme cu bilanț depus
