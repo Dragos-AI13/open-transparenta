@@ -54,6 +54,17 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 4.4 | Header links reale (Domenii, Despre) în loc de `#` | ⏳ pending |
 | 4.5 | Administratori și Acționari — crawler ONRC reprezentanți legali | ✅ **done** |
 
+## Phase 5 — 🏛️ Întreprinderi Publice (AMEPIP) — 📋 planificat
+
+| ID | Ticket | Status |
+|----|--------|--------|
+| 5.1 | Crawler AMEPIP: CSV 2023 + XLSX 2024 → Meilisearch | 📋 ready (ticket scris) |
+| 5.2 | API Routes: listă + detalii | 📋 ready (ticket scris) |
+| 5.3 | Sub-category page `/companii/intreprinderi-publice` | 📋 ready (ticket scris) |
+| 5.4 | Card „🏛️ Întreprindere publică" pe profil firmă | 📋 ready (ticket scris) |
+| 5.5 | Integrare sidebar + navigare cap-coadă | 📋 ready (ticket scris) |
+| 5.6 | QA complet + state docs + README | 📋 ready (ticket scris) |
+
 ---
 
 ## Legendă
