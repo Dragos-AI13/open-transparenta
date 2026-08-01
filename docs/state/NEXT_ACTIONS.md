@@ -1,19 +1,20 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 6 completă)
+**Last updated:** 2026-08-01 (Phase 7 planificată)
 
 ---
 
 ## Active Feature
 
-**Phase 6 — 🔒 Concurență (Consiliul Concurenței)** — ✅ Complet
+**Phase 7 — 💰 Buget și Finanțe** — 📋 planificat (subdomeniul 1: 💱 Curs Valutar BNR + pagina domeniului)
 
-- [x] TICKET-6.1 — Spike + Crawler decizii CC (2.380 decizii indexate)
-- [x] TICKET-6.2 — API Routes + pagina `/companii/concurenta`
-- [x] TICKET-6.3 — QA + state docs + README
+- [ ] TICKET-7.1 — Spike + Crawler BNR curs valutar (XML live + istoric)
+- [ ] TICKET-7.2 — API + pagina subdomeniului `/buget-si-finante/curs-valutar`
+- [ ] TICKET-7.3 — Pagina principală a domeniului `/buget-si-finante` + link homepage
+- [ ] TICKET-7.4 — QA + state docs + README
 
-**→ Next:** TICKET-4.2 — PWA manifest + service worker
-**→ După:** TICKET-4.3 — domenii noi din grid-ul homepage (bugete, sănătate, educație — de verificat sursele)
+**→ Next:** TICKET-7.1 — Spike + Crawler BNR (tickete 7.1-7.4 scrise)
+**→ După:** TICKET-4.2 — PWA manifest + service worker
 
 ---
 
