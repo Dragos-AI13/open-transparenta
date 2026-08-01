@@ -1,19 +1,27 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 5 completă)
+**Last updated:** 2026-08-01 (Phase 6 planificată)
 
 ---
 
 ## Active Feature
 
-**Phase 5 — 🏛️ Întreprinderi Publice (AMEPIP)** — ✅ Complet
+**Phase 6 — 🔒 Concurență (Consiliul Concurenței)** — 📋 planificat
 
-- [x] TICKET-5.1 — Crawler AMEPIP (1.259 firme cu capital de stat, 17 indicatori, 2019-2023)
-- [x] TICKET-5.2 — API Routes (listă + detalii)
-- [x] TICKET-5.3 — Sub-category page `/companii/intreprinderi-publice`
-- [x] TICKET-5.4 — Card „🏛️ Întreprindere publică" pe profil firmă
-- [x] TICKET-5.5 — Integrare sidebar + navigare cap-coadă
-- [x] TICKET-5.6 — QA complet + state docs
+- [ ] TICKET-6.1 — Spike + Crawler decizii CC (HTML scraping)
+- [ ] TICKET-6.2 — API Routes + pagina `/companii/concurenta`
+- [ ] TICKET-6.3 — QA + state docs + README
 
-**→ Next:** TICKET-4.2 — PWA manifest + service worker
-**→ După:** TICKET-4.3 — 16 domenii live
+**→ Next:** TICKET-6.1 — Spike + Crawler decizii CC (tickete 6.1-6.3 scrise)
+**→ După:** TICKET-4.2 — PWA manifest + service worker
+
+---
+
+## Completate (Phase 1-5)
+
+- [x] Phase 1 — Fundația (Next.js, Tailwind, design tokens, layout, Meilisearch)
+- [x] Phase 2 — Registrul Comerțului (4.2M firme, căutare 7 filtre, profil firmă)
+- [x] Phase 3 — Situații Financiare (1.7M doc, 20 indicatori, grafice)
+- [x] Phase 4.5 — Administratori și Acționari (3.68M reprezentanți, card pe profil)
+- [x] Phase 5 — Întreprinderi Publice (1.259 firme AMEPIP, 17 indicatori, pagină + card)
+- [x] Sidebar curat (doar categorii cu date reale) + fix hydration extension warning

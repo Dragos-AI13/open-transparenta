@@ -65,6 +65,14 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 5.5 | Integrare sidebar + navigare cap-coadă | ✅ **done** |
 | 5.6 | QA complet + state docs + README | ✅ **done** |
 
+## Phase 6 — 🔒 Concurență (Consiliul Concurenței) — 📋 planificat
+
+| ID | Ticket | Status |
+|----|--------|--------|
+| 6.1 | Spike + Crawler decizii CC (HTML scraping) | 📋 ready (ticket scris) |
+| 6.2 | API Routes + pagina `/companii/concurenta` (tabel decizii) | 📋 ready (ticket scris) |
+| 6.3 | QA + state docs + README | 📋 ready (ticket scris) |
+
 ---
 
 ## Legendă
