@@ -16,8 +16,8 @@
 - ✅ TICKET-2.12 — Connect Search Flow — deja implementat
 - ✅ TICKET-3.1–3.5 — Situații Financiare (crawler MF 1.7M doc, API, tabel, grafice) — deja implementat, era nemarcat
 
-**→ Next:** TICKET-4.2 — PWA manifest + service worker (cel mai mic efort, impact vizibil)
-**→ După:** TICKET-4.1 — Deploy producție (VPS)
+**→ Next:** TICKET-4.5 — Administratori și Acționari (crawler ONRC reprezentanți legali) — ticket scris, gata de implementare
+**→ După:** TICKET-4.2 — PWA manifest + service worker
 
 ---
 
