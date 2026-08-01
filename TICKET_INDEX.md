@@ -109,6 +109,12 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 10.2 | API + pagina `/buget-si-finante/investitii-si-fonduri` | ✅ **done** |
 | 10.3 | QA + state docs | ✅ **done** |
 
+## Phase 11 — 🎓 Educație — 📋 planificat
+
+| ID | Ticket | Status |
+|----|--------|--------|
+| 11.1 | Pagina principală a domeniului `/educatie` (grid subdomenii) | 📋 ready (ticket scris) |
+
 ---
 
 ## Legendă

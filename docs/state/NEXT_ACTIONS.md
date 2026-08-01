@@ -12,8 +12,8 @@
 - [x] TICKET-10.2 — API + pagina `/buget-si-finante/investitii-si-fonduri`
 - [x] TICKET-10.3 — QA + state docs
 
-**→ Next:** domeniu nou (Sănătate, Educație — de verificat sursele)
-**→ După:** subdomeniu nou Buget și Finanțe cu sursă validată (dacă apare)
+**→ Next:** TICKET-11.1 — Pagina principală Educație (surse verificate)
+**→ După:** crawler + subdomeniile Educației (Rețea școlară, Bacalaureat, Cadre didactice) SAU domeniul Sănătate
 
 ---
 
