@@ -1,18 +1,18 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 8 completă — 8/8)
+**Last updated:** 2026-08-01 (Phase 9 planificată)
 
 ---
 
 ## Active Feature
 
-**Phase 8 — 💳 Taxe și Impozite (ANAF)** — ✅ Complet
+**Phase 9 — 📱 PWA (Manifest + Service Worker)** — 📋 planificat
 
-- [x] TICKET-8.1 — Spike + Crawler Buletin Statistic Fiscal ANAF (125 docs, 6 trimestre)
-- [x] TICKET-8.2 — API + pagina `/buget-si-finante/taxe-si-impozite`
-- [x] TICKET-8.3 — QA + state docs + README
+- [ ] TICKET-9.1 — Manifest PWA + iconițe (app/manifest.ts + icons)
+- [ ] TICKET-9.2 — Service worker Serwist (cache runtime + offline)
+- [ ] TICKET-9.3 — QA + Lighthouse + state docs
 
-**→ Next:** TICKET-4.2 — PWA manifest + service worker
+**→ Next:** TICKET-9.1 — Manifest PWA (tickete 9.1-9.3 scrise)
 **→ După:** următorul subdomeniu Buget și Finanțe (📈 Datoria Publică) SAU domeniu nou (Sănătate, Educație — de verificat sursele)
 
 ---
