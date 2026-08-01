@@ -1,9 +1,16 @@
 # Ticket 7.1 — Spike + Crawler BNR curs valutar (XML live + istoric)
 
 **ID:** TICKET-7.1
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 7 — 💰 Buget și Finanțe (subdomeniul: 💱 Indicatori Financiari)
 **Dependențe:** —
+
+## Rezultat spike (2026-08-01)
+
+- **Parametrul `?data=YYYYMMDD` e IGNORAT** de BNR (întoarce mereu ziua curentă) — verificat cu 3 formate diferite
+- **Fișierele anuale `nbrfxrates{YYYY}.xml` → 502** (nu mai sunt expuse public)
+- **Decizie de arhitectură:** crawler-ul acumulează istoricul singur — rulează zilnic (cron), documentele au `id = {VALUTA}_{DATA}`, re-rulează = upsert idempotent
+- **37 valute** parsate corect, multiplier aplicat (HUF: 1.4420 × 100 = 144.20)
 
 ## Context (investigație făcută)
 
