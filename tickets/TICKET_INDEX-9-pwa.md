@@ -10,7 +10,7 @@
 - `layout.tsx` are deja `viewport: { themeColor: "#08090b" }`
 - Nu există `manifest.json`, nici service worker
 
-**Status:** 📋 Planificat
+**Status:** ✅ Complet (2026-08-01)
 
 ---
 
@@ -18,7 +18,7 @@
 |----|--------|--------|------------|-------|
 | 9.1 | Manifest PWA + iconițe (app/manifest.ts + icons) | ✅ **done** | — | ~25 min |
 | 9.2 | Service worker Serwist (cache runtime + offline) | ✅ **done** | 9.1 | ~30 min |
-| 9.3 | QA + Lighthouse + state docs | ⏳ pending | 9.2 | ~20 min |
+| 9.3 | QA + Lighthouse + state docs | ✅ **done** | 9.2 | ~20 min |
 
 **Total efort estimat:** ~75 minute
 
@@ -32,9 +32,9 @@
 
 ## Verification (end of feature)
 
-- [ ] `/manifest.json` → manifest valid (nume, iconițe, theme_color)
-- [ ] Chrome DevTools → Application → Manifest OK; Service Worker activ
-- [ ] Site-ul se poate **instala** (prompt Chrome / desktop)
-- [ ] Reload offline (Workbox precache) → pagina se încarcă
-- [ ] Lighthouse PWA score > 90
-- [ ] State docs actualizate
+- [x] `/manifest.json` → manifest valid (nume, iconițe, theme_color)
+- [x] Chrome DevTools → Application → Manifest OK; Service Worker activ
+- [x] Site-ul se poate **instala** (prompt Chrome / desktop)
+- [x] Reload offline (Workbox precache) → pagina se încarcă
+- [x] Lighthouse PWA score > 90 — **n/a în Lighthouse 13** (categoria PWA eliminată din LH 12+; verificat manual: manifest valid + SW activ + offline pass + HTTPS)
+- [x] State docs actualizate

@@ -4,6 +4,23 @@
 
 ---
 
+## [2026-08-01] — TICKET-9.1 + 9.2 + 9.3: Phase 9 PWA completă — instalabil + offline
+
+### Added
+- `app/manifest.ts` — manifest PWA (Next 16 nativ, `MetadataRoute.Manifest`): name/short_name/description, `display: standalone`, theme_color + background `#08090b`, iconițe 192/512/maskable
+- `scripts/generate_icons.py` — iconițe generate cu Pillow (gradient dark + „OT" amber): `public/icons/icon-192.png`, `icon-512.png`, `maskable-512.png` (safe zone 80%) + `favicon.ico`
+- **Service worker Serwist 9.5** (`@serwist/turbopack` + `app/sw.ts`): precache statici build (`__SW_MANIFEST`), runtime cache — API **NetworkFirst** (1h, niciodată CacheFirst pe date), statice **CacheFirst** (30 zile), `skipWaiting` + `clientsClaim` + `navigationPreload`
+- Site-ul e **instalabil** ca PWA (standalone) + funcțional **offline** (App Shell + date din cache)
+
+### Verified
+- Build: `/sw/sw.js` generat (precache manifest), `/manifest.webmanifest` valid, iconițe 200
+- Browser: SW **activated** + controller, precache 34 entry-uri, cache-uri `serwist-precache` + `api-cache` + `static-assets`
+- **Test offline TRECUT**: server oprit → `/buget-si-finante/curs-valutar` s-a încărcat complet din cache (37 valute)
+- HTTPS pass; nota: categoria PWA eliminată din Lighthouse 12+ (scorul „>90" nu mai există în LH 13) — verificare manuală completă în loc
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-8.1 + 8.2: Taxe și Impozite live (Buletin Statistic Fiscal ANAF)
 
 ### Added

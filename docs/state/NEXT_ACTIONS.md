@@ -1,19 +1,18 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 9 planificată)
+**Last updated:** 2026-08-01 (Phase 9 completă — PWA)
 
 ---
 
 ## Active Feature
 
-**Phase 9 — 📱 PWA (Manifest + Service Worker)** — 📋 planificat
+**Phase 9 — 📱 PWA (Manifest + Service Worker)** — ✅ Complet
 
-- [ ] TICKET-9.1 — Manifest PWA + iconițe (app/manifest.ts + icons)
-- [ ] TICKET-9.2 — Service worker Serwist (cache runtime + offline)
-- [ ] TICKET-9.3 — QA + Lighthouse + state docs
+- [x] TICKET-9.1 — Manifest PWA + iconițe (app/manifest.ts + icons)
+- [x] TICKET-9.2 — Service worker Serwist (cache runtime + offline)
+- [x] TICKET-9.3 — QA + Lighthouse + state docs
 
-**→ Next:** TICKET-9.1 — Manifest PWA (tickete 9.1-9.3 scrise)
-**→ După:** următorul subdomeniu Buget și Finanțe (📈 Datoria Publică) SAU domeniu nou (Sănătate, Educație — de verificat sursele)
+**→ Next:** următorul subdomeniu Buget și Finanțe (📈 Datoria Publică) SAU domeniu nou (Sănătate, Educație — de verificat sursele)
 
 ---
 

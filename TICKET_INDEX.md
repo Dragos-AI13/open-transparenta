@@ -93,13 +93,13 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 8.2 | API + pagina `/buget-si-finante/taxe-si-impozite` | ✅ **done** |
 | 8.3 | QA + state docs + README | ✅ **done** |
 
-## Phase 9 — 📱 PWA (Manifest + Service Worker) — 📋 planificat
+## Phase 9 — 📱 PWA (Manifest + Service Worker) — ✅ Complet
 
 | ID | Ticket | Status |
 |----|--------|--------|
-| 9.1 | Manifest PWA + iconițe (app/manifest.ts + icons) | 📋 ready (ticket scris) |
-| 9.2 | Service worker Serwist (cache runtime + offline) | 📋 ready (ticket scris) |
-| 9.3 | QA + Lighthouse + state docs | 📋 ready (ticket scris) |
+| 9.1 | Manifest PWA + iconițe (app/manifest.ts + icons) | ✅ **done** |
+| 9.2 | Service worker Serwist (cache runtime + offline) | ✅ **done** |
+| 9.3 | QA + Lighthouse + state docs | ✅ **done** |
 
 ---
 

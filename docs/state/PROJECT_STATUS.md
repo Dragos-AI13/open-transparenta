@@ -7,9 +7,9 @@
 
 ## Lifecycle
 
-```
-🔵 Vision → 🟢 Fundația → ✅ Registrul Comerțului → ✅ Situații Financiare → ✅ Întreprinderi Publice → ⏳ PWA/Deploy → ⏳ 16 domenii rămase
-                                                                                                       ↑ (we are here)
+``` 
+🔵 Vision → 🟢 Fundația → ✅ Registrul Comerțului → ✅ Situații Financiare → ✅ Întreprinderi Publice → ✅ PWA → ⏳ 16 domenii rămase
+                                                                                       ↑ (we are here)
 ```
 
 ## Current Phase
@@ -37,9 +37,14 @@
 
 **Phase 6 — 🚧 Următorul**
 - ⏳ 4.1 Deploy producție (VPS)
-- ⏳ 4.2 PWA manifest + service worker
+- ✅ 4.2 PWA manifest + service worker → **mutat în Phase 9 — Complet**
 - ⏳ 4.3 Pagini pentru restul de 16 domenii (doar Companii e live)
 - ⏳ 4.4 Header links reale (Domenii, Despre) în loc de `#`
+
+**Phase 9 — 📱 PWA (Manifest + Service Worker)** (100% complete, 2026-08-01)
+- ✅ TICKET-9.1 Manifest `app/manifest.ts` (Next 16 nativ) + iconițe 192/512/maskable generate cu Pillow
+- ✅ TICKET-9.2 Service worker Serwist 9.5 (`@serwist/turbopack`): precache statici, runtime cache API NetworkFirst (1h) + statice CacheFirst (30 zile), offline App Shell
+- ✅ TICKET-9.3 QA: SW activ + controller, test offline TRECUT (server oprit → pagina + date din cache), manifest valid, HTTPS
 
 ---
 
@@ -83,15 +88,21 @@ Docs-urile de stare erau în urmă cu 2 faze față de cod. Corectat:
 
 - 16 din 17 domenii din DomainGrid au `href="#"` (doar Companii e live) — TICKET-4.3
 - Header: linkurile „Domenii” și „Despre” sunt `#` — TICKET-4.4
-- Fără PWA (manifest/service worker) — TICKET-4.2
+- Fără PWA (manifest/service worker) — ✅ REZOLVAT — **Phase 9 completă** (manifest + Serwist SW + offline)
 - Fără deploy producție — TICKET-4.1
 - Administratori/Acționari pe profil firmă: ✅ REZOLVAT — 3.68M reprezentanți indexați, card live (TICKET-4.5)
 - Telefon/Email pe profil firmă: `—` (ONRC nu publică aceste date în open data)
 
 ## Session 2026-08-01 (rezumat)
 
+- **Phase 9 — 📱 PWA completă (3/3 tickete)**: manifest `app/manifest.ts` (Next 16 nativ) + iconițe Pillow (192/512/maskable/favicon), service worker **Serwist 9.5** (`@serwist/turbopack`): precache statici build, runtime cache API NetworkFirst (1h) + statice CacheFirst (30 zile), offline App Shell funcțional
+- **QA TICKET-9.3**: SW activ + controller, precache 34 entry-uri, **test offline TRECUT** (server oprit → pagina Curs Valutar + 37 valute din cache), manifest valid, HTTPS pass
+- **Notă Lighthouse**: categoria PWA a fost eliminată din Lighthouse 12+ — scorul „PWA > 90” nu mai există în LH 13; verificare manuală completă în loc (manifest + SW + offline + HTTPS)
 - **Reconciliere cod ↔ docs**: Feature 3 (Situații Financiare) marcat done (era „planificat" în docs, codul era complet de pe 29.07); 2.10–2.12 promovate la done; TICKET_INDEX rescris ca hartă Phase 1–4
 - **Fix hydration dev**: `allowedDevOrigins` adăugat în next.config.ts + cache `.next` șters → React hidratează corect în dev, cele 3 grafice Chart.js se desenează (line/bar/donut), filtrele funcționează
 - **Verificat live**: homepage → căutare „Autonom" (958 firme, 7 filtre) → profil firmă (stare, CAEN, adresă) → grafice financiare pe firme cu bilanț depus
 - **TICKET-4.5 — Administratori și Acționari**: crawler ONRC reprezentanți legali — 3.68M înregistrări indexate, API + card cu badge-uri pe profil
 - **Phase 5 — Întreprinderi Publice (AMEPIP)**: 1.259 firme cu capital de stat, 17 indicatori pe an (2019-2023), pagina subdomeniului cu tabel live, card IP pe profil cu mini-chart, navigare completă — 6/6 tickete done
+- **Phase 6 — Concurență (CC)**: 2.380 decizii, pagină subdomeniu + filtre + PDF
+- **Phase 7 — Buget și Finanțe**: Curs Valutar BNR (37 valute) + Bugetul de Stat (480 rânduri) + pagina domeniului — 2 domenii live
+- **Phase 8 — Taxe și Impozite (ANAF)**: 125 indicatori fiscali, 6 trimestre, evoluții ▲/▼ — 3/7 subdomenii live

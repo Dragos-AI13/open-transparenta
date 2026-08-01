@@ -53,8 +53,12 @@ Phase 8 — Taxe și Impozite      ██████████ 100%
   ✅ Evoluții trimestriale ▲/▼ (TVA +17,9%, profit +22,2%)
   ✅ 3/7 subdomenii live în Buget și Finanțe
 
-Phase 9 — În lucru
-  ⬜ PWA manifest + service worker
+Phase 9 — PWA                 ██████████ 100%
+  ✅ Manifest + iconițe (installabil, standalone)
+  ✅ Service worker Serwist (offline + cache API)
+  ✅ Test offline trecut (date din cache fără server)
+
+Phase 10 — În lucru
   ⬜ Datoria Publică
   ⬜ Domenii noi (sănătate, educație)
 ```
