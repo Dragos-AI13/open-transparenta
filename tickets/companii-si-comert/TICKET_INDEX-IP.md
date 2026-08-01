@@ -15,7 +15,7 @@
 | 5.1 | Crawler AMEPIP: CSV 2023 + XLSX 2024 → Meilisearch | ✅ **done** | — | ~20 min |
 | 5.2 | API Routes: listă + detalii întreprinderi publice | ✅ **done** | 5.1 | ~15 min |
 | 5.3 | Sub-category page `/companii/intreprinderi-publice` (tabel + filtre) | ✅ **done** | 5.2 | ~20 min |
-| 5.4 | Card „🏛️ Întreprindere publică" pe profil firmă (indicatori + mini-chart) | ⏳ pending | 5.2 | ~25 min |
+| 5.4 | Card „🏛️ Întreprindere publică" pe profil firmă (indicatori + mini-chart) | ✅ **done** | 5.2 | ~25 min |
 | 5.5 | Integrare sidebar + navigare cap-coadă | ⏳ pending | 5.3, 5.4 | ~10 min |
 | 5.6 | QA complet subdomeniu + state docs + README | ⏳ pending | 5.3-5.5 | ~15 min |
 

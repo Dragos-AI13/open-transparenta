@@ -6,6 +6,7 @@ import { getFinancialData } from "@/lib/financiar";
 import FinancialTable from "@/components/companii/FinancialTable";
 import FinancialCharts from "@/components/companii/FinancialCharts";
 import RepresentativesCard from "@/components/companii/RepresentativesCard";
+import IntreprinderePublicaCard from "@/components/companii/IntreprinderePublicaCard";
 
 // ── Meilisearch client ─────────────────────────
 
@@ -240,7 +241,12 @@ export default async function CompanyProfile({
         )}
       </div>
 
-      {/* Future features placeholder */}
+      {/* Intreprindere publica card (doar daca firma e in lista AMEPIP) */}
+      <div className="mt-4">
+        <IntreprinderePublicaCard cui={normalizedCui} />
+      </div>
+
+      {/* Administratori si actionari */}
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         <RepresentativesCard cui={normalizedCui} />
       </div>

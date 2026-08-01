@@ -1,7 +1,7 @@
 # Ticket 5.4 — Card „🏛️ Întreprindere publică" pe profil firmă
 
 **ID:** TICKET-5.4
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 5 — 🏛️ Întreprinderi Publice
 **Dependențe:** TICKET-5.2
 

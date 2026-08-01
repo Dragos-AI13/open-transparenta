@@ -4,6 +4,22 @@
 
 ---
 
+## [2026-08-01] — TICKET-5.4: Card „Întreprindere publică" pe profil firmă
+
+### Added
+- `IntreprinderePublicaCard.tsx` — card pe profil firmă, apare DOAR dacă firma e în lista AMEPIP (404 → ascuns, zero impact pe firme normale)
+- Tabel indicatori pe ani: ROE, ROA, EBITDA, Marja profit net, Lichiditate curentă, Datorii totale, Cota de piață (doar cei disponibili, trenduri ascunse pentru valori insuficiente)
+- Mini-chart Chart.js line cu două axe (ROE % stânga + EBITDA RON dreapta)
+- Badge „Capital de stat", notă sursă „AMEPIP (OUG 109/2011) · data.gov.ro"
+- Stări: skeleton, ascuns (404), cu date; eroare → ascuns (non-critic)
+
+### Verified
+- RO54760 (COMPANIA DE APĂ ORADEA SA) → card complet: 7 indicatori × 5 ani + chart desenat
+- RO28397 (ANAGIANI IMPEX, firmă normală) → card absent (verificat în browser)
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-5.3: Pagina subdomeniului Întreprinderi Publice
 
 ### Added
