@@ -1,7 +1,7 @@
 # Ticket 6.3 — QA complet + state docs + README
 
 **ID:** TICKET-6.3
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 6 — 🔒 Concurență
 **Dependențe:** TICKET-6.2
 

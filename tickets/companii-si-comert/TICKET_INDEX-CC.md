@@ -18,7 +18,7 @@
 |----|--------|--------|------------|-------|
 | 6.1 | Spike + Crawler decizii CC (HTML scraping) | ✅ **done** | — | ~40 min |
 | 6.2 | API Routes + pagina `/companii/concurenta` (tabel decizii) | ✅ **done** | 6.1 | ~20 min |
-| 6.3 | QA + state docs + README | ⏳ pending | 6.2 | ~15 min |
+| 6.3 | QA + state docs + README | ✅ **done** | 6.2 | ~15 min |
 
 **Total efort estimat:** ~75 minute
 

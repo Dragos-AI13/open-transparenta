@@ -39,10 +39,14 @@ Phase 5 — Întreprinderi Publice  ██████████ 100%
   ✅ 17 indicatori per firmă/an (2019-2023)
   ✅ Pagină subdomeniu + card profil + grafice
 
-Phase 6 — În lucru
+Phase 6 — Concurență           ██████████ 100%
+  ✅ 2.380 decizii Consiliul Concurenței
+  ✅ Pagină subdomeniu + filtre + link-uri PDF
+
+Phase 7 — În lucru
   ⬜ Deploy producție (VPS)
   ⬜ PWA manifest + service worker
-  ⬜ Pagini pentru restul de 16 domenii
+  ⬜ Domenii noi (bugete, sănătate, educație)
 ```
 
 ## 🧱 Stack

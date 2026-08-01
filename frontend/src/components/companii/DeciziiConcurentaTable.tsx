@@ -49,7 +49,11 @@ export default function DeciziiConcurentaTable() {
     if (typeof window === "undefined") return "";
     return new URLSearchParams(window.location.search).get("q") ?? "";
   });
-  const [categorie, setCategorie] = useState("Toate");
+  const [categorie, setCategorie] = useState<string>(() => {
+    if (typeof window === "undefined") return "Toate";
+    const c = new URLSearchParams(window.location.search).get("categorie");
+    return c && CATEGORII.includes(c) ? c : "Toate";
+  });
   const [page, setPage] = useState(1);
 
   const load = useCallback(async () => {

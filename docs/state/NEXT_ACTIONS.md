@@ -1,19 +1,19 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 6 planificată)
+**Last updated:** 2026-08-01 (Phase 6 completă)
 
 ---
 
 ## Active Feature
 
-**Phase 6 — 🔒 Concurență (Consiliul Concurenței)** — 📋 planificat
+**Phase 6 — 🔒 Concurență (Consiliul Concurenței)** — ✅ Complet
 
-- [ ] TICKET-6.1 — Spike + Crawler decizii CC (HTML scraping)
-- [ ] TICKET-6.2 — API Routes + pagina `/companii/concurenta`
-- [ ] TICKET-6.3 — QA + state docs + README
+- [x] TICKET-6.1 — Spike + Crawler decizii CC (2.380 decizii indexate)
+- [x] TICKET-6.2 — API Routes + pagina `/companii/concurenta`
+- [x] TICKET-6.3 — QA + state docs + README
 
-**→ Next:** TICKET-6.1 — Spike + Crawler decizii CC (tickete 6.1-6.3 scrise)
-**→ După:** TICKET-4.2 — PWA manifest + service worker
+**→ Next:** TICKET-4.2 — PWA manifest + service worker
+**→ După:** TICKET-4.3 — domenii noi din grid-ul homepage (bugete, sănătate, educație — de verificat sursele)
 
 ---
 
