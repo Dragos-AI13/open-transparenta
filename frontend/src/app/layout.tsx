@@ -5,6 +5,10 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
+export const viewport: Viewport = {
+  themeColor: "#08090b",
+};
+
 export const metadata: Metadata = {
   title: "Open Transparență — Caută orice dată publică din România",
   description:
@@ -18,10 +22,16 @@ export const metadata: Metadata = {
     "ONRC",
     "BNR",
   ],
-};
-
-export const viewport: Viewport = {
-  themeColor: "#08090b",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icons/icon-192.png",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "OpenTransp",
+    statusBarStyle: "black-translucent",
+  },
 };
 
 export default function RootLayout({

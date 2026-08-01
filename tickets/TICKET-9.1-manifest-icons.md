@@ -1,7 +1,7 @@
 # Ticket 9.1 — Manifest PWA + iconițe (app/manifest.ts + public/icons)
 
 **ID:** TICKET-9.1
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 9 — 📱 PWA
 **Dependențe:** —
 
