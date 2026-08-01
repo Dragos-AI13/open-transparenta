@@ -7,6 +7,8 @@ export interface CompaniiCategory {
   fullDesc: string;
   sourceCount: number;
   keyInstitutions: string[];
+  /** Apar în sidebar doar categoriile cu date reale sau sursă confirmată */
+  showInSidebar: boolean;
 }
 
 export const companiiCategories: CompaniiCategory[] = [
@@ -20,6 +22,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Datele Oficiului Național al Registrului Comerțului: firme înregistrate, nomenclatoare CAEN, forme juridice, activități autorizate. Actualizat lunar prin dumps CSV.",
     sourceCount: 76,
     keyInstitutions: ["ONRC — Registrul Comerțului"],
+    showInSidebar: true,
   },
   {
     slug: "situatii-financiare",
@@ -31,6 +34,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Situațiile financiare anuale ale companiilor: cifră de afaceri, profit, active, datorii, număr angajați. Date istorice 2008-2025, actualizate anual.",
     sourceCount: 2,
     keyInstitutions: ["Ministerul Finanțelor"],
+    showInSidebar: true,
   },
   {
     slug: "intreprinderi-publice",
@@ -42,6 +46,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Indicatori financiari, nefinanciari și de guvernanță pentru întreprinderile publice monitorizate de AMEPIP. Lista completă și date comparative.",
     sourceCount: 2,
     keyInstitutions: ["AMEPIP"],
+    showInSidebar: true,
   },
   {
     slug: "piata-de-capital",
@@ -53,6 +58,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Date de la BVB și ASF: cotații bursiere, indici, emitenți, dividende, valori mobiliare. Pentru investitori și analiști.",
     sourceCount: 3,
     keyInstitutions: ["ASF", "BVB — Bursa de Valori București"],
+    showInSidebar: false,
   },
   {
     slug: "pensii-private",
@@ -64,6 +70,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Statistici privind fondurile de pensii private: active administrate, contribuții, randamente, număr de participanți, pe fiecare fond în parte.",
     sourceCount: 1,
     keyInstitutions: ["ASF — Autoritatea de Supraveghere Financiară"],
+    showInSidebar: false,
   },
   {
     slug: "asigurari",
@@ -75,6 +82,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Date despre piața asigurărilor: prime subscrise, daune plătite, intermediari autorizați, solvabilitate. Actualizat periodic de ASF.",
     sourceCount: 1,
     keyInstitutions: ["ASF — Autoritatea de Supraveghere Financiară"],
+    showInSidebar: false,
   },
   {
     slug: "protectia-consumatorului",
@@ -86,6 +94,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Activitatea Autorității Naționale pentru Protecția Consumatorului: amenzi și sancțiuni, controale OPC, reclamații și sesizări.",
     sourceCount: 3,
     keyInstitutions: ["ANPC — Protecția Consumatorului"],
+    showInSidebar: false,
   },
   {
     slug: "concurenta",
@@ -97,6 +106,7 @@ export const companiiCategories: CompaniiCategory[] = [
       "Decizii, avize și concentrări economice analizate de Consiliul Concurenței. Ajutoare de stat și practici anticoncurențiale.",
     sourceCount: 1,
     keyInstitutions: ["Consiliul Concurenței"],
+    showInSidebar: true,
   },
   {
     slug: "drepturi-de-autor",
@@ -108,5 +118,6 @@ export const companiiCategories: CompaniiCategory[] = [
       "Statistici privind marcajele holografice distribuite de ORDA, produse pirat distruse, top societăți beneficiare.",
     sourceCount: 8,
     keyInstitutions: ["ORDA — Oficiul Român pentru Drepturile de Autor"],
+    showInSidebar: false,
   },
 ];

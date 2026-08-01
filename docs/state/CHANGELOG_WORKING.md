@@ -4,6 +4,21 @@
 
 ---
 
+## [2026-08-01] — Sidebar curat: eliminate subdomeniile fără date reale
+
+### Changed
+- `DomainSidebar`: afișează doar categoriile cu `showInSidebar: true` — Registrul Comerțului, Situații Financiare, Întreprinderi Publice, Concurență (sursă confirmată: WordPress REST API Consiliul Concurenței)
+- Eliminate din sidebar: Piață de Capital, Pensii Private, Asigurări, Protecția Consumatorului, Drepturi de Autor (fără sursă de date viabilă — verificat: data.gov.ro gol sau vechi, ASF blochează botii, BVB fără API)
+- Paginile rămân accesibile direct din URL (doar nu mai apar în sidebar) — reversibil oricând
+- Homepage/grid-ul de 17 domenii: **neatins** (decizie explicită user — site-ul e în dev)
+
+### Verified
+- Sidebar: 6 itemi (Toate datele, Căutare firmă, 4 categorii live) — verificat în browser
+- `/companii/piata-de-capital` și `/companii/concurenta` → 200 direct din URL
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-5.6: QA complet Phase 5 (Întreprinderi Publice)
 
 ### Fixed
