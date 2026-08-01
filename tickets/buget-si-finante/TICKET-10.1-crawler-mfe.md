@@ -1,7 +1,7 @@
 # Ticket 10.1 — Crawler MFE (Proiecte contractate + Stadiul absorbției)
 
 **ID:** TICKET-10.1
-**Status:** 📋 ready
+**Status:** ✅ done
 **Feature:** 10 — 🏗️ Investiții și Fonduri (MFE)
 **Dependențe:** —
 
@@ -20,7 +20,7 @@ Crawler pentru datele MFE (Ministerul Investițiilor și Proiectelor Europene) d
 
 ## Cerințe
 
-- [ ] `crawler/crawler_mfe.py`:
+- [x] `crawler/crawler_mfe.py`:
   - Descoperă resursele din pachetele CKAN (package_search + package_show) — programul din numele resursei (prefix `POIM -`, `POC -` etc.)
   - Filtrează cele mai recente N resurse per program (evită re-crawl la fiecare rulare — state hash per pachet)
   - Parsează XLSX (openpyxl): saltă primele 4 rânduri (titlu), header la rândul 5, mapează coloane după nume
@@ -28,7 +28,7 @@ Crawler pentru datele MFE (Ministerul Investițiilor și Proiectelor Europene) d
   - Index Meilisearch `proiecte_fonduri` (primary key: `{program}_{smis}_{titlu_hash}` — SMIS poate lipsi/repeta)
   - `--dry-run`, `--max`, `--force`, `.crawler_state.json`, staging + swap atomic, wait_for_task înainte de swap
   - Comandă npm: `crawl:mfe` (în ACELAȘI commit)
-- [ ] Datele din „Stadiul absorbției" (2014-2020 + 2021-2027) — index `absorbție_fonduri` (sau inclus în același index cu tip distinct): program, alocare, plăți, % absorbție, dată raportare
+- [x] Datele din „Stadiul absorbției" (2014-2020 + 2021-2027) — index `absorbție_fonduri` (sau inclus în același index cu tip distinct): program, alocare, plăți, % absorbție, dată raportare
 
 ## Fișiere
 
@@ -45,9 +45,9 @@ Crawler pentru datele MFE (Ministerul Investițiilor și Proiectelor Europene) d
 
 ## Acceptance criteria
 
-- [ ] Index Meilisearch cu proiecte reale MFE (POIM + minim 2 alte programe)
-- [ ] `crawl:mfe` idempotent (re-rulare → zero duplicat)
-- [ ] Stadiul absorbției indexat cu % și dată raportare
+- [x] Index Meilisearch cu proiecte reale MFE (POIM + minim 2 alte programe) — **16.979 proiecte, 7 programe: POR 8032, POC 3084, POCU 2933, POIM 1852, POCA 900, POAT 149, POAD 29**
+- [x] `crawl:mfe` idempotent (re-rulare → zero duplicat) — verificat: 16.979 → 16.979 după re-rulare
+- [x] Stadiul absorbției indexat cu % și dată raportare — **29 programe, perioada 29 mai 2026**
 
 ## Security
 

@@ -13,7 +13,8 @@
     "crawl:concurenta": "cd ../crawler && python crawler_concurenta.py",
     "crawl:bnr": "cd ../crawler && python crawler_bnr.py",
     "crawl:buget": "cd ../crawler && python crawler_buget.py",
-    "crawl:anaf": "cd ../crawler && python crawler_anaf.py"
+    "crawl:anaf": "cd ../crawler && python crawler_anaf.py",
+    "crawl:mfe": "cd ../crawler && python crawler_mfe.py"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
