@@ -4,6 +4,23 @@
 
 ---
 
+## [2026-08-01] — UI: monedă pe grafice + fallback-uri elegante
+
+### Added
+- Axa Y a graficelor Chart.js afișează acum moneda: `18k RON`, `1,1M RON` (era doar `18k`)
+- Mesaj fallback pentru „Structura Activelor" când datele sunt insuficiente (sub 2 componente) — în loc de card gol
+- Text explicativ pentru „Administratori și Acționari" (menționează sursa ONRC și planul de indexare)
+
+### Fixed
+- Anul din titlul „Structura Activelor (YYYY)" folosea ultimul an din array în loc de cel mai recent — inconsecvent cu mesajul interior
+
+### Verified
+- Firma fără structură detaliată (RO28397 ANAGIANI IMPEX): fallback afișat corect, an 2025 în titlu și mesaj
+- Firma cu date complete (RO25629090): donut-ul se desenează normal
+- RON vizibil pe axa Y la ambele grafice trend
+
+---
+
 ## [2026-08-01] — Fix: grafice financiare goale în dev mode
 
 ### Fixed
