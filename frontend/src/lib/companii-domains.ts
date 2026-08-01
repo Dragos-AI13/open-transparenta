@@ -9,6 +9,8 @@ export interface CompaniiCategory {
   keyInstitutions: string[];
   /** Apar în sidebar doar categoriile cu date reale sau sursă confirmată */
   showInSidebar: boolean;
+  /** Categorie fără sursă de date viabilă (verificat) — ascunsă din UI, dar păstrată în cod pentru reversibilitate */
+  hidden?: boolean;
 }
 
 export const companiiCategories: CompaniiCategory[] = [
@@ -59,6 +61,7 @@ export const companiiCategories: CompaniiCategory[] = [
     sourceCount: 3,
     keyInstitutions: ["ASF", "BVB — Bursa de Valori București"],
     showInSidebar: false,
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): data.gov.ro 0 seturi; ASF blochează botii, BVB fără API JSON
   },
   {
     slug: "pensii-private",
@@ -71,6 +74,7 @@ export const companiiCategories: CompaniiCategory[] = [
     sourceCount: 1,
     keyInstitutions: ["ASF — Autoritatea de Supraveghere Financiară"],
     showInSidebar: false,
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): data.gov.ro doar bugete MF irelevante (2014-2018)
   },
   {
     slug: "asigurari",
@@ -83,6 +87,7 @@ export const companiiCategories: CompaniiCategory[] = [
     sourceCount: 1,
     keyInstitutions: ["ASF — Autoritatea de Supraveghere Financiară"],
     showInSidebar: false,
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): data.gov.ro 0 seturi; ASF „Request Rejected" anti-bot
   },
   {
     slug: "protectia-consumatorului",
@@ -95,6 +100,7 @@ export const companiiCategories: CompaniiCategory[] = [
     sourceCount: 3,
     keyInstitutions: ["ANPC — Protecția Consumatorului"],
     showInSidebar: false,
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): data.gov.ro 0 seturi relevante
   },
   {
     slug: "concurenta",
@@ -119,5 +125,6 @@ export const companiiCategories: CompaniiCategory[] = [
     sourceCount: 8,
     keyInstitutions: ["ORDA — Oficiul Român pentru Drepturile de Autor"],
     showInSidebar: false,
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): ORDA 7 seturi dar toate din 2018 (vechi de 8 ani)
   },
 ];

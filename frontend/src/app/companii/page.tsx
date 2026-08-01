@@ -3,10 +3,14 @@ import { companiiCategories } from "@/lib/companii-domains";
 import { DomainSearch } from "@/components/companii/DomainSearch";
 
 export default function CompaniiPage() {
-  const totalSources = companiiCategories.reduce(
+  const visibleCategories = companiiCategories.filter((c) => !c.hidden);
+  const totalSources = visibleCategories.reduce(
     (sum, c) => sum + c.sourceCount,
     0,
   );
+  const totalInstitutions = new Set(
+    visibleCategories.flatMap((c) => c.keyInstitutions),
+  ).size;
 
   return (
     <div className="flex flex-col">
@@ -17,19 +21,26 @@ export default function CompaniiPage() {
         </h1>
         <p className="mt-1.5 max-w-2xl text-sm text-text-secondary sm:text-base">
           Toate datele publice despre firmele din România — de la Registrul
-          Comerțului la situații financiare, piață de capital și protecția
-          consumatorului.
+          Comerțului la situații financiare, întreprinderi publice și
+          concurență.
         </p>
         <div className="mt-3 flex flex-wrap gap-3 text-xs text-text-muted">
           <span>
-            <strong className="text-text-secondary">{companiiCategories.length}</strong>{" "}
-            categorii
+            <strong className="text-text-secondary">
+              {visibleCategories.length}
+            </strong>{" "}
+            categorii live
           </span>
           <span>
             <strong className="text-text-secondary">{totalSources}+</strong>{" "}
             seturi de date
           </span>
-          <span>9 instituții</span>
+          <span>
+            <strong className="text-text-secondary">
+              {totalInstitutions}
+            </strong>{" "}
+            instituții
+          </span>
         </div>
 
         {/* Domain Search */}
@@ -40,7 +51,7 @@ export default function CompaniiPage() {
 
       {/* Category Grid */}
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {companiiCategories.map((cat) => (
+        {visibleCategories.map((cat) => (
           <Link
             key={cat.slug}
             href={`/companii/${cat.slug}`}
