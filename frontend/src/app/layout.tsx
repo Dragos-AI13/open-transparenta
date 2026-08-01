@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro" className="h-full antialiased">
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col" suppressHydrationWarning>
         <Header />
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
