@@ -54,6 +54,18 @@ export interface DecizieConcurentaDoc {
   url_sursa: string;  // link sursă
 }
 
+// ─── Curs Valutar (BNR) ─────────────────────────
+
+export interface CursValutarDoc {
+  id: string;          // "EUR_2026-07-31"
+  valuta: string;      // "EUR"
+  denumire: string;    // "Euro"
+  data: string;        // "2026-07-31"
+  rata: number;        // 5.2473 (valoarea reală, multiplier aplicat)
+  rata_bruta: number;  // 5.2473
+  multiplier: number;  // 1 (sau 100 pentru HUF, JPY...)
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;

@@ -4,6 +4,23 @@
 
 ---
 
+## [2026-08-01] — TICKET-7.1 + 7.2: Curs Valutar BNR live
+
+### Added
+- `crawler/crawler_bnr.py` — XML BNR public (nbrfxrates.xml), 37 valute, multiplier aplicat (HUF ×100 = 144.20), denumiri oficiale; istoric acumulat prin re-rulări zilnice (id `{VALUTA}_{DATA}`, upsert idempotent) — BNR nu mai expune istoric via API (`?data=` ignorat, fișiere anuale 502)
+- Index Meilisearch `curs_valutar` (37 docs, 2026-07-31)
+- `GET /api/curs-valutar?q=&data=&page=&limit=` — fără filtre → cea mai recentă zi, sortat desc după rată; `q` caută pe valută/denumire
+- Pagină `/buget-si-finante/curs-valutar` — tabel: Valută (badge amber), Denumire, Rată (4 zecimale, format RO), Multiplier; căutare; stări complete; responsive; notă sursă BNR
+- Tip `CursValutarDoc` în lib
+
+### Verified
+- API: latestDate 2026-07-31, total 37; `?q=EUR` → Euro 5.2473
+- Browser: 37 valute afișate (XAU 594,63; EUR 5,2473; USD 4,5595; CHF 5,6420; GBP 6,1332), multiplier ×100 vizibil (HUF 144,20; JPY 285,14)
+- Căutare „dolar" → 6 rezultate (american, canadian, australian, neo-zeelandez, Hong Kong, Singapore)
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-6.1 + 6.2: Concurență live (2.380 decizii CC)
 
 ### Added

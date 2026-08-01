@@ -68,8 +68,8 @@ CURRENCY_NAMES = {
     "KRW": "Won sud-coreean", "MDL": "Leu moldovenesc", "MXN": "Peso mexican",
     "NOK": "Coroană norvegiană", "NZD": "Dolar neo-zeelandez", "PHP": "Peso filipinez",
     "PLN": "Zlot polonez", "RSD": "Dinar sârb", "RUB": "Rublă rusească",
-    "SEK": "Coroană suedeză", "THB": "Baht thailandez", "TRY": "Liră turcească",
-    "UAH": "Hrivnă ucraineană", "USD": "Dolar american", "XAU": "Aur (gram)",
+    "SEK": "Coroană suedeză", "SGD": "Dolar Singapore", "THB": "Baht thailandez",
+    "TRY": "Liră turcească", "MYR": "Ringgit malaysian", "UAH": "Hrivnă ucraineană", "USD": "Dolar american", "XAU": "Aur (gram)",
     "XDR": "Drepturi speciale de tragere", "ZAR": "Rand sud-african",
 }
 

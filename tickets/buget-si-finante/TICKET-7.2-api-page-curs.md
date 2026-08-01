@@ -1,7 +1,7 @@
 # Ticket 7.2 — API + pagina subdomeniului `/buget-si-finante/curs-valutar`
 
 **ID:** TICKET-7.2
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 7 — 💰 Buget și Finanțe (subdomeniul: 💱 Indicatori Financiari)
 **Dependențe:** TICKET-7.1
 
