@@ -19,7 +19,7 @@ const domainColors: Record<string, string> = {
 };
 
 const domains: { name: string; slug: string; href?: string }[] = [
-  { name: "Buget și Finanțe", slug: "buget" },
+  { name: "Buget și Finanțe", slug: "buget", href: "/buget-si-finante" },
   { name: "Sănătate", slug: "sanatate" },
   { name: "Educație", slug: "educatie" },
   { name: "Justiție", slug: "justitie" },

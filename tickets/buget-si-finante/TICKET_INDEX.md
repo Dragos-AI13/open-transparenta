@@ -18,7 +18,7 @@
 |----|--------|--------|------------|-------|
 | 7.1 | Spike + Crawler BNR curs valutar (XML live + istoric) | ✅ **done** | — | ~30 min |
 | 7.2 | API + pagina subdomeniului `/buget-si-finante/curs-valutar` | ✅ **done** | 7.1 | ~25 min |
-| 7.3 | Pagina principală a domeniului `/buget-si-finante` + link homepage | ⏳ pending | 7.2 | ~20 min |
+| 7.3 | Pagina principală a domeniului `/buget-si-finante` + link homepage | ✅ **done** | 7.2 | ~20 min |
 | 7.4 | QA + state docs + README | ⏳ pending | 7.2, 7.3 | ~15 min |
 
 **Total efort estimat:** ~90 minute

@@ -1,7 +1,7 @@
 # Ticket 7.3 — Pagina principală a domeniului `/buget-si-finante` + link homepage
 
 **ID:** TICKET-7.3
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 7 — 💰 Buget și Finanțe
 **Dependențe:** TICKET-7.2
 

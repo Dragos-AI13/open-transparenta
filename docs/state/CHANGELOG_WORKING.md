@@ -4,6 +4,20 @@
 
 ---
 
+## [2026-08-01] — TICKET-7.3: Pagina principală a domeniului Buget și Finanțe
+
+### Added
+- `/buget-si-finante` — pagina principală a domeniului: hero, grid 7 subdomenii (💱 Curs Valutar **Live** + 6 „În pregătire" fără dead link), badge-uri, instituțiile din domeniu (MF, ANAF, BNR, AEP, Energie, CNI, MFE)
+- `lib/buget-domains.ts` — datele subdomeniilor (pattern `companii-domains.ts`)
+- **Homepage DomainGrid: „💰 Buget și Finanțe" devine clickabil** (`href: "/buget-si-finante"`) — primul domeniu nou din grid după Companii și Comerț
+
+### Verified
+- Browser: homepage → card „Buget și Finanțe" (fără 🔜) → pagina domeniului → „💱 Curs Valutar" (LIVE) → tabel 37 valute → înapoi
+- Subdomeniile „În pregătire" NU sunt link-uri (zero dead link)
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-7.1 + 7.2: Curs Valutar BNR live
 
 ### Added
