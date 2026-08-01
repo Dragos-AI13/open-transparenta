@@ -1,19 +1,22 @@
 # NEXT ACTIONS — Open Transparență
 
-**Last updated:** 2026-08-01 (Phase 7 completă)
+**Last updated:** 2026-08-01 (Phase 7 completă — 7/7)
 
 ---
 
 ## Active Feature
 
-**Phase 7 — 💰 Buget și Finanțe** — ✅ Complet (subdomeniul 1: 💱 Curs Valutar BNR + pagina domeniului)
+**Phase 7 — 💰 Buget și Finanțe** — ✅ Complet (2 subdomenii live: 💱 Curs Valutar + 📋 Bugetul de Stat)
 
 - [x] TICKET-7.1 — Spike + Crawler BNR curs valutar (37 valute, XML live)
 - [x] TICKET-7.2 — API + pagina subdomeniului `/buget-si-finante/curs-valutar`
 - [x] TICKET-7.3 — Pagina principală a domeniului `/buget-si-finante` + link homepage
 - [x] TICKET-7.4 — QA + state docs + README
+- [x] TICKET-7.5 — Crawler Bugetul de Stat (480 docs, 2023-2025)
+- [x] TICKET-7.6 — API + pagina `/buget-si-finante/bugetul-de-stat`
+- [x] TICKET-7.7 — QA + state docs + README
 
-**→ Next:** subdomeniul 2 din Buget și Finanțe (📋 Bugetul de Stat — MF) SAU TICKET-4.2 PWA
+**→ Next:** subdomeniul 3 din Buget și Finanțe (💳 Taxe și Impozite — ANAF) SAU TICKET-4.2 PWA
 **→ După:** alte domenii din grid (Sănătate, Educație — de verificat sursele)
 
 ---

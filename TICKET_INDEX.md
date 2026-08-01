@@ -73,7 +73,7 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 6.2 | API Routes + pagina `/companii/concurenta` (tabel decizii) | ✅ **done** |
 | 6.3 | QA + state docs + README | ✅ **done** |
 
-## Phase 7 — 💰 Buget și Finanțe — ✅ Complet (7.1-7.4) + 📋 planificat (7.5-7.7)
+## Phase 7 — 💰 Buget și Finanțe — ✅ Complet
 
 | ID | Ticket | Status |
 |----|--------|--------|
@@ -81,9 +81,9 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 7.2 | API + pagina subdomeniului `/buget-si-finante/curs-valutar` | ✅ **done** |
 | 7.3 | Pagina principală a domeniului `/buget-si-finante` + link homepage | ✅ **done** |
 | 7.4 | QA + state docs + README | ✅ **done** |
-| 7.5 | Crawler Bugetul de Stat (XML MF 2023-2025) | 📋 ready (ticket scris) |
-| 7.6 | API + pagina `/buget-si-finante/bugetul-de-stat` | 📋 ready (ticket scris) |
-| 7.7 | QA + state docs + README | 📋 ready (ticket scris) |
+| 7.5 | Crawler Bugetul de Stat (XML MF 2023-2025) | ✅ **done** |
+| 7.6 | API + pagina `/buget-si-finante/bugetul-de-stat` | ✅ **done** |
+| 7.7 | QA + state docs + README | ✅ **done** |
 
 ---
 

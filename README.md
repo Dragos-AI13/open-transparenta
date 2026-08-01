@@ -45,10 +45,11 @@ Phase 6 — Concurență           ██████████ 100%
 
 Phase 7 — Buget și Finanțe     ██████████ 100%
   ✅ Curs Valutar BNR live (37 valute, zilnic)
+  ✅ Bugetul de Stat live (480 rânduri, 3 ani, deficit)
   ✅ Pagină domeniu + link homepage (2/17 domenii live)
 
 Phase 8 — În lucru
-  ⬜ Subdomeniul 2 Buget și Finanțe (Bugetul de Stat)
+  ⬜ Subdomeniul 3 Buget și Finanțe (Taxe și Impozite — ANAF)
   ⬜ Deploy producție (VPS)
   ⬜ PWA manifest + service worker
   ⬜ Domenii noi (sănătate, educație)

@@ -1,7 +1,7 @@
 # Ticket 7.7 — QA complet + state docs + README
 
 **ID:** TICKET-7.7
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 7 — 💰 Buget și Finanțe (subdomeniul: 📋 Bugetul de Stat)
 **Dependențe:** TICKET-7.6
 
