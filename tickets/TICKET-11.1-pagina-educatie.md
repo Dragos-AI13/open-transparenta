@@ -1,7 +1,7 @@
 # Ticket 11.1 — Pagina principală a domeniului Educație
 
 **ID:** TICKET-11.1
-**Status:** 📋 ready
+**Status:** ✅ done
 **Feature:** 11 — 🎓 Educație
 **Dependențe:** —
 
@@ -23,16 +23,16 @@ Pagina principală a domeniului **Educație** (`/educatie`) cu grid-ul tuturor s
 
 ## Cerințe
 
-- [ ] `lib/educatie-domains.ts` — `EducatieSubdomain[]` (pattern `buget-domains.ts`):
+- [x] `lib/educatie-domains.ts` — `EducatieSubdomain[]` (pattern `buget-domains.ts`):
   - `{ slug, name, icon, shortDesc, status: "live"|"planned", href?, hidden? }`
   - 3 subdomenii `planned` (Rețea școlară, Bacalaureat, Cadre didactice) + 2 `hidden: true` (Studenți, Rețea universitară — date vechi)
   - Comentariu pe fiecare hidden cu motivul verificat
-- [ ] `app/educatie/page.tsx` — pagina principală (pattern `buget-si-finante/page.tsx`):
+- [x] `app/educatie/page.tsx` — pagina principală (pattern `buget-si-finante/page.tsx`):
   - Hero: iconiță 🎓, titlu „Educație", subtitlu, descrierea domeniului
   - Grid subdomenii: **live = `<Link>` cu badge, planned = `<div>` (NU link, zero dead links)**, ascunse = filtrate `!hidden`
-  - Secțiune „Instituții în acest domeniu": 🎓 Ministerul Educației, 🏛️ MEN, 📊 INS, (altele relevante)
+  - Secțiune „Instituții în acest domeniu": 🎓 Ministerul Educației, 🏛️ MEN, 📊 INS
   - Metadata (title + description)
-- [ ] `components/DomainGrid.tsx` — `{ name: "Educație", slug: "educatie", href: "/educatie" }` (pierde 🔜, devine clickabil)
+- [x] `components/DomainGrid.tsx` — `{ name: "Educație", slug: "educatie", href: "/educatie" }` (pierde 🔜, devine clickabil)
 
 ## Fișiere
 
@@ -50,10 +50,10 @@ Pagina principală a domeniului **Educație** (`/educatie`) cu grid-ul tuturor s
 
 ## Acceptance criteria
 
-- [ ] `/educatie` afișează hero + grid cu **3 subdomenii** (Rețea școlară, Bacalaureat, Cadre didactice) — toate cu badge „În pregătire", zero link-uri moarte
-- [ ] Studenți + Rețea universitară **NU apar** în grid (hidden)
-- [ ] Homepage → cardul „🎓 Educație" fără 🔜, click → `/educatie`
-- [ ] `npm run build` trece
+- [x] `/educatie` afișează hero + grid cu **3 subdomenii** (Rețea școlară, Bacalaureat, Cadre didactice) — toate cu badge „În pregătire", zero link-uri moarte
+- [x] Studenți + Rețea universitară **NU apar** în grid (hidden)
+- [x] Homepage → cardul „🎓 Educație" fără 🔜, click → `/educatie`
+- [x] `npm run build` trece
 
 ## Security
 

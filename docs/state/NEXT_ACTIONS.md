@@ -12,8 +12,15 @@
 - [x] TICKET-10.2 — API + pagina `/buget-si-finante/investitii-si-fonduri`
 - [x] TICKET-10.3 — QA + state docs
 
-**→ Next:** TICKET-11.1 — Pagina principală Educație (surse verificate)
-**→ După:** crawler + subdomeniile Educației (Rețea școlară, Bacalaureat, Cadre didactice) SAU domeniul Sănătate
+**Phase 11 — 🎓 Educație** — în lucru (1/…)
+
+- [x] TICKET-11.1 — Pagina principală a domeniului `/educatie` (grid subdomenii)
+- [ ] TICKET-11.2 — Crawler + subdomeniu Rețea școlară
+- [ ] TICKET-11.3 — Crawler + subdomeniu Bacalaureat
+- [ ] TICKET-11.4 — Crawler + subdomeniu Cadre didactice
+
+**→ Next:** TICKET-11.2 — Rețea școlară (crawler ME + API + pagină)
+**→ După:** Bacalaureat, Cadre didactice, apoi domeniul Sănătate
 
 ---
 
