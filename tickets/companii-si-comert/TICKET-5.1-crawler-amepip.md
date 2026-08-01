@@ -1,7 +1,7 @@
 # Ticket 5.1 — Crawler AMEPIP: CSV 2023 + XLSX 2024 → Meilisearch
 
 **ID:** TICKET-5.1
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 5 — 🏛️ Întreprinderi Publice
 **Dependențe:** — (pattern: TICKET-4.5 crawler_reprezentanti.py)
 

@@ -4,6 +4,24 @@
 
 ---
 
+## [2026-08-01] — TICKET-5.1: Crawler AMEPIP (întreprinderi publice)
+
+### Added
+- `crawler/crawler_amepip.py` — descarcă `data_2023.csv` (AMEPIP, data.gov.ro), agregă pe CUI, indexează în Meilisearch (index `intreprinderi_publice`, primary key `cui`, swap atomic)
+- **1.259 firme cu capital de stat** indexate: COMPANIA DE APĂ ORADEA SA, TRANSELECTRICA, POSTA ROMÂNĂ, LOTERIA ROMÂNĂ etc.
+- **17 indicatori AMEPIP pe firmă, ani 2019-2023**: ROE, ROA, EBITDA, marje, lichidități, datorii, cota de piață
+- Normalizare CUI (`54760` → `RO54760`), split CAEN (cod + descriere)
+- `--include-2024` opțional: XLSX-ul ian 2026 e format pivot fără mapare CUI directă → fallback elegant (se sare, se folosește CSV)
+- Comandă npm: `crawl:amepip`
+
+### Verified
+- Index: 1.259 documente, `searchableAttributes` + `filterableAttributes` configurate
+- Search „COMPANIA DE APA ORADEA" → RO54760, ani [2019-2023], ROE/EBITDA/lichiditate populați pe toți anii
+- `--dry-run` + `--max` funcționale; `--include-2024` sare elegant (pivot nemapabil)
+- Build frontend neafectat
+
+---
+
 ## [2026-08-01] — TICKET-4.5: Administratori și Acționari (reprezentanți legali ONRC)
 
 ### Added
