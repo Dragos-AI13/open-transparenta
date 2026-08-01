@@ -5,6 +5,8 @@ export interface BugetSubdomain {
   shortDesc: string;
   status: "live" | "planned";
   href?: string;
+  /** Subdomeniu fără sursă de date viabilă (verificat) — ascuns din UI, dar păstrat în cod pentru reversibilitate */
+  hidden?: boolean;
 }
 
 /** Subdomeniile domeniului „Buget și Finanțe" (din docs/04-domains/01-buget-si-finante) */
@@ -31,6 +33,7 @@ export const bugetSubdomains: BugetSubdomain[] = [
     icon: "🏘️",
     shortDesc: "Consilii județene, primării, instituții subordonate",
     status: "planned",
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): data.gov.ro doar fișiere vechi 2018, fragmentate, majoritatea doar link-uri
   },
   {
     slug: "datoria-publica",
@@ -38,6 +41,7 @@ export const bugetSubdomains: BugetSubdomain[] = [
     icon: "📈",
     shortDesc: "Datorie guvernamentală, titluri de stat, garanții",
     status: "planned",
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): MF blocat (connection reset), data.gov.ro doar local (Vrancea), Eurostat = doar UE agregat
   },
   {
     slug: "taxe-si-impozite",
@@ -60,5 +64,6 @@ export const bugetSubdomains: BugetSubdomain[] = [
     icon: "🗳️",
     shortDesc: "AEP — venituri, cheltuieli și subvenții ale partidelor",
     status: "planned",
+    hidden: true, // ❌ fără sursă viabilă (verificat 2026-08-01): aep.ro = parking page, finantarepartide.ro + roaep.ro = reCAPTCHA (anti-bot total)
   },
 ];

@@ -40,7 +40,9 @@ export default function BugetFinantePage() {
           Subdomenii
         </h2>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {bugetSubdomains.map((sub) => {
+          {bugetSubdomains
+            .filter((sub) => !sub.hidden)
+            .map((sub) => {
             const isLive = sub.status === "live" && sub.href;
             if (isLive) {
               return (
