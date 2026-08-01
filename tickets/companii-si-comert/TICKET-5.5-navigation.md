@@ -1,7 +1,7 @@
 # Ticket 5.5 — Integrare sidebar + navigare cap-coadă
 
 **ID:** TICKET-5.5
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 5 — 🏛️ Întreprinderi Publice
 **Dependențe:** TICKET-5.3, TICKET-5.4
 

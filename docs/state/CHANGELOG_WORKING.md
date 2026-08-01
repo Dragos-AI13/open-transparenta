@@ -4,6 +4,22 @@
 
 ---
 
+## [2026-08-01] — TICKET-5.5: Integrare sidebar + navigare cap-coadă
+
+### Verified
+- Sidebar „🏛️ Întreprinderi Publice" → `/companii/intreprinderi-publice` (link dinamic `/companii/${slug}` — deja corect, verificat)
+- Grid `/companii` → card „Întreprinderi Publice" (2 seturi · AMEPIP) → pagina dedicată cu tabel
+- Breadcrumb: „Companii și Comerț › Întreprinderi Publice"
+- Sub-categoriile generice (`[slug]`) încă funcționează: `/companii/registrul-comertului` → pagina informativă normală
+- Profil firmă → card IP (5.4) + „Înapoi la căutare"
+- Flow cap-coadă complet: homepage → Companii → Întreprinderi Publice → profil firmă → înapoi
+- `npm run build` — curat
+
+### Changed
+- Niciun cod necesar — navigarea era deja dinamică (linkurile sidebar/grid folosesc slug-ul); TICKET-5.5 a fost în principal QA + confirmare
+
+---
+
 ## [2026-08-01] — TICKET-5.4: Card „Întreprindere publică" pe profil firmă
 
 ### Added

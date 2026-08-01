@@ -62,7 +62,7 @@ Indexul detaliat per domeniu trăiește în `tickets/companii-si-comert/` (TICKE
 | 5.2 | API Routes: listă + detalii | ✅ **done** |
 | 5.3 | Sub-category page `/companii/intreprinderi-publice` | ✅ **done** |
 | 5.4 | Card „🏛️ Întreprindere publică" pe profil firmă | ✅ **done** |
-| 5.5 | Integrare sidebar + navigare cap-coadă | 📋 ready (ticket scris) |
+| 5.5 | Integrare sidebar + navigare cap-coadă | ✅ **done** |
 | 5.6 | QA complet + state docs + README | 📋 ready (ticket scris) |
 
 ---
