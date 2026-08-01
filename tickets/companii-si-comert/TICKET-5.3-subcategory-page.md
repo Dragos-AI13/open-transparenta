@@ -1,7 +1,7 @@
 # Ticket 5.3 — Sub-category page `/companii/intreprinderi-publice`
 
 **ID:** TICKET-5.3
-**Status:** 📋 ready
+**Status:** ✅ Done
 **Feature:** 5 — 🏛️ Întreprinderi Publice
 **Dependențe:** TICKET-5.2
 

@@ -4,6 +4,22 @@
 
 ---
 
+## [2026-08-01] — TICKET-5.3: Pagina subdomeniului Întreprinderi Publice
+
+### Added
+- `app/companii/intreprinderi-publice/page.tsx` — pagină dedicată (prioritate peste `/companii/[slug]`) cu hero (nume, descriere, iconiță) + tabel live
+- `IntreprinderiPubliceTable.tsx` — tabel: Denumire (link → profil), CUI, CAEN, ROE (colorat verde/roșu), EBITDA, Lichiditate, Ani; căutare full-text, sortare A-Z/Z-A, paginare
+- 4 stări: loading skeleton, eroare (cu retry), gol (cu reset căutare), cu date
+- Responsive: tabel pe desktop, carduri pe mobil
+
+### Verified
+- `/companii/intreprinderi-publice` → 200, „1.259 întreprinderi publice"
+- Căutare „oradea" → 7 rezultate (COMPANIA DE APĂ ORADEA, ORADEA TRANSPORT LOCAL, AEROPORTUL ORADEA, TERMOFICARE...)
+- Click pe COMPANIA DE APĂ ORADEA → profil `/companii/firma/RO54760` funcțional
+- `npm run build` — curat, pagina statică (○)
+
+---
+
 ## [2026-08-01] — TICKET-5.2: API Routes întreprinderi publice
 
 ### Added
