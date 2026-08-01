@@ -15,9 +15,9 @@
 **Phase 11 — 🎓 Educație** — în lucru (1/…)
 
 - [x] TICKET-11.1 — Pagina principală a domeniului `/educatie` (grid subdomenii)
-- [ ] TICKET-11.2 — Crawler + subdomeniu Rețea școlară
-- [ ] TICKET-11.3 — Crawler + subdomeniu Bacalaureat
-- [ ] TICKET-11.4 — Crawler + subdomeniu Cadre didactice
+- [ ] TICKET-11.2 — Crawler + subdomeniu Rețea școlară (ticket scris)
+- [ ] TICKET-11.3 — Crawler + subdomeniu Bacalaureat (ticket scris)
+- [ ] TICKET-11.4 — Crawler + subdomeniu Cadre didactice (ticket scris)
 
 **→ Next:** TICKET-11.2 — Rețea școlară (crawler ME + API + pagină)
 **→ După:** Bacalaureat, Cadre didactice, apoi domeniul Sănătate
