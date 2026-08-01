@@ -4,6 +4,31 @@
 
 ---
 
+## [2026-08-01] — TICKET-10.1 + 10.2: Investiții și Fonduri live (MFE) — 17.879 proiecte europene
+
+### Added
+- `crawler/crawler_mfe.py` — descoperă pachetele MFE de pe data.gov.ro (Proiecte contractate: 119 XLSX, 7 programe; Stadiul absorbției 2014-2020 + 2021-2027 lunar), ia cea mai recentă resursă per program (comparație dată numerică, nu lexicografică), parsează XLSX cu header detectat dinamic + mapare coloane după nume (robust la structuri diferite: POIM/POC/POR), normalizează diacriticele
+- **17.879 proiecte** indexate (`proiecte_fonduri`): POR 8040, POC 3403, POCU 2948, POIM 2388, POCA 904, POAT 160, POAD 36
+- **29 programe absorbție** indexate (`absorbtie_fonduri`), perioada 29 mai 2026, cu % absorbție
+- `GET /api/proiecte-fonduri` (q, program, judet, stadiu, sort, paginare) — **facet program pentru total exact** pe programe mari (POR 8040 > capul 1000 Meilisearch)
+- `GET /api/proiecte-fonduri/rezumat` — total proiecte, valoare, plăți + absorbție pe programe
+- Pagină `/buget-si-finante/investitii-si-fonduri` — carduri hero (17.879 proiecte, 165,36 mld RON, raportare 29 mai 2026), bare absorbție, tabel (titlu, badge program, beneficiar, județ, valoare, stadiu colorat), filtre program + județ + căutare, stări complete, responsive
+- Tip `ProiectFondDoc` + `AbsorbtieFondDoc` în lib; cardul din pagina domeniului → **Live (4/7 subdomenii)**
+- Comandă npm: `crawl:mfe`
+
+### Fixed
+- Mapare coloane beneficiar: „Plăţi către beneficiari" (conține „beneficiar") suprascria „Denumire beneficiar" → verificare `plati` înainte + excludere „tip beneficiar"; normalizare ASCII pentru matching („Plăţi"→„plati")
+- Comparație dată resurse: lexicografică („martie" > „august") alegea fișiere vechi → `parse_report_date` numeric (an, lună, zi)
+- id proiect: include județ+valoare în hash (același SMIS cu defalcări multiple, ex. 125325)
+
+### Verified
+- `?q=oradea` → 67 proiecte Bihor; `program=POR` → 8040 exact; `judet=Bihor` → 560; `POIM+Bihor` → 134
+- Beneficiari reali: CFR, METROREX, CNAIR, MINISTERUL ECONOMIEI, MINISTERUL SANATATII (fix mapare)
+- Browser: carduri hero, bare absorbție (Politica de Coeziune 111,8%), tabel 50 rânduri, filtre + paginare
+- `npm run build` — curat
+
+---
+
 ## [2026-08-01] — TICKET-9.1 + 9.2 + 9.3: Phase 9 PWA completă — instalabil + offline
 
 ### Added

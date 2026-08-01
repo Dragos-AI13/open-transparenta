@@ -97,6 +97,35 @@ export interface TaxaImpozitDoc {
   unitate: string;        // "milioane lei" | "număr contribuabili"
 }
 
+// ─── Investiții și Fonduri (MFE) ────────────────
+
+export interface ProiectFondDoc {
+  id: string;             // "{program}_{smis}_{hash}"
+  titlu: string;          // titlul proiectului
+  program: string;        // POIM | POC | POCU | POR | POAT | POAD | POCA
+  smis: string | null;    // cod SMIS
+  beneficiar: string | null;  // numele beneficiarului
+  judet: string | null;   // județul/județele
+  regiune: string | null; // regiunea de dezvoltare
+  stadiu: string | null;  // "Proiect finalizat" | "Proiect nefinalizat" | ...
+  valoare_totala: number | null;    // lei
+  valoare_eligibila: number | null; // lei
+  plati: number | null;   // lei
+  cofinantare_ue: string | null;    // rata cofinanțare UE
+  data_raportare: string; // "31 martie 2026"
+}
+
+export interface AbsorbtieFondDoc {
+  id: string;             // hash(perioada, program)
+  program: string;        // "PO Regional", "PO Infrastructură Mare***"...
+  alocare: number | null;      // EUR
+  plati: number | null;        // EUR
+  absorbtie_pct: number | null; // %
+  prefinantari: number | null; // EUR
+  perioada: string;       // "29 mai 2026"
+  unitate: string;        // "EUR"
+}
+
 export interface SearchFilters {
   judet?: string;
   localitate?: string;

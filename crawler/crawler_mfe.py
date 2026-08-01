@@ -74,6 +74,24 @@ def log(msg: str):
 
 # ── Utilitare ───────────────────────────────────
 
+LUNI_RO = {
+    "ianuarie": 1, "februarie": 2, "martie": 3, "aprilie": 4, "mai": 5,
+    "iunie": 6, "iulie": 7, "august": 8, "septembrie": 9, "octombrie": 10,
+    "noiembrie": 11, "decembrie": 12,
+}
+
+
+def parse_report_date(name: str) -> tuple:
+    """Extrage (an, lună, zi) din numele resursei pentru comparație numerică.
+    „la 31 martie 2019" → (2019, 3, 31); fără dată → (0, 0, 0)."""
+    m = re.search(
+        r"(\d{1,2})\s+(ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie)\s+(\d{4})",
+        name, re.I,
+    )
+    if not m:
+        return (0, 0, 0)
+    return (int(m.group(3)), LUNI_RO[m.group(2).lower()], int(m.group(1)))
+
 def normalize_ro(s: str) -> str:
     """Normalizează diacriticele românești (ț/ș cu virgulă vs cedilă)."""
     return (
@@ -155,8 +173,10 @@ def find_absorb_packages() -> list[dict]:
 
 def latest_resource_per_program(pkg: dict) -> dict[str, dict]:
     """
-    Din pachetul 'Proiecte contractate": cea mai recentă resursă per program.
-    Programul = prefixul din numele resursei ('POIM - ...").
+    Din pachetul „Proiecte contractate": cea mai recentă resursă per program.
+    Programul = prefixul din numele resursei („POIM - ...").
+    Comparația datei e NUMERICĂ (an, lună, zi) — nu lexicografică
+    („martie" > „august" alfabetic ar fi ales fișiere vechi).
     """
     out: dict[str, dict] = {}
     for res in pkg.get("resources", []):
@@ -171,46 +191,55 @@ def latest_resource_per_program(pkg: dict) -> dict[str, dict]:
                 break
         if not prog:
             continue
-        # 'la 31 august 2025" → dată de raportare pentru comparare
-        m = re.search(r"(\d{1,2})\s+(ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie)\s+(\d{4})", name, re.I)
-        report_date = m.group(0) if m else ""
+        date_key = parse_report_date(name)
         existing = out.get(prog)
-        if existing is None or report_date > existing.get("_report_date", ""):
-            out[prog] = {**res, "_report_date": report_date}
+        if existing is None or date_key > existing.get("_date_key", (0, 0, 0)):
+            out[prog] = {**res, "_date_key": date_key}
     return out
 
 
 # ── Parsing proiecte ───────────────────────────
 
 def find_header_row(ws) -> int:
-    """Header-ul românesc: primul rând care conține 'Titlu proiect"."""
-    for r in range(1, 12):
-        for c in range(1, 25):
+    """Header-ul românesc: primul rând care conține „Titlu proiect"."""
+    for r in range(1, 15):
+        for c in range(1, 30):
             v = ws.cell(row=r, column=c).value
             if v and "Titlu proiect" in str(v):
                 return r
-    return 5  # fallback verificat
+    return 5  # fallback verificat (POIM)
 
 
-def parse_projects(content: bytes, program: str, report_date: str) -> list[dict]:
-    wb = openpyxl.load_workbook(BytesIO(content), data_only=True)
-    ws = wb.active
-    hdr = find_header_row(ws)
-
-    # Mapare coloane după nume (robust la variații de header)
-    col = {}
+def map_columns(ws, hdr: int) -> dict[str, int]:
+    """
+    Mapare coloane după nume — ROBUST la structuri diferite între programe.
+    (POIM: header r5, „Nume beneficiar" col7; POC aug 2025: header r7,
+    „Denumire beneficiar" col6, „Județ implementare" col12...)
+    Ordinea contează: „Plăţi către beneficiari" (col24 POC) conține
+    „beneficiar" dar e coloana de plăți → verificăm „plati" ÎNAINTE.
+    """
+    col: dict[str, int] = {}
     for c in range(1, 30):
         v = ws.cell(row=hdr, column=c).value
         if not v:
             continue
         key = str(v).strip().lower()
+        # Normalizare ASCII completă pentru MATCHING (nu pentru date!):
+        # „Plăţi" → „plati", „Județ" → „judet", „Cofinanțare" → „cofinantare"
+        key = (
+            key.replace("ă", "a").replace("â", "a").replace("î", "i")
+            .replace("ș", "s").replace("ş", "s").replace("ț", "t").replace("ţ", "t")
+        )
         if "titlu proiect" in key:
             col["titlu"] = c
-        elif "smis" in key:
+        elif "smis" in key or "my smis" in key:
             col["smis"] = c
-        elif "beneficiar" in key:
+        elif "plati" in key and "lei" in key:  # „Plăţi către beneficiari (lei)"
+            col["plati"] = c
+        elif ("denumire beneficiar" in key or "nume beneficiar" in key
+              or ("beneficiar" in key and "plati" not in key and "tip beneficiar" not in key)):
             col["beneficiar"] = c
-        elif "județ" in key or "judet" in key:
+        elif "județ implementare" in key or "judet implementare" in key or "județ" in key or "judet" in key:
             col["judet"] = c
         elif "regiune" in key:
             col["regiune"] = c
@@ -218,25 +247,40 @@ def parse_projects(content: bytes, program: str, report_date: str) -> list[dict]
             col["stadiu"] = c
         elif "total valoare proiect" in key:
             col["valoare_totala"] = c
-        elif "valoare totala eligibila" in key and "nerambursabila" not in key:
+        elif "valoarea eligibila" in key or "valoare eligibila" in key:
             col["valoare_eligibila"] = c
-        elif "plati" in key and "lei" in key:
-            col["plati"] = c
         elif "cofinanțare ue" in key or "cofinantare ue" in key:
             col["cofinantare"] = c
+    return col
+
+
+def parse_projects(content: bytes, program: str, report_date: str) -> list[dict]:
+    wb = openpyxl.load_workbook(BytesIO(content), data_only=True)
+    ws = wb.active
+    hdr = find_header_row(ws)
+    col = map_columns(ws, hdr)
 
     if "titlu" not in col:
         return []
 
     docs = []
-    # Datele încep la hdr+5 (r10 pentru POIM) — dar căutăm primul rând cu titlu
-    start = hdr + 5
+    # Datele încep după header + rândurile de note/header englezesc.
+    # Structurile diferă (POIM: r10 = hdr+5; POC aug 2025: r13 = hdr+6) →
+    # căutăm primul rând cu titlu după hdr+2, ignorând header-ul englezesc.
+    for r in range(hdr + 2, min(ws.max_row + 1, hdr + 12)):
+        titlu = ws.cell(row=r, column=col["titlu"]).value
+        if titlu and str(titlu).strip() and not str(titlu).strip().lower() in ("project title", "titlu proiect"):
+            start = r
+            break
+    else:
+        start = hdr + 5
+
     for r in range(start, ws.max_row + 1):
         titlu = ws.cell(row=r, column=col["titlu"]).value
         if not titlu or not str(titlu).strip():
             continue
         titlu_s = normalize_ro(str(titlu).strip())
-        # Sărim header-ul englezesc ('Project title") dacă apare
+        # Sărim header-ul englezesc („Project title") dacă apare
         if titlu_s.lower() in ("project title", "titlu proiect"):
             continue
 
@@ -415,7 +459,7 @@ def main():
         log(f"  {len(resources)} programe cu resurse recente: {', '.join(sorted(resources.keys()))}")
 
         # State hash: {program: report_date} — skip dacă neschimbat (fără --force)
-        cur_hash = json.dumps({p: resources[p].get("_report_date", "") for p in resources}, sort_keys=True)
+        cur_hash = json.dumps({p: resources[p].get("_date_key", (0,0,0)) for p in resources}, sort_keys=True)
         if not args.force and state.get("mfe_projects_hash") == cur_hash:
             log("  State neschimbat (aceleași date de raportare) — sar peste proiecte.")
         else:
@@ -433,7 +477,7 @@ def main():
                 except Exception as e:
                     log(f"    Eroare: {e} — sar peste")
                     continue
-                docs = parse_projects(resp.content, prog, res.get("_report_date", ""))
+                docs = parse_projects(resp.content, prog, str(res.get("_date_key", "")))
                 log(f"    {len(docs)} proiecte")
                 all_docs.extend(docs)
                 time.sleep(0.6)

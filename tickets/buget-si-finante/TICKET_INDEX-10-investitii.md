@@ -17,7 +17,7 @@
 | ID | Ticket | Status | Depends On | Efort |
 |----|--------|--------|------------|-------|
 | 10.1 | Crawler MFE (proiecte contractate + stadiul absorbției) | ✅ **done** | — | ~45 min |
-| 10.2 | API + pagina `/buget-si-finante/investitii-si-fonduri` | 📋 ready | 10.1 | ~40 min |
+| 10.2 | API + pagina `/buget-si-finante/investitii-si-fonduri` | ✅ **done** | 10.1 | ~40 min |
 | 10.3 | QA + state docs | 📋 ready | 10.2 | ~20 min |
 
 **Total efort estimat:** ~105 minute
@@ -33,6 +33,6 @@
 ## Verification (end of feature)
 
 - [x] Index Meilisearch cu proiecte reale MFE (POIM + minim 2 alte programe) — **16.979 proiecte pe 7 programe** (10.1 done)
-- [ ] `/buget-si-finante/investitii-si-fonduri` — tabel proiecte + carduri absorbție
-- [ ] Cardul „🏗️ Investiții și Fonduri" din pagina domeniului → **Live** (4/7)
-- [ ] State docs actualizate
+- [x] `/buget-si-finante/investitii-si-fonduri` — tabel proiecte + carduri absorbție (**17.879 proiecte**, 7 programe, filtre program/județ/căutare, carduri hero + absorbție 29 programe)
+- [x] Cardul „🏗️ Investiții și Fonduri" din pagina domeniului → **Live** (4/7)
+- [ ] State docs actualizate (10.3)

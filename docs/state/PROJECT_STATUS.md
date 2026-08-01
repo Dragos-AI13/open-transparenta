@@ -46,6 +46,11 @@
 - ✅ TICKET-9.2 Service worker Serwist 9.5 (`@serwist/turbopack`): precache statici, runtime cache API NetworkFirst (1h) + statice CacheFirst (30 zile), offline App Shell
 - ✅ TICKET-9.3 QA: SW activ + controller, test offline TRECUT (server oprit → pagina + date din cache), manifest valid, HTTPS
 
+**Phase 10 — 🏗️ Investiții și Fonduri (MFE)** (2/3, 2026-08-01)
+- ✅ TICKET-10.1 Crawler MFE: 17.879 proiecte europene pe 7 programe (POR 8040, POC 3403, POCU 2948, POIM 2388...) + 29 programe absorbție (29 mai 2026)
+- ✅ TICKET-10.2 API + pagina `/buget-si-finante/investitii-si-fonduri`: carduri hero, bare absorbție, tabel cu filtre program/județ/căutare → **4/7 subdomenii live**
+- ⏳ TICKET-10.3 QA + state docs
+
 ---
 
 ## Stack Status

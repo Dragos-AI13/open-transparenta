@@ -58,8 +58,13 @@ Phase 9 — PWA                 ██████████ 100%
   ✅ Service worker Serwist (offline + cache API)
   ✅ Test offline trecut (date din cache fără server)
 
-Phase 10 — În lucru
-  ⬜ Datoria Publică
+Phase 10 — Investiții și Fonduri ████████░░ 80%
+  ✅ 17.879 proiecte europene pe 7 programe (MFE)
+  ✅ Stadiul absorbției (29 programe, lunar)
+  ✅ Pagină live cu filtre + carduri (4/7 subdomenii Buget)
+
+Phase 11 — În lucru
+  ⬜ QA + state docs (TICKET-10.3)
   ⬜ Domenii noi (sănătate, educație)
 ```
 

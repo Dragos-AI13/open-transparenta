@@ -56,7 +56,8 @@ export const bugetSubdomains: BugetSubdomain[] = [
     name: "Investiții și Fonduri",
     icon: "🏗️",
     shortDesc: "PNRR, fonduri europene, CNI, proiecte contractate",
-    status: "planned",
+    status: "live",
+    href: "/buget-si-finante/investitii-si-fonduri",
   },
   {
     slug: "finantare-partide",
